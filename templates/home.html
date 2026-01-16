@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1>Confía en RoMA</h1>
+        <p>Somos una consultora de ingeniería y servicios de asesoramientos a entidades publicas y privadas.</p>
+        <a href="{% url 'project_list' %}" class="btn">Ver Proyectos</a>
+    </div>
+</section>
+
+<!-- History / About Section -->
+<section class="section about-section" style="background-color: var(--white); padding-bottom: 40px;">
+    <div class="container text-center">
+        <h2 class="section-title">Nuestra Historia</h2>
+        <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: var(--text-medium);">
+            RoMA surge de las siglas de los nombres de sus fundadores, en el año 2020, con la idea de brindar
+            servicios de ingeniería civil de alto nivel y asesoramientos de ingeniería industrial en organización y
+            logística.
+        </p>
+    </div>
+</section>
+
+<!-- Services / Intro Section -->
+<section class="section services">
+    <div class="container">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="services-grid">
+            <!-- Servicio 1: Cálculo Estructural -->
+            <div class="service-card">
+                <i class="fa fa-layer-group"></i>
+                <h3>Cálculo Estructural</h3>
+                <ul class="service-list" style="text-align: left; font-size: 0.95rem; color: var(--text-medium);">
+                    <li style="margin-bottom: 8px;"><i class="fa fa-check"
+                            style="color: var(--primary-color); font-size: 0.8rem; width: auto; margin-right: 5px;"></i>
+                        Cálculo y dimensionado de estructuras de hormigón armado, pretensado, metálicas y steel framing
+                        (Robot Structural, CypeCAD, Staad, Rfem).</li>
+                    <li style="margin-bottom: 8px;"><i class="fa fa-check"
+                            style="color: var(--primary-color); font-size: 0.8rem; width: auto; margin-right: 5px;"></i>
+                        Modelados en Revit con planillas de doblado y detalles de uniones.</li>
+                    <li><i class="fa fa-check"
+                            style="color: var(--primary-color); font-size: 0.8rem; width: auto; margin-right: 5px;"></i>
+                        Optimización de estructuras para ahorro en materiales y tiempos.</li>
+                </ul>
+            </div>
+
+            <!-- Servicio 2: Cálculo Hidráulico -->
+            <div class="service-card">
+                <i class="fa fa-water"></i>
+                <h3>Cálculo Hidráulico</h3>
+                <p>Desarrollamos trabajos en ingeniería hidráulica y civil, diseño, cálculo y soluciones para todo tipo
+                    de obras hidráulicas y sanitarias.</p>
+            </div>
+
+            <!-- Servicio 3: Cálculo Vial -->
+            <div class="service-card">
+                <i class="fa fa-road"></i>
+                <h3>Cálculo Vial</h3>
+                <p>Personal especializado y equipamiento para relevamientos topográficos y desarrollo integral de obras
+                    viales.</p>
+            </div>
+
+            <!-- Servicio 4: Steel Framing -->
+            <div class="service-card">
+                <i class="fa fa-home"></i>
+                <h3>Steel Framing</h3>
+                <p>Cálculo y diseño de estructuras en Steel Framing para obras de arquitectura modernas y eficientes.
+                </p>
+            </div>
+
+            <!-- Servicio 5: Pliegos y Presupuestos -->
+            <div class="service-card">
+                <i class="fa fa-file-signature"></i>
+                <h3>Pliegos y Presupuestos</h3>
+                <p>Confección de pliegos licitatorios (provinciales y nacionales), análisis de precios, cómputo y
+                    presupuesto, curvas de inversión y planes de avance.</p>
+            </div>
+
+            <!-- Servicio 6: Impacto Ambiental -->
+            <div class="service-card">
+                <i class="fa fa-leaf"></i>
+                <h3>Impacto Ambiental</h3>
+                <ul class="service-list" style="text-align: left; font-size: 0.95rem; color: var(--text-medium);">
+                    <li style="margin-bottom: 8px;"><i class="fa fa-check"
+                            style="color: var(--primary-color); font-size: 0.8rem; width: auto; margin-right: 5px;"></i>
+                        Servicios de Ingeniería Ambiental adaptados al contexto actual.</li>
+                    <li style="margin-bottom: 8px;"><i class="fa fa-check"
+                            style="color: var(--primary-color); font-size: 0.8rem; width: auto; margin-right: 5px;"></i>
+                        Mejora continua y satisfacción del cliente.</li>
+                    <li style="margin-bottom: 8px;"><i class="fa fa-check"
+                            style="color: var(--primary-color); font-size: 0.8rem; width: auto; margin-right: 5px;"></i>
+                        Profesionales aptos para nuevos desafíos y cumplimiento de metas.</li>
+                    <li><i class="fa fa-check"
+                            style="color: var(--primary-color); font-size: 0.8rem; width: auto; margin-right: 5px;"></i>
+                        Compromiso con el desarrollo sustentable y economía circular.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Specialists Section -->
+<section class="section specialists">
+    <div class="container">
+        <h2 class="section-title">Nuestros Especialistas</h2>
+        <div class="services-grid"> <!-- Reuse grid for consistency -->
+            <!-- 1 -->
+            <div class="service-card">
+                <i class="fa fa-user-tie"></i>
+                <h3>Miguel Ángel Díaz</h3>
+                <p class="role" style="font-weight: 700; color: var(--primary-color); margin-bottom: 5px;">Socio Gerente
+                </p>
+                <p>Ingeniero Industrial.</p>
+            </div>
+            <!-- 2 -->
+            <div class="service-card">
+                <i class="fa fa-user-tie"></i>
+                <h3>Rodrigo Nicolas Díaz</h3>
+                <p class="role" style="font-weight: 700; color: var(--primary-color); margin-bottom: 5px;">Socio Gerente
+                </p>
+                <p>Ingeniero Civil, especialista en Cálculo Estructural e Ingeniería Sanitaria.</p>
+            </div>
+
+            <!-- 4 -->
+            <div class="service-card">
+                <i class="fa fa-calculator"></i>
+                <h3>Gerardo Alberto Dllano</h3>
+                <p>Contador Público.</p>
+            </div>
+            <!-- 5 -->
+            <div class="service-card">
+                <i class="fa fa-user-graduate"></i>
+                <h3>Mulki Ignacio</h3>
+                <p>Magister en Ingeniería Civil.</p>
+            </div>
+            <!-- 6 -->
+            <div class="service-card">
+                <i class="fa fa-home"></i>
+                <h3>Juan Ignacio Ramos</h3>
+                <p>Ingeniero Civil, especialista en Steel Framing.</p>
+            </div>
+            <!-- 7 -->
+            <div class="service-card">
+                <i class="fa fa-hard-hat"></i>
+                <h3>Silvana Carina Cuelle</h3>
+                <p>Técnica en Seguridad e Higiene.</p>
+            </div>
+            <!-- 8 -->
+            <div class="service-card">
+                <i class="fa fa-balance-scale"></i>
+                <h3>Macarena Soledad Díaz</h3>
+                <p>Abogada.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Featured Projects -->
+<section class="section featured-projects">
+    <div class="container">
+        <h2 class="section-title">Proyectos Destacados</h2>
+
+        {% if featured_projects %}
+        <div class="projects-grid">
+            {% for project in featured_projects %}
+            <div class="project-card">
+                <div class="project-image">
+                    {% if project.main_image %}
+                    <img src="{{ project.main_image.url }}" alt="{{ project.title }}">
+                    {% else %}
+                    <div class="no-image">Sin Imagen</div>
+                    {% endif %}
+                </div>
+                <div class="project-info">
+                    <span class="category-tag">{{ project.get_category_display }}</span>
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.description|truncatewords:20 }}</p>
+                    <a href="{% url 'project_detail' project.pk %}" class="read-more">Ver Detalles &rarr;</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="text-center">Aumentando obras recientes...</p>
+        {% endif %}
+
+        <div class="text-center mt-2">
+            <a href="{% url 'project_list' %}" class="btn-outline">Ver Todos los Proyectos</a>
+        </div>
+    </div>
+</section>
+
+<!-- Clients Section (Extracted from PDF) -->
+<section class="section clients-section">
+    <div class="container">
+        <h2 class="section-title">Confían en Nosotros</h2>
+        <div class="clients-list">
+            <ul>
+                <li>Aeropuertos Argentina</li>
+                <li>Municipalidad de Arata</li>
+                <li>Municipalidad de Catriló</li>
+                <li>Municipalidad de Mauricio Mayer</li>
+                <li>Cooperativa de Victorica</li>
+                <li>Cooperativa de Winifreda</li>
+                <li>Comisión de Fomento de Maisonave</li>
+                <li>Comisión de Fomento de Pichi Huinca</li>
+                <li>PROCREAR</li>
+                <li>Municipalidad de Toay</li>
+                <li>Ministerio de Obras y Servicios Públicos de La Pampa</li>
+                <li>Casillas RG de Macachín</li>
+                <li>Comisión de Fomento de Sarah</li>
+                <li>Cooperativa de Intendente Alvear</li>
+                <li>BEPHA Construcciones</li>
+                <li>ECOP Construcciones</li>
+                <li>ILKA Construcciones</li>
+                <li>IPAV</li>
+                <li>RIGEM</li>
+                <li>Municipalidad de Miguel Riglos</li>
+                <li>Municipalidad de Doblas</li>
+                <li>Municipalidad de Macachín</li>
+                <li>Municipalidad de Miguel Cané</li>
+            </ul>
+        </div>
+        <!-- Clients Image -->
+        <div class="clients-image-container"
+            style="display: flex; justify-content: center; margin-top: 40px; width: 100%;">
+            <img src="{% static 'img/clientes_collage.png' %}" alt="Nuestros Clientes"
+                style="max-width: 80%; height: auto; border-radius: 4px; display: block;">
+        </div>
+    </div>
+</section>
+
+{% endblock %}

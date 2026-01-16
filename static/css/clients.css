@@ -1,0 +1,31 @@
+/* Clients Section */
+.clients-section {
+    background-color: var(--white);
+    text-align: center;
+}
+
+.clients-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.clients-list li {
+    background-color: var(--bg-light);
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    transition: all 0.2s ease;
+}
+
+.clients-list li:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

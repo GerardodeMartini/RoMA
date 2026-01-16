@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="page-header">
+    <div class="container">
+        <h1>Nuestros Proyectos</h1>
+        <p>Explora nuestro portafolio de obras civiles e industriales.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <!-- Filter Buttons (Optional - can be implemented with JS or URL params) -->
+        <div class="filters">
+            <a href="{% url 'project_list' %}"
+                class="filter-btn {% if not request.GET.category %}active{% endif %}">Todos</a>
+            <a href="?category=CIVIL"
+                class="filter-btn {% if request.GET.category == 'CIVIL' %}active{% endif %}">Civil</a>
+            <a href="?category=INDUSTRIAL"
+                class="filter-btn {% if request.GET.category == 'INDUSTRIAL' %}active{% endif %}">Industrial</a>
+        </div>
+
+        <div class="projects-grid">
+            {% for project in projects %}
+            <div class="project-card">
+                <div class="project-image">
+                    {% if project.main_image %}
+                    <img src="{{ project.main_image.url }}" alt="{{ project.title }}">
+                    {% else %}
+                    <div class="no-image">Sin Imagen</div>
+                    {% endif %}
+                </div>
+                <div class="project-info">
+                    <span class="category-tag">{{ project.get_category_display }}</span>
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.description|truncatewords:20 }}</p>
+                    <a href="{% url 'project_detail' project.pk %}" class="read-more">Ver Detalles &rarr;</a>
+                </div>
+            </div>
+            {% empty %}
+            <p>No se encontraron proyectos en esta categoría.</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

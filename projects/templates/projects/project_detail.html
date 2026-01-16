@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="project-detail-header">
+    <div class="container">
+        <span class="category-pill">{{ project.get_category_display }}</span>
+        <h1>{{ project.title }}</h1>
+        <p class="client-info">
+            {% if project.client %}Cliente: {{ project.client }} | {% endif %}
+            {% if project.completion_date %}Fecha: {{ project.completion_date|date:"F Y" }}{% endif %}
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container project-content-grid">
+        <div class="main-column">
+            <div class="main-image-wrapper">
+                {% if project.main_image %}
+                <img src="{{ project.main_image.url }}" alt="{{ project.title }}" class="img-fluid">
+                {% endif %}
+            </div>
+
+            <div class="project-description">
+                <h3>Sobre el Proyecto</h3>
+                <p>{{ project.description|linebreaks }}</p>
+            </div>
+
+            <!-- Gallery -->
+            {% if project.images.all %}
+            <div class="gallery-section">
+                <h3>Galería de Imágenes</h3>
+                <div class="gallery-grid">
+                    {% for img in project.images.all %}
+                    <div class="gallery-item">
+                        <img src="{{ img.image.url }}" alt="{{ img.caption }}">
+                        {% if img.caption %}<p class="caption">{{ img.caption }}</p>{% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Videos -->
+            {% if project.videos.all %}
+            <div class="video-section">
+                <h3>Videos del Proyecto</h3>
+                {% for video in project.videos.all %}
+                <div class="video-wrapper">
+                    {% if video.video_file %}
+                    <video controls width="100%">
+                        <source src="{{ video.video_file.url }}">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
+                    {% elif video.video_url %}
+                    <p><a href="{{ video.video_url }}" target="_blank">Ver Video Externo: {{ video.title }}</a></p>
+                    <!-- You would need an embed parser logic here for youtube/vimeo, keeping it simple for now -->
+                    {% endif %}
+                    <p class="video-title">{{ video.title }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar-box">
+                <h4>Detalles</h4>
+                <ul>
+                    <li><strong>Categoría:</strong> {{ project.get_category_display }}</li>
+                    {% if project.client %}<li><strong>Cliente:</strong> {{ project.client }}</li>{% endif %}
+                    {% if project.completion_date %}<li><strong>Completado:</strong> {{ project.completion_date }}</li>
+                    {% endif %}
+                </ul>
+            </div>
+            <a href="{% url 'project_list' %}" class="btn-outline full-width">&larr; Volver al Portafolio</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
