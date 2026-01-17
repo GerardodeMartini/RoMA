@@ -1,0 +1,46 @@
+
+--- Proposed Visual Clusters ---
+[cement_grey_matte]: 1 products
+   Examples: Cemento Gris - Mate
+[cement_beige_matte]: 1 products
+   Examples: Cemento Beige - Mate
+[cement_grey_polished]: 1 products
+   Examples: Cemento Gris - Pulido
+[cement_neutral_matte]: 3 products
+   Examples: Bossa CZ - Granulado, Concept - Mate, Concreto CL - Mate
+[wood_neutral_matte]: 4 products
+   Examples: Caja - Mate Relieve, Carvalho NAT CL - Mate, Piemont - Mate
+[wood_natural_satin]: 1 products
+   Examples: Carvalho Natural - Mate
+[wood_neutral_satin]: 1 products
+   Examples: Fresno - Mate
+[marble_neutral_textured]: 1 products
+   Examples: Gran Vision - Granillado
+[marble_neutral_polished]: 20 products
+   Examples: HD Cremo Delicato - Pulido, HD Damasco - Pulido, HD Marmo Allure - Pulido
+[marble_grey_polished]: 3 products
+   Examples: HD Marmo Gris - Pulido, HD Marmo Gris - Pulido, HD Silver - Pulido
+[marble_black_polished]: 1 products
+   Examples: HD Marmo Negro - Pulido
+[marble_beige_polished]: 1 products
+   Examples: HD Crema - Pulido
+[marble_brown_polished]: 1 products
+   Examples: HD Marmo Brown - Pulido
+[marble_neutral_satin]: 1 products
+   Examples: HD Apollo - Satinado
+[stone_neutral_satin]: 1 products
+   Examples: Apollo - Mate
+[stone_neutral_matte]: 2 products
+   Examples: Arenito CZ - Mate, Arenito BG - Mate
+[stone_black_matte]: 1 products
+   Examples: Arenito Black - Mate
+[generic_grey_matte]: 1 products
+   Examples: Gris Mate
+[granite_grey_textured]: 1 products
+   Examples: R70072 GRIS - GRANILLADO
+[generic_neutral_matte]: 1 products
+   Examples: TDL Algarve
+[white_tile_white_matte]: 1 products
+   Examples: R40082 Blanco Mate
+[white_tile_white_polished]: 1 products
+   Examples: R40002 Blanco Pulido

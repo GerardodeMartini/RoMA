@@ -1,0 +1,899 @@
+[
+    {
+        "Linea": "CEMENTO",
+        "Modelo": "Cemento Gris - Mate",
+        "Marca": "Grupo Cristofoli",
+        "Formato": "77x77 cm",
+        "Tipologia": "Mate",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": 1.78,
+        "Precio_M2": 16200,
+        "Especificaciones": {
+            "Caras": 6,
+            "Espesor": "9.0 mm",
+            "Junta": "2 mm",
+            "Resistencia_Manchas": "Si",
+            "Peso_Caja_kg": 33
+        },
+        "imagen": "p3_1.jpeg"
+    },
+    {
+        "Linea": "CEMENTO",
+        "Modelo": "Cemento Beige - Mate",
+        "Marca": "Grupo Cristofoli",
+        "Formato": "77x77 cm",
+        "Tipologia": "Mate",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": 1.78,
+        "Precio_M2": 16200,
+        "Especificaciones": {
+            "Caras": 6,
+            "Espesor": "9.0 mm",
+            "Junta": "2 mm",
+            "Resistencia_Manchas": "Si",
+            "Peso_Caja_kg": 33
+        },
+        "imagen": "p4_1.jpeg"
+    },
+    {
+        "Linea": "CEMENTO",
+        "Modelo": "Cemento Gris - Pulido",
+        "Marca": "Grupo Cristofoli",
+        "Formato": "76x76 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "-",
+        "M2_Caja": 1.73,
+        "Precio_M2": 22140,
+        "Especificaciones": {
+            "Caras": 6,
+            "Variacion_Tono": "V1",
+            "Peso_Caja_kg": 33
+        },
+        "imagen": "p5_1.jpeg"
+    },
+    {
+        "Linea": "CONCRETO",
+        "Modelo": "Bossa CZ - Granulado",
+        "Marca": "Formigres Premium",
+        "Formato": "60x120 cm",
+        "Tipologia": "Granulado RT",
+        "Rectificado": "Si",
+        "Uso": "LE",
+        "M2_Caja": 2.16,
+        "Precio_M2": 18900,
+        "Especificaciones": {
+            "Caras": 4,
+            "Variacion_Tono": "V3",
+            "Cajas_Palet": 30
+        },
+        "imagen": "p7_1.jpeg"
+    },
+    {
+        "Linea": "CONCRETO",
+        "Modelo": "Concept - Mate",
+        "Marca": "Formigres Premium",
+        "Formato": "60x120 cm",
+        "Tipologia": "Mate RT",
+        "Rectificado": "Si",
+        "Uso": "LE",
+        "M2_Caja": 2.16,
+        "Precio_M2": 18900,
+        "Especificaciones": {
+            "Caras": 4,
+            "Variacion_Tono": "V3",
+            "Cajas_Palet": 30
+        },
+        "imagen": "p8_1.jpeg"
+    },
+    {
+        "Linea": "CONCRETO",
+        "Modelo": "Concreto CL - Mate",
+        "Marca": "Formigres Premium",
+        "Formato": "60x120 cm",
+        "Tipologia": "Mate RT",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": 2.16,
+        "Precio_M2": 18900,
+        "Especificaciones": {
+            "Caras": 4,
+            "Variacion_Tono": "V3",
+            "Cajas_Palet": 30
+        },
+        "imagen": "p9_1.jpeg"
+    },
+    {
+        "Linea": "MADERA",
+        "Modelo": "Caja - Mate Relieve",
+        "Marca": "Formigres Premium",
+        "Formato": "20x120 cm",
+        "Tipologia": "Relevo Mate",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": 1.68,
+        "Precio_M2": 17000,
+        "Especificaciones": {
+            "Caras": 12,
+            "Variacion_Tono": "V3",
+            "Cajas_Palet": 42
+        },
+        "imagen": "p11_1.jpeg"
+    },
+    {
+        "Linea": "MADERA",
+        "Modelo": "Carvalho NAT CL - Mate",
+        "Marca": "Formigres Premium",
+        "Formato": "20x120 cm",
+        "Tipologia": "Mate",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": 1.68,
+        "Precio_M2": 17000,
+        "Especificaciones": {
+            "Caras": 12,
+            "Variacion_Tono": "V3",
+            "Cajas_Palet": 42
+        },
+        "imagen": "p12_1.jpeg"
+    },
+    {
+        "Linea": "MADERA",
+        "Modelo": "Carvalho Natural - Mate",
+        "Marca": "Formigres Premium",
+        "Formato": "20x120 cm",
+        "Tipologia": "Satinado Mate",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": 1.68,
+        "Precio_M2": 17000,
+        "Especificaciones": {
+            "Caras": 12,
+            "Variacion_Tono": "V3",
+            "Cajas_Palet": 42
+        },
+        "imagen": "p13_1.jpeg"
+    },
+    {
+        "Linea": "MADERA",
+        "Modelo": "Fresno - Mate",
+        "Marca": "Formigres Premium",
+        "Formato": "20x120 cm",
+        "Tipologia": "Satinado Mate",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": 1.68,
+        "Precio_M2": 17000,
+        "Especificaciones": {
+            "Caras": 9,
+            "Variacion_Tono": "V3",
+            "Cajas_Palet": 42
+        },
+        "imagen": "p14_1.jpeg"
+    },
+    {
+        "Linea": "MADERA",
+        "Modelo": "Piemont - Mate",
+        "Marca": "Formigres",
+        "Formato": "20x120 cm",
+        "Tipologia": "Relevo Mate",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": 1.68,
+        "Precio_M2": 17000,
+        "Especificaciones": {
+            "Caras": 12,
+            "Variacion_Tono": "V3"
+        },
+        "imagen": "p15_1.jpeg"
+    },
+    {
+        "Linea": "MADERA",
+        "Modelo": "Taruma - Mate Relieve",
+        "Marca": "Formigres",
+        "Formato": "20x120 cm",
+        "Tipologia": "Mate Relieve",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": 1.68,
+        "Precio_M2": 17000,
+        "Especificaciones": {
+            "Caras": 12,
+            "Variacion_Tono": "V3"
+        },
+        "imagen": "p16_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "Gran Vision - Granillado",
+        "Marca": "Rochamaxx",
+        "Formato": "82x82 cm",
+        "Tipologia": "ABS",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": 1.68,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V2",
+            "Cajas_Palet": 42
+        },
+        "imagen": "p18_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Cremo Delicato - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "67x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.83,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V2",
+            "Peso_Caja_kg": 45,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 40
+        },
+        "imagen": "p19_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Damasco - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "67x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.83,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V3",
+            "Peso_Caja_kg": 45,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 40
+        },
+        "imagen": "p44_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Marmo Allure - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "67x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.83,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V2",
+            "Peso_Caja_kg": 45,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 40
+        },
+        "imagen": "p21_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Marmo Gris - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "82x82 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.7,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V2",
+            "Espesor": "8.4 mm",
+            "Peso_Caja_kg": 46,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 28
+        },
+        "imagen": "p32_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Marmo Negro - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "61x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.83,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V3",
+            "Peso_Caja_kg": 45,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 40
+        },
+        "imagen": "p23_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Oro Realle - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "67x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.83,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V2",
+            "Peso_Caja_kg": 45,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 40
+        },
+        "imagen": "p24_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Statuario - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "67x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.83,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V3",
+            "Peso_Caja_kg": 45,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 40
+        },
+        "imagen": "p25_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Evok - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "67x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.83,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V2",
+            "Peso_Caja_kg": 45,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 40
+        },
+        "imagen": "p26_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Caravaggio - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "61x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.83,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V3",
+            "Peso_Caja_kg": 45,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 40
+        },
+        "imagen": "p27_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Bronze - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "67x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.83,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V2",
+            "Peso_Caja_kg": 45,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 40
+        },
+        "imagen": "p28_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Mirage - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "61x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.83,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V2",
+            "Peso_Caja_kg": 45,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 40
+        },
+        "imagen": "p29_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Marmo Imperial - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "67x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.83,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V2",
+            "Peso_Caja_kg": 45,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 40
+        },
+        "imagen": "p30_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Apunan - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "61x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.83,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V2",
+            "Peso_Caja_kg": 45,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 40
+        },
+        "imagen": "p31_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Marmo Gris - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "67x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.83,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V2",
+            "Peso_Caja_kg": 45,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 40
+        },
+        "imagen": "p32_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Lexus - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "67x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.83,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V2",
+            "Peso_Caja_kg": 45,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 40
+        },
+        "imagen": "p33_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Arabesco - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "61x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.7,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V2",
+            "Peso_Caja_kg": 46,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 28
+        },
+        "imagen": "p34_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Iris - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "61x116 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.7,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V3",
+            "Peso_Caja_kg": 46,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 28
+        },
+        "imagen": "p35_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Crema - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "82x82 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.7,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V3",
+            "Peso_Caja_kg": 46,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 28
+        },
+        "imagen": "p36_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Montreal - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "82x82 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.7,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V3",
+            "Peso_Caja_kg": 46,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 28
+        },
+        "imagen": "p37_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Golden - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "82x82 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.7,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V3",
+            "Peso_Caja_kg": 46,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 28
+        },
+        "imagen": "p38_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Marmo Brown - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "82x82 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.7,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V3",
+            "Peso_Caja_kg": 46,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 28
+        },
+        "imagen": "p39_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Silver - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "82x82 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.7,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V3",
+            "Peso_Caja_kg": 46,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 28
+        },
+        "imagen": "p40_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Marmo Douro - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "82x82 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.7,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V3",
+            "Peso_Caja_kg": 46,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 28
+        },
+        "imagen": "p41_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Apollo - Satinado",
+        "Marca": "Rochamaxx",
+        "Formato": "82x82 cm",
+        "Tipologia": "Satinado",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": 2.7,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V2",
+            "Peso_Caja_kg": 46,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 28
+        },
+        "imagen": "p42_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Dommus - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "82x82 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.7,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V3",
+            "Peso_Caja_kg": 46,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 28
+        },
+        "imagen": "p43_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "HD Damasco - Pulido",
+        "Marca": "Rochamaxx",
+        "Formato": "82x82 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 2.7,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V3",
+            "Peso_Caja_kg": 46,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 28
+        },
+        "imagen": "p44_1.jpeg"
+    },
+    {
+        "Linea": "MÁRMOL",
+        "Modelo": "PR7085 - Pulido",
+        "Marca": "Rochaforte",
+        "Formato": "70x70 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 3.43,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V3",
+            "Peso_Caja_kg": 53,
+            "Piezas_Caja": 7,
+            "Cajas_Palet": 24
+        },
+        "imagen": "p45_1.jpeg"
+    },
+    {
+        "Linea": "URBAN STONE",
+        "Modelo": "Apollo - Mate",
+        "Marca": "Rochamaxx",
+        "Formato": "61x116 cm",
+        "Tipologia": "Satinado",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": 2.83,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V2",
+            "Peso_Caja_kg": 45,
+            "Piezas_Caja": 4,
+            "Cajas_Palet": 40
+        },
+        "imagen": "p47_1.jpeg"
+    },
+    {
+        "Linea": "URBAN STONE",
+        "Modelo": "Arenito CZ - Mate",
+        "Marca": "Formigres Premium",
+        "Formato": "88x88 cm",
+        "Tipologia": "Mate",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": null,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 4,
+            "Variacion_Tono": "V3"
+        },
+        "imagen": "p48_1.jpeg"
+    },
+    {
+        "Linea": "URBAN STONE",
+        "Modelo": "Arenito BG - Mate",
+        "Marca": "Formigres Premium",
+        "Formato": "88x88 cm",
+        "Tipologia": "Mate",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": null,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 4,
+            "Variacion_Tono": "V3"
+        },
+        "imagen": "p49_1.jpeg"
+    },
+    {
+        "Linea": "URBAN STONE",
+        "Modelo": "Arenito Black - Mate",
+        "Marca": "Formigres Premium",
+        "Formato": "88x88 cm",
+        "Tipologia": "Mate",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": null,
+        "Precio_M2": 24000,
+        "Especificaciones": {
+            "Caras": 3,
+            "Variacion_Tono": "V3"
+        },
+        "imagen": "p50_1.jpeg"
+    },
+    {
+        "Linea": "70X70",
+        "Modelo": "Gris Mate",
+        "Marca": "Rochaforte",
+        "Formato": "70x70 cm",
+        "Tipologia": "Acetinado",
+        "Rectificado": "Si",
+        "Uso": "LD",
+        "M2_Caja": 3.43,
+        "Precio_M2": 13500,
+        "Especificaciones": {
+            "Caras": 3,
+            "Espesor": "7.2 mm",
+            "Peso_Caja_kg": 53,
+            "Piezas_Caja": 7,
+            "Cajas_Palet": 24
+        },
+        "imagen": "p52_1.jpeg"
+    },
+    {
+        "Linea": "70X70",
+        "Modelo": "R70072 GRIS - GRANILLADO",
+        "Marca": "Rochaforte",
+        "Formato": "70x70 cm",
+        "Tipologia": "Granillado",
+        "Rectificado": "Si",
+        "Uso": "LE",
+        "M2_Caja": 3.43,
+        "Precio_M2": 13500,
+        "Especificaciones": {
+            "Caras": 3,
+            "Espesor": "7.2 mm",
+            "Peso_Caja_kg": 53,
+            "Piezas_Caja": 7,
+            "Cajas_Palet": 24
+        },
+        "imagen": "p53_1.jpeg"
+    },
+    {
+        "Linea": "PILETA",
+        "Modelo": "TDL Algarve",
+        "Marca": "Ceral",
+        "Formato": "10x10 cm",
+        "Tipologia": "Esmaltado",
+        "Rectificado": "Si",
+        "Uso": "LA/LF/LP",
+        "M2_Caja": 2.07,
+        "Precio_M2": 27850,
+        "Especificaciones": {
+            "Variacion_Tono": "V4",
+            "Peso_Caja_kg": 26.4,
+            "Piezas_Caja": 198,
+            "Cajas_Palet": 54
+        },
+        "imagen": "p55_1.jpeg"
+    },
+    {
+        "Linea": "BLANCA",
+        "Modelo": "R40082 Blanco Mate",
+        "Marca": "Rochaforte",
+        "Formato": "40x75 cm",
+        "Tipologia": "Mate",
+        "Rectificado": "Si",
+        "Uso": "LA",
+        "M2_Caja": 3.0,
+        "Precio_M2": 13520,
+        "Especificaciones": {
+            "Caras": 1,
+            "Peso_Caja_kg": 48,
+            "Piezas_Caja": 10,
+            "Cajas_Palet": 48
+        },
+        "imagen": "p57_1.jpeg"
+    },
+    {
+        "Linea": "BLANCA",
+        "Modelo": "R40002 Blanco Pulido",
+        "Marca": "Rochaforte",
+        "Formato": "40x75 cm",
+        "Tipologia": "Pulido",
+        "Rectificado": "Si",
+        "Uso": "LC",
+        "M2_Caja": 3.0,
+        "Precio_M2": 17900,
+        "Especificaciones": {
+            "Caras": 1,
+            "Variacion_Tono": "V1",
+            "Peso_Caja_kg": 48,
+            "Piezas_Caja": 10,
+            "Cajas_Palet": 48
+        },
+        "imagen": "p58_1.jpeg"
+    }
+]

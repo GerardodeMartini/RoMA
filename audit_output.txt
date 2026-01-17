@@ -1,0 +1,11 @@
+Total pages found: 59
+Pages with >1 valid image (> 30000 bytes): 8
+------------------------------
+Page 16: 3 images -> ['p16_1.jpeg', 'p16_2.jpeg', 'p16_3.jpeg']
+Page 1: 2 images -> ['p1_1.png', 'p1_2.png']
+Page 53: 2 images -> ['p53_1.jpeg', 'p53_2.jpeg']
+Page 54: 2 images -> ['p54_1.jpeg', 'p54_2.png']
+Page 57: 2 images -> ['p57_1.jpeg', 'p57_2.jpeg']
+Page 58: 2 images -> ['p58_1.jpeg', 'p58_2.jpeg']
+Page 59: 2 images -> ['p59_1.png', 'p59_3.png']
+Page 5: 3 images -> ['p5_1.jpeg', 'p5_2.jpeg', 'p5_3.jpeg']

@@ -1,0 +1,8 @@
+Total Products Checked: 49
+------------------------------
+Products with MISSING M2/BOX (Calculator Disabled): 3
+ - Arenito CZ - Mate
+ - Arenito BG - Mate
+ - Arenito Black - Mate
+------------------------------
+Products with MISSING PRICE (Shows 'Consultar'): 0
