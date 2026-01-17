@@ -30,7 +30,9 @@
             <nav class="main-nav">
                 <ul class="nav-links">
                     <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                    <li><a href="{% url 'inicio' %}#servicios">Nuestros Servicios</a></li>
                     <li><a href="{% url 'project_list' %}">Proyectos</a></li>
+                    <li><a href="#porcelanatos">Porcelanatos</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                     {% if user.is_authenticated %}
                     <li><a href="{% url 'admin:index' %}" class="admin-link">Admin</a></li>
