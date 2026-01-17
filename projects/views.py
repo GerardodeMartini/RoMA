@@ -6,6 +6,9 @@ def inicio(request):
     featured_projects = Project.objects.all().order_by('-completion_date')[:3]
     return render(request, 'inicio.html', {'featured_projects': featured_projects})
 
+def porcelanatos(request):
+    return render(request, 'porcelanatos.html')
+
 def project_list(request):
     category = request.GET.get('category')
     if category:
