@@ -22,14 +22,14 @@
     <header class="header">
         <div class="container header-container">
             <!-- Logo (Left) -->
-            <a href="{% url 'home' %}" class="logo-link">
+            <a href="{% url 'inicio' %}" class="logo-link">
                 <img src="{% static 'img/logo_roma_white.png' %}" alt="Logo Ingeniería RoMA" class="logo-img">
             </a>
 
             <!-- Navigation (Right) -->
             <nav class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="{% url 'home' %}">Inicio</a></li>
+                    <li><a href="{% url 'inicio' %}">Inicio</a></li>
                     <li><a href="{% url 'project_list' %}">Proyectos</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                     {% if user.is_authenticated %}

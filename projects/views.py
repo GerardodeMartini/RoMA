@@ -1,10 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Project
 
-def home(request):
+def inicio(request):
     # Show last 3 featured projects (or just last 3 created)
     featured_projects = Project.objects.all().order_by('-completion_date')[:3]
-    return render(request, 'home.html', {'featured_projects': featured_projects})
+    return render(request, 'inicio.html', {'featured_projects': featured_projects})
 
 def project_list(request):
     category = request.GET.get('category')
