@@ -34,12 +34,12 @@
                     <li><a href="{% url 'inicio' %}">Inicio</a></li>
                     <li><a href="{% url 'inicio' %}#servicios">Nuestros Servicios</a></li>
                     <li><a href="{% url 'project_list' %}">Proyectos</a></li>
-                    <li><a href="{% url 'porcelanatos' %}">Porcelanatos</a></li>
+                    <li><a href="{% url 'productos_hub' %}">Productos</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                     {% if user.is_authenticated %}
-                    <li><a href="{% url 'admin:index' %}" class="admin-link">Admin</a></li>
+                    <li><a href="{% url 'edicion' %}" class="admin-link">Admin</a></li>
                     {% else %}
-                    <li><a href="{% url 'admin:index' %}" class="admin-link"><i class="fa fa-lock"></i></a></li>
+                    <li><a href="{% url 'login' %}" class="admin-link"><i class="fa fa-lock"></i></a></li>
                     {% endif %}
                 </ul>
             </nav>
@@ -62,9 +62,20 @@
                 <h3>Contacto</h3>
                 <p><i class="fa fa-envelope"></i> oys.ing.roma@gmail.com</p>
                 <div style="margin-top: 10px;">
-                    <p style="margin-bottom: 5px;"><i class="fa fa-phone"></i> 2954-330377 (Ing. Ind. Miguel A. Díaz)
+                    <p style="margin-bottom: 8px;">
+                        <a href="https://wa.me/5492954330377?text=Hola%20Miguel%2C%20estuve%20viendo%20el%20Sitio%20de%20RoMA%20y%20quer%C3%ADa%20consultarles%20por%20un%20proyecto%20de"
+                            target="_blank" style="color: #ccc; text-decoration: none;">
+                            <i class="fab fa-whatsapp" style="color: #25d366; font-size: 1.1em;"></i> 2954-330377 (Ing.
+                            Miguel Díaz)
+                        </a>
                     </p>
-                    <p><i class="fa fa-phone"></i> 351-7632522 (Ing. Civil Rodrigo N. Díaz)</p>
+                    <p>
+                        <a href="https://wa.me/5493517632522?text=Hola%20Rodrigo%2C%20estuve%20viendo%20el%20Sitio%20de%20RoMA%20y%20quer%C3%ADa%20consultarles%20por%20un%20proyecto%20de"
+                            target="_blank" style="color: #ccc; text-decoration: none;">
+                            <i class="fab fa-whatsapp" style="color: #25d366; font-size: 1.1em;"></i> 351-7632522 (Ing.
+                            Rodrigo Díaz)
+                        </a>
+                    </p>
                 </div>
                 <p style="margin-top: 10px;"><i class="fa fa-map-marker-alt"></i> Santa Rosa, La Pampa, Argentina</p>
             </div>
@@ -86,8 +97,9 @@
                 </div>
             </div>
 
-            <p class="copyright" style="margin: 0; color: #888;">&copy; {% now "Y" %} RoMA Ingeniería. Todos los
-                derechos reservados.</p>
+            <p class="copyright" style="margin: 0; color: #888;">&copy; {% now "Y" %} RoMA Ingeniería y <a
+                    href="https://portfolio.gdemar.com.ar/" target="_blank"
+                    style="color: #888; text-decoration: none;">GdeMar</a>. Todos los derechos reservados.</p>
         </div>
     </footer>
 

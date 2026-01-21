@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container section">
+    <div class="row justify-content-center">
+        <div class="col-md-6 offset-md-3">
+            <div class="login-container text-center">
+                <h2 class="section-title">Iniciar Sesión</h2>
+                <form method="post" class="login-form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_username">Usuario</label>
+                        {{ form.username }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_password">Contraseña</label>
+                        {{ form.password }}
+                    </div>
+                    <button type="submit" class="btn mt-2">Ingresar -></button>
+                </form>
+                {% if form.errors %}
+                <p class="error-msg mt-2" style="color: var(--accent-color-2);">Usuario o contraseña incorrectos.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

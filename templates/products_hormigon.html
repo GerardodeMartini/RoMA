@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container text-center">
+        <h1>Catálogo de Prefabricados de Hormigón</h1>
+        <p>Soluciones duraderas para tu obra.</p>
+    </div>
+</section>
+
+<section class="section catalog-section">
+    <div class="container">
+        <div class="mb-4">
+            <a href="{% url 'productos_hub' %}" class="btn-outline" style="text-decoration: none;">&larr; Volver a
+                Productos</a>
+        </div>
+
+        <div class="row" style="display: flex; flex-wrap: wrap; margin: 0 -15px;">
+            {% for p in products %}
+            <div class="col-lg-4 col-md-6 mb-4" style="padding: 0 15px;">
+                <div class="product-card">
+                    <div class="product-image"
+                        style="height: 250px; background: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; overflow: hidden;"
+                        onclick='openProductModal(this)' data-title="{{ p.title }}"
+                        data-price="{{ p.price|default_if_none:'0' }}" data-dimensions="{{ p.dimensions }}"
+                        data-description="{{ p.description|escapejs }}"
+                        data-images="{{ p.image.url }}{% for img in p.images.all %},{{ img.image.url }}{% endfor %}">
+
+                        {% if p.image %}
+                        <img src="{{ p.image.url }}" alt="{{ p.title }}" class="img-fluid clickable-image">
+                        {% endif %}
+                    </div>
+                    <div class="product-info p-3">
+                        <div class="product-title" style="font-size: 1.2rem; font-weight: bold;">{{ p.title }}</div>
+                        {% if p.price %}
+                        <div class="product-price"
+                            style="color: var(--accent-color-2); font-weight: bold; margin-bottom: 5px;">${{
+                            p.price|floatformat:0 }} +IVA</div>
+                        {% else %}
+                        <div class="product-price"
+                            style="color: var(--text-color); font-weight: bold; margin-bottom: 5px;">Consultar Precio
+                        </div>
+                        {% endif %}
+
+                        <div class="text-muted small mb-2">{{ p.dimensions }}</div>
+
+                        <button class="btn btn-sm btn-block"
+                            style="background-color: var(--primary-color); color: white;"
+                            onclick='openProductModal(this.parentNode.previousElementSibling)'>Ver Detalle</button>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center">
+                <p class="lead text-muted">Aún no hay productos cargados en esta categoría.</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Product Detail Modal -->
+        <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-hidden="true"
+            style="z-index: 10500;">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content" style="border: none; border-radius: 15px; overflow: hidden;">
+                    <div class="modal-body p-0">
+                        <div class="row no-gutters">
+                            <div class="col-lg-7 bg-light d-flex align-items-center justify-content-center"
+                                style="min-height: 400px; background-color: #f8f9fa;">
+                                <div id="modalCarousel" class="carousel slide" data-ride="carousel"
+                                    style="width: 100%; height: 100%;">
+                                    <div class="carousel-inner" id="modalCarouselInner"
+                                        style="height: 100%; display: flex; align-items: center;">
+                                        <!-- Slides injected via JS -->
+                                    </div>
+                                    <a class="carousel-control-prev" href="#modalCarousel" role="button"
+                                        data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"
+                                            style="background-color: rgba(0,0,0,0.3); border-radius: 50%; padding: 20px;"></span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#modalCarousel" role="button"
+                                        data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"
+                                            style="background-color: rgba(0,0,0,0.3); border-radius: 50%; padding: 20px;"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 p-4 d-flex flex-column">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                    style="position: absolute; right: 15px; top: 10px;">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h3 id="modalTitle" class="mb-2" style="font-weight: 700;">-</h3>
+                                <p id="modalDimensions" class="text-muted mb-3" style="font-size: 0.9rem;">-</p>
+                                <h4 id="modalPrice" class="mb-4"
+                                    style="color: var(--accent-color-2); font-weight: bold;">-</h4>
+
+                                <div class="description-box mb-4">
+                                    <h6 class="font-weight-bold">Descripción:</h6>
+                                    <p id="modalDescription" style="white-space: pre-line; color: #555;">-</p>
+                                </div>
+
+                                <div class="mt-auto">
+                                    <!-- Use dynamic contact link? For now fixed as per general contact -->
+                                    <a href="https://wa.me/5492954595243?text=Hola,%20estoy%20interesado%20en%20los%20prefabricados%20de%20hormigón."
+                                        target="_blank" class="btn btn-success btn-block">
+                                        <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function openProductModal(element) {
+        const title = element.getAttribute('data-title');
+        const price = parseFloat(element.getAttribute('data-price')) || 0;
+        const dimensions = element.getAttribute('data-dimensions');
+        const description = element.getAttribute('data-description');
+        const imagesStr = element.getAttribute('data-images');
+        const images = imagesStr ? imagesStr.split(',') : [];
+
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalDimensions').innerText = dimensions ? 'Medidas: ' + dimensions : '';
+        document.getElementById('modalDescription').innerText = description;
+
+        const priceEl = document.getElementById('modalPrice');
+        if (price > 0) {
+            priceEl.innerText = '$' + price.toLocaleString('es-AR') + ' +IVA';
+        } else {
+            priceEl.innerText = 'Consultar Precio';
+        }
+
+        const carouselInner = document.getElementById('modalCarouselInner');
+        carouselInner.innerHTML = '';
+
+        if (images.length > 0) {
+            images.forEach((img, index) => {
+                // If url is empty or 'None' skip or handle
+                if (!img || img === 'None') return;
+
+                const active = index === 0 ? 'active' : '';
+                const item = `<div class="carousel-item ${active}" style="height: 100%; text-align: center;"><img src="${img}" class="img-fluid" style="max-height: 400px; max-width: 100%; object-fit: contain;"></div>`;
+                carouselInner.innerHTML += item;
+            });
+        } else {
+            carouselInner.innerHTML = '<div class="carousel-item active" style="height: 100%; text-align: center;"><p class="mt-5">Sin imagen</p></div>';
+        }
+
+        $('#productModal').modal('show');
+    }
+</script>
+
+<style>
+    .catalog-section {
+        padding: 40px 0;
+    }
+
+    .product-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        height: 100%;
+        border: 1px solid #eee;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-outline {
+        border: 1px solid #ccc;
+        padding: 5px 15px;
+        border-radius: 20px;
+        color: #555;
+        transition: all 0.2s;
+    }
+
+    .btn-outline:hover {
+        background: #eee;
+        text-decoration: none;
+        color: #333;
+    }
+</style>
+{% endblock %}

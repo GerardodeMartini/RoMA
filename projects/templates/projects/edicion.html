@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container section text-center">
+    <h1 class="section-title">Panel de Edición</h1>
+    <p class="mb-5">Bienvenido, {{ user.first_name|default:user.username }}. Seleccione una opción para gestionar el
+        contenido.</p>
+
+    <div class="services-grid" style="justify-content: center; display: flex; gap: 40px; flex-wrap: wrap;">
+
+        <!-- Gestionar Proyectos -->
+        <div class="service-card" style="flex: 0 1 300px;">
+            <i class="fa fa-home"></i>
+            <h3>Proyectos</h3>
+            <p>Gestionar portafolio de obras.</p>
+            <div style="display: flex; gap: 10px; justify-content: center; flex-direction: column;">
+                <a href="{% url 'add_project' %}" class="btn mt-2">Agregar Nuevo</a>
+                <a href="{% url 'manage_projects' %}" class="btn-outline mt-2">Editar Existentes</a>
+            </div>
+        </div>
+
+        <!-- Gestionar Porcelanatos -->
+        <div class="service-card" style="flex: 0 1 300px;">
+            <i class="fa fa-th-large"></i>
+            <h3>Porcelanatos</h3>
+            <p>Gestionar catálogo de productos.</p>
+            <div style="display: flex; gap: 10px; justify-content: center; flex-direction: column;">
+                <a href="{% url 'add_porcelanato' %}" class="btn mt-2">Agregar Nuevo</a>
+                <a href="{% url 'manage_porcelanatos' %}" class="btn-outline mt-2">Editar Existentes</a>
+            </div>
+        </div>
+
+        <!-- Gestionar Hormigón -->
+        <div class="service-card" style="flex: 0 1 300px;">
+            <i class="fa fa-cubes"></i>
+            <h3>Hormigón</h3>
+            <p>Gestionar prefabricados.</p>
+            <div style="display: flex; gap: 10px; justify-content: center; flex-direction: column;">
+                <a href="{% url 'add_hormigon' %}" class="btn mt-2">Agregar Nuevo</a>
+                <a href="{% url 'manage_hormigones' %}" class="btn-outline mt-2">Editar Existentes</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mt-2" style="margin-top: 60px;">
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn-outline">Cerrar Sesión</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

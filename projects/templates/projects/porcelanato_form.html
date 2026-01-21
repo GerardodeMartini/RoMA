@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container section">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="section-title">{{ title }}</h2>
+            <p class="text-muted mb-4"><span class="text-danger">*</span> Campos obligatorios</p>
+            <form method="post" enctype="multipart/form-data" class="login-form">
+                {% csrf_token %}
+
+                {% for field in form %}
+                {% if field.errors %}
+                <div class="alert alert-danger">
+                    {{ field.label }}: {{ field.errors|striptags }}
+                </div>
+                {% endif %}
+                {% endfor %}
+
+                {% if form.non_field_errors %}
+                <div class="alert alert-danger">
+                    {{ form.non_field_errors }}
+                </div>
+                {% endif %}
+
+                {% for field in form %}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">
+                        {{ field.label }}
+                        {% if field.field.required %}<span class="text-danger">*</span>{% endif %}
+                    </label>
+                    {{ field }}
+                    {% if field.errors %}
+                    <div class="text-danger">
+                        {{ field.errors }}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+
+                {% if existing_images %}
+                <div class="mt-4 mb-4">
+                    <h3>Imágenes Adicionales Existentes</h3>
+                    <p class="text-muted"><small>Marque los elementos que desea eliminar.</small></p>
+                    <div class="row">
+                        {% for img in existing_images %}
+                        <div class="col-md-3 text-center mb-3">
+                            <img src="{{ img.image.url }}" alt="Imagen {{ forloop.counter }}"
+                                class="img-fluid rounded mb-2" style="max-height: 100px;">
+                            <br>
+                            <label><input type="checkbox" name="delete_images" value="{{ img.id }}"> Eliminar</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                <div class="mt-2 text-center">
+                    <button type="submit" class="btn">Guardar</button>
+                    <a href="{% url 'edicion' %}" class="btn-outline ml-2">Cancelar</a>
+                    {% if form.instance.pk %}
+                    <a href="{% url 'delete_porcelanato' form.instance.pk %}" class="btn btn-outline-danger ml-2"
+                        style="border-color: #dc3545; color: #dc3545;">Eliminar</a>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

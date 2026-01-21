@@ -1,20 +1,17 @@
 from django.contrib import admin
-from .models import Project, ProjectImage, ProjectVideo
+from .models import Project, ProjectImage, ProjectVideo, AuditLog
 
-class ProjectImageInline(admin.TabularInline):
-    model = ProjectImage
-    extra = 1
-
-class ProjectVideoInline(admin.TabularInline):
-    model = ProjectVideo
-    extra = 1
-
-@admin.register(Project)
-class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('title', 'category', 'client', 'completion_date')
-    list_filter = ('category', 'completion_date')
-    search_fields = ('title', 'description', 'client')
-    inlines = [ProjectImageInline, ProjectVideoInline]
-
+admin.site.register(Project)
+# admin.site.register(Porcelanato)
 admin.site.register(ProjectImage)
 admin.site.register(ProjectVideo)
+
+@admin.register(AuditLog)
+class AuditLogAdmin(admin.ModelAdmin):
+    list_display = ('user', 'action', 'timestamp', 'ip_address')
+    list_filter = ('action', 'timestamp')
+    search_fields = ('user__username', 'user__email', 'ip_address')
+    readonly_fields = ('user', 'action', 'timestamp', 'ip_address')
+    
+    def has_add_permission(self, request):
+        return False

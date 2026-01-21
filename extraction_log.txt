@@ -1,0 +1,6 @@
+Output directory exists: static/img/extracted_pymupdf
+PDF opened: 59 pages.
+------------------------------
+Extraction Completed.
+Total Images: 128
+Saved to: static/img/extracted_pymupdf

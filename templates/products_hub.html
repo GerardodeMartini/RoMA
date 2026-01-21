@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container section" style="min-height: 60vh; display: flex; align-items: center;">
+    <div class="row w-100 justify-content-center">
+        <div class="col-12 text-center mb-5">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <p class="text-muted">Seleccione una categoría para ver nuestro catálogo</p>
+        </div>
+
+        <!-- Option 1: Hormigón -->
+        <div class="col-md-5 mb-4">
+            <a href="{% url 'productos_hormigon' %}" class="card-link" style="text-decoration: none;">
+                <div class="glass-card text-center p-5 h-100 product-hub-card">
+                    <i class="fa fa-cubes fa-3x mb-3" style="color: var(--primary-color);"></i>
+                    <h3>Prefabricados de Hormigón</h3>
+                    <p class="text-muted">Caños, pilares, postes y soluciones estructurales.</p>
+                    <span class="btn mt-3" style="background-color: var(--primary-color); color: white;">Ver Catálogo
+                        &rarr;</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Option 2: Revestimientos (Porcelanatos) -->
+        <div class="col-md-5 mb-4">
+            <a href="{% url 'porcelanatos' %}" class="card-link" style="text-decoration: none;">
+                <div class="glass-card text-center p-5 h-100 product-hub-card">
+                    <i class="fa fa-layer-group fa-3x mb-3" style="color: var(--primary-color);"></i>
+                    <h3>Revestimientos</h3>
+                    <p class="text-muted">Porcelanatos, cerámicas y grifería de alta calidad.</p>
+                    <span class="btn mt-3" style="background-color: var(--primary-color); color: white;">Ver Catálogo
+                        &rarr;</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .product-hub-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .product-hub-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-color: var(--primary-color);
+    }
+
+    /* Animate icon slightly too */
+    .product-hub-card:hover i {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+
+    .btn,
+    i {
+        transition: all 0.3s ease;
+    }
+
+    /* Ensure full card clickability */
+    .card-link {
+        display: block;
+        height: 100%;
+        color: inherit;
+    }
+</style>
+{% endblock %}

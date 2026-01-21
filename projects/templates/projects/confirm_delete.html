@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container py-5" style="margin-top: 80px;">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center p-5">
+                    <h3 class="card-title text-danger mb-4">¿Eliminar Porcelanato?</h3>
+                    <p class="lead mb-4">¿Estás seguro de que deseas eliminar <strong>"{{ object.title }}"</strong>?
+                        Esta acción no se puede deshacer.</p>
+
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="{% url cancel_url %}" class="btn btn-outline-secondary mr-3">Cancelar</a>
+                            <button type="submit" class="btn btn-danger">Confirmar Eliminación</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

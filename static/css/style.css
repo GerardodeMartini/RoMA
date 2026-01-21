@@ -824,3 +824,39 @@ img {
 .weather-widget-container:hover #weather-ticker {
     animation-play-state: paused;
 }
+
+/* Login Styles */
+.login-container {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #eee;
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+.login-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
