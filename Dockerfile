@@ -12,6 +12,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     libpq-dev \
     gcc \
+    dos2unix \
     && rm -rf /var/lib/apt/lists/*
 
 # Install python dependencies
@@ -22,9 +23,9 @@ RUN pip install -r requirements.txt
 # Copy project
 COPY . /app/
 
-# Make entrypoint executable
+# Make entrypoint executable and fix line endings (Critical for Windows users)
 COPY entrypoint.sh /app/entrypoint.sh
-RUN chmod +x /app/entrypoint.sh
+RUN dos2unix /app/entrypoint.sh && chmod +x /app/entrypoint.sh
 
 # Run entrypoint.sh
 ENTRYPOINT ["/app/entrypoint.sh"]
