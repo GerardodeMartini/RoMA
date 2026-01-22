@@ -140,3 +140,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = 'edicion'
 LOGOUT_REDIRECT_URL = 'inicio'
+
+if not DEBUG:
+    # Tell Django to trust the X-Forwarded-Proto header coming from the proxy (Coolify/Traefik)
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    
+    # Redirect all non-HTTPS traffic to HTTPS
+    SECURE_SSL_REDIRECT = True
+    
+    # Session and CSRF cookies should be secure (HTTPS only)
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    
+    # HTTP Strict Transport Security settings
+    SECURE_HSTS_SECONDS = 31536000  # 1 year
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
