@@ -41,6 +41,17 @@ class ProjectVideo(models.Model):
     def __str__(self):
         return f"Video de {self.project.title}"
 
+    def get_embed_url(self):
+        if not self.video_url:
+            return None
+        import re
+        # Regex covers: youtu.be/<id>, youtube.com/watch?v=<id>, youtube.com/embed/<id>
+        regex = r'(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})'
+        match = re.search(regex, self.video_url)
+        if match:
+            return f"https://www.youtube.com/embed/{match.group(1)}"
+        return self.video_url  # Fallback for non-youtube or unparseable URLs
+
 class Porcelanato(models.Model):
     CATEGORY_CHOICES = [
         ('INTERIOR', 'Interior'),

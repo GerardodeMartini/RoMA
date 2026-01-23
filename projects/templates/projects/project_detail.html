@@ -54,9 +54,12 @@
                         <source src="{{ video.video_file.url }}">
                         Tu navegador no soporta videos HTML5.
                     </video>
+                    {% elif video.get_embed_url %}
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="{{ video.get_embed_url }}" allowfullscreen></iframe>
+                    </div>
                     {% elif video.video_url %}
-                    <p><a href="{{ video.video_url }}" target="_blank">Ver Video Externo: {{ video.title }}</a></p>
-                    <!-- You would need an embed parser logic here for youtube/vimeo, keeping it simple for now -->
+                    <p><a href="{{ video.video_url }}" target="_blank">Ver Video Externo</a></p>
                     {% endif %}
                     <p class="video-title">{{ video.title }}</p>
                 </div>

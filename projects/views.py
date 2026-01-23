@@ -62,8 +62,15 @@ def add_project(request):
             project = form.save()
             for f in request.FILES.getlist('extra_images'):
                 ProjectImage.objects.create(project=project, image=f)
-            for f in request.FILES.getlist('extra_videos'):
-                ProjectVideo.objects.create(project=project, video_file=f)
+            for f in request.FILES.getlist('extra_images'):
+                ProjectImage.objects.create(project=project, image=f)
+            
+            # Process video URLs handled by generic CharField in form (not bound to model directly)
+            video_urls_raw = form.cleaned_data.get('video_urls')
+            if video_urls_raw:
+                urls = [url.strip() for url in video_urls_raw.splitlines() if url.strip()]
+                for url in urls:
+                    ProjectVideo.objects.create(project=project, video_url=url, title="Video")
             return redirect('edicion')
     else:
         form = ProjectForm()
@@ -84,8 +91,15 @@ def edit_project(request, pk):
             # Handle new uploads
             for f in request.FILES.getlist('extra_images'):
                 ProjectImage.objects.create(project=project, image=f)
-            for f in request.FILES.getlist('extra_videos'):
-                ProjectVideo.objects.create(project=project, video_file=f)
+            for f in request.FILES.getlist('extra_images'):
+                ProjectImage.objects.create(project=project, image=f)
+            
+            # Process video URLs
+            video_urls_raw = form.cleaned_data.get('video_urls')
+            if video_urls_raw:
+                urls = [url.strip() for url in video_urls_raw.splitlines() if url.strip()]
+                for url in urls:
+                    ProjectVideo.objects.create(project=project, video_url=url, title="Video")
             # Handle deletions
             for image_id in request.POST.getlist('delete_images'):
                 ProjectImage.objects.filter(id=image_id).delete()

@@ -31,10 +31,11 @@ class ProjectForm(forms.ModelForm):
         required=False, 
         label="Imágenes Adicionales (Seleccionar varias)"
     )
-    extra_videos = MultipleFileField(
-        widget=MultipleFileInput(attrs={'multiple': True, 'accept': 'video/*'}), 
+    video_urls = forms.CharField(
+        widget=forms.Textarea(attrs={'rows': 3, 'placeholder': 'Pegar enlaces de YouTube aquí (uno por línea)'}), 
         required=False, 
-        label="Videos Adicionales (Seleccionar varias)"
+        label="Videos de YouTube (Uno por línea)",
+        help_text="Ingrese solo enlaces de YouTube válidos."
     )
 
     class Meta:
