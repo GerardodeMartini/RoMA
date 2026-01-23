@@ -56,7 +56,10 @@
                     </video>
                     {% elif video.get_embed_url %}
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="{{ video.get_embed_url }}" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="{{ video.get_embed_url }}"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     {% elif video.video_url %}
                     <p><a href="{{ video.video_url }}" target="_blank">Ver Video Externo</a></p>
