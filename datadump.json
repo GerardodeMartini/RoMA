@@ -1,0 +1,847 @@
+[
+{
+  "model": "projects.project",
+  "pk": 1,
+  "fields": {
+    "title": "Obras y Trabajos Recientes",
+    "description": "Compilación de imágenes extraídas de la presentación institucional.",
+    "category": "CIVIL",
+    "client": "Varios",
+    "completion_date": null,
+    "main_image": "projects/gallery/0_X9.png",
+    "created_at": "2026-01-15T20:37:04.066Z",
+    "updated_at": "2026-01-15T20:37:04.237Z"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 1,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/0_X9.png",
+    "caption": "0_X9.png"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 2,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/10_X6.jpg",
+    "caption": "10_X6.jpg"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 3,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/11_X8.jpg",
+    "caption": "11_X8.jpg"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 4,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/12_X6.jpg",
+    "caption": "12_X6.jpg"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 5,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/13_X4.png",
+    "caption": "13_X4.png"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 6,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/1_X12.jpg",
+    "caption": "1_X12.jpg"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 7,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/2_X14.jpg",
+    "caption": "2_X14.jpg"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 8,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/3_X6.jpg",
+    "caption": "3_X6.jpg"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 9,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/4_X8.jpg",
+    "caption": "4_X8.jpg"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 10,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/5_X9.jpg",
+    "caption": "5_X9.jpg"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 11,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/6_X6.jpg",
+    "caption": "6_X6.jpg"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 12,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/7_X8.jpg",
+    "caption": "7_X8.jpg"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 13,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/8_X6.jpg",
+    "caption": "8_X6.jpg"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 14,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/9_X8.jpg",
+    "caption": "9_X8.jpg"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 3,
+  "fields": {
+    "title": "Cemento Gris - Mate",
+    "description": "Marca: Grupo Cristofoli\nTipología: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 1,78 m²\n• M² por Palet: 71,20 m²\n• Peso por Caja: 33 kg\n• Peso por Palet: 1.330 kg\n• M² por Pieza: 1,68 m²",
+    "category": "CEMENTO",
+    "dimensions": "77x77 cm",
+    "price": "16200.00",
+    "m2_per_box": "1.78",
+    "image": "porcelanatos/p3_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.694Z",
+    "updated_at": "2026-01-19T01:31:55.271Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 4,
+  "fields": {
+    "title": "Cemento Beige - Mate",
+    "description": "Marca: Grupo Cristofoli\nTipología: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 1,78 m²\n• M² por Palet: 71,20 m²\n• Peso por Caja: 33 kg\n• Peso por Palet: 1.330 kg\n• M² por Pieza: 1,68 m²",
+    "category": "CEMENTO",
+    "dimensions": "77x77 cm",
+    "price": "16200.00",
+    "m2_per_box": "1.78",
+    "image": "porcelanatos/p4_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.700Z",
+    "updated_at": "2026-01-19T01:31:55.268Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 5,
+  "fields": {
+    "title": "Cemento Gris - Pulido",
+    "description": "Marca: Grupo Cristofoli\nTipología: Pulido\nRectificado: Si\nUso: -\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Palet: 69.20\n• Peso por Caja: 33 kg\n• Peso por Palet: 1.380 kg",
+    "category": "CEMENTO",
+    "dimensions": "76x76 cm",
+    "price": "22140.00",
+    "m2_per_box": "1.73",
+    "image": "porcelanatos/p5_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.704Z",
+    "updated_at": "2026-01-19T01:21:14.271Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 6,
+  "fields": {
+    "title": "Bossa CZ - Granulado",
+    "description": "Marca: Formigres Premium\nTipología: Granulado RT\nRectificado: Si\nUso: LE\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 2,16 m²\n• M² por Palet: 64,8 m²",
+    "category": "CEMENTO",
+    "dimensions": "60x120 cm",
+    "price": "18900.00",
+    "m2_per_box": "2.16",
+    "image": "porcelanatos/p7_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.708Z",
+    "updated_at": "2026-01-19T01:31:55.264Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 7,
+  "fields": {
+    "title": "Concept - Mate",
+    "description": "Marca: Formigres Premium\nTipología: Mate RT\nRectificado: Si\nUso: LE\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 2,16 m²\n• M² por Palet: 64,8 m²",
+    "category": "CEMENTO",
+    "dimensions": "60x120 cm",
+    "price": "18900.00",
+    "m2_per_box": "2.16",
+    "image": "porcelanatos/p8_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.713Z",
+    "updated_at": "2026-01-19T01:31:55.261Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 8,
+  "fields": {
+    "title": "Concreto CL - Mate",
+    "description": "Marca: Formigres Premium\nTipología: Mate RT\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 2,16 m²\n• M² por Palet: 64,8 m²",
+    "category": "CEMENTO",
+    "dimensions": "60x120 cm",
+    "price": "18900.00",
+    "m2_per_box": "2.16",
+    "image": "porcelanatos/p9_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.718Z",
+    "updated_at": "2026-01-19T01:31:55.258Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 9,
+  "fields": {
+    "title": "Caja - Mate Relieve",
+    "description": "Marca: Formigres Premium\nTipología: Relevo Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 1,68 m²\n• M² por Palet: 70,56 m²",
+    "category": "MADERA",
+    "dimensions": "20x120 cm",
+    "price": "17000.00",
+    "m2_per_box": "1.68",
+    "image": "porcelanatos/p11_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.723Z",
+    "updated_at": "2026-01-19T01:31:55.255Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 10,
+  "fields": {
+    "title": "Carvalho NAT CL - Mate",
+    "description": "Marca: Formigres Premium\nTipología: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 1,68 m²\n• M² por Palet: 70,56 m²",
+    "category": "MADERA",
+    "dimensions": "20x120 cm",
+    "price": "17000.00",
+    "m2_per_box": "1.68",
+    "image": "porcelanatos/p12_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.727Z",
+    "updated_at": "2026-01-19T01:31:55.249Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 11,
+  "fields": {
+    "title": "Carvalho Natural - Mate",
+    "description": "Marca: Formigres Premium\nTipología: Satinado Mate\nRectificado: Si\nUso: LD",
+    "category": "MADERA",
+    "dimensions": "20x120 cm",
+    "price": "17000.00",
+    "m2_per_box": "1.68",
+    "image": "porcelanatos/p13_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.732Z",
+    "updated_at": "2026-01-19T00:41:42.272Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 12,
+  "fields": {
+    "title": "Fresno - Mate",
+    "description": "Marca: Formigres Premium\nTipología: Satinado Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 1,68 m²\n• M² por Palet: 70,56 m²",
+    "category": "MADERA",
+    "dimensions": "20x120 cm",
+    "price": "17000.00",
+    "m2_per_box": "1.68",
+    "image": "porcelanatos/p14_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.737Z",
+    "updated_at": "2026-01-19T01:31:55.246Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 13,
+  "fields": {
+    "title": "Piemont - Mate",
+    "description": "Marca: Formigres\nTipología: Relevo Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\nPeso x Caja: - Mcaja: 2 -\nCaja x Palet: - Peso x palet: -\nPiezas x Cajas: -",
+    "category": "MADERA",
+    "dimensions": "20x120 cm",
+    "price": "17000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p15_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.741Z",
+    "updated_at": "2026-01-19T01:15:24.102Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 14,
+  "fields": {
+    "title": "Taruma - Mate Relieve",
+    "description": "Marca: Formigres\nTipología: Mate Relieve\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\nPeso x Caja: - Mcaja: 2 -\nCaja x Palet: - Peso x palet: -\nPiezas x Cajas: -",
+    "category": "MADERA",
+    "dimensions": "20x120 cm",
+    "price": "17000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p16_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.746Z",
+    "updated_at": "2026-01-19T01:15:24.107Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 15,
+  "fields": {
+    "title": "Gran Vision - Granillado",
+    "description": "Marca: Rochamaxx\nTipología: ABS\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 1,68 m²\n• M² por Palet: 70,56 m²",
+    "category": "MARMOL",
+    "dimensions": "82x82 cm",
+    "price": "24000.00",
+    "m2_per_box": "1.68",
+    "image": "porcelanatos/p18_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.751Z",
+    "updated_at": "2026-01-19T01:31:55.242Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 16,
+  "fields": {
+    "title": "HD Cremo Delicato - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "67x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p19_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.756Z",
+    "updated_at": "2026-01-19T01:15:24.114Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 17,
+  "fields": {
+    "title": "HD Damasco - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Peso por Palet: 1.300 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "82x82 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p44_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.760Z",
+    "updated_at": "2026-01-19T01:15:24.209Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 18,
+  "fields": {
+    "title": "HD Marmo Allure - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "67x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p21_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.765Z",
+    "updated_at": "2026-01-19T01:15:24.122Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 19,
+  "fields": {
+    "title": "HD Marmo Gris - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "67x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p32_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.770Z",
+    "updated_at": "2026-01-19T01:15:24.165Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 20,
+  "fields": {
+    "title": "HD Marmo Negro - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "61x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p23_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.775Z",
+    "updated_at": "2026-01-19T01:15:24.131Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 21,
+  "fields": {
+    "title": "HD Oro Realle - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "67x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p24_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.780Z",
+    "updated_at": "2026-01-19T01:15:24.135Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 22,
+  "fields": {
+    "title": "HD Statuario - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "67x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p25_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.785Z",
+    "updated_at": "2026-01-19T01:15:24.139Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 23,
+  "fields": {
+    "title": "HD Evok - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "67x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p26_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.790Z",
+    "updated_at": "2026-01-19T01:15:24.142Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 24,
+  "fields": {
+    "title": "HD Caravaggio - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "61x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p27_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.795Z",
+    "updated_at": "2026-01-19T01:15:24.146Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 25,
+  "fields": {
+    "title": "HD Bronze - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "67x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p28_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.800Z",
+    "updated_at": "2026-01-19T01:15:24.149Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 26,
+  "fields": {
+    "title": "HD Mirage - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "61x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p29_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.804Z",
+    "updated_at": "2026-01-19T01:15:24.152Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 27,
+  "fields": {
+    "title": "HD Marmo Imperial - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "67x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p30_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.808Z",
+    "updated_at": "2026-01-19T01:15:24.156Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 28,
+  "fields": {
+    "title": "HD Apunan - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "61x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p31_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.814Z",
+    "updated_at": "2026-01-19T01:15:24.160Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 29,
+  "fields": {
+    "title": "HD Lexus - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "67x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p33_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.819Z",
+    "updated_at": "2026-01-19T01:15:24.169Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 30,
+  "fields": {
+    "title": "HD Arabesco - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "61x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p34_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.824Z",
+    "updated_at": "2026-01-19T01:15:24.173Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 31,
+  "fields": {
+    "title": "HD Iris - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "61x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p35_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.829Z",
+    "updated_at": "2026-01-19T01:15:24.177Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 32,
+  "fields": {
+    "title": "HD Crema - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "82x82 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p36_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.834Z",
+    "updated_at": "2026-01-19T01:15:24.181Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 33,
+  "fields": {
+    "title": "HD Montreal - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC",
+    "category": "MARMOL",
+    "dimensions": "82x82 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.70",
+    "image": "porcelanatos/p37_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.838Z",
+    "updated_at": "2026-01-19T00:41:42.348Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 34,
+  "fields": {
+    "title": "HD Golden - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "82x82 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p38_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.843Z",
+    "updated_at": "2026-01-19T01:15:24.186Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 35,
+  "fields": {
+    "title": "HD Marmo Brown - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "82x82 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p39_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.851Z",
+    "updated_at": "2026-01-19T01:15:24.190Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 36,
+  "fields": {
+    "title": "HD Silver - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "82x82 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p40_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.856Z",
+    "updated_at": "2026-01-19T01:15:24.193Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 37,
+  "fields": {
+    "title": "HD Marmo Douro - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "82x82 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p41_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.862Z",
+    "updated_at": "2026-01-19T01:15:24.197Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 38,
+  "fields": {
+    "title": "HD Apollo - Satinado",
+    "description": "Marca: Rochamaxx\nTipología: Satinado\nRectificado: Si\nUso: LD",
+    "category": "MARMOL",
+    "dimensions": "82x82 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.70",
+    "image": "porcelanatos/p42_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.866Z",
+    "updated_at": "2026-01-19T00:41:42.364Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 39,
+  "fields": {
+    "title": "HD Dommus - Pulido",
+    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Peso por Palet: 1.300 kg\n• Piezas por Caja: 4",
+    "category": "MARMOL",
+    "dimensions": "82x82 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p43_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.873Z",
+    "updated_at": "2026-01-19T01:15:24.204Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 40,
+  "fields": {
+    "title": "PR7085 - Pulido",
+    "description": "Marca: Rochaforte\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 53 kg\n• Peso por Palet: 1.279 kg\n• Piezas por Caja: 7",
+    "category": "MARMOL",
+    "dimensions": "70x70 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p45_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.878Z",
+    "updated_at": "2026-01-19T01:15:24.212Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 41,
+  "fields": {
+    "title": "Apollo - Mate",
+    "description": "Marca: Rochamaxx\nTipología: Satinado\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "category": "PIEDRA",
+    "dimensions": "61x116 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p47_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.883Z",
+    "updated_at": "2026-01-19T01:15:24.216Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 42,
+  "fields": {
+    "title": "Arenito CZ - Mate",
+    "description": "Marca: Formigres Premium\nTipología: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\nPeso x Caja: - Mcaja: 2 -\nCaja x Palet: - Peso x palet: -\nPiezas x Cajas: -",
+    "category": "PIEDRA",
+    "dimensions": "88x88 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p48_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.887Z",
+    "updated_at": "2026-01-19T01:15:24.220Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 43,
+  "fields": {
+    "title": "Arenito BG - Mate",
+    "description": "Marca: Formigres Premium\nTipología: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\nPeso x Caja: - Mcaja: 2 -\nCaja x Palet: - Peso x palet: -\nPiezas x Cajas: -",
+    "category": "PIEDRA",
+    "dimensions": "88x88 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p49_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.893Z",
+    "updated_at": "2026-01-19T01:15:24.223Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 44,
+  "fields": {
+    "title": "Arenito Black - Mate",
+    "description": "Marca: Formigres Premium\nTipología: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\nPeso x Caja: - Mcaja: 2 -\nCaja x Palet: - Peso x palet: -\nPiezas x Cajas: -",
+    "category": "PIEDRA",
+    "dimensions": "88x88 cm",
+    "price": "24000.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p50_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.899Z",
+    "updated_at": "2026-01-19T01:15:24.227Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 45,
+  "fields": {
+    "title": "Gris Mate",
+    "description": "Marca: Rochaforte\nTipología: Acetinado\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 53 kg\n• Piezas por Caja: 7",
+    "category": "OTRO",
+    "dimensions": "70x70 cm",
+    "price": "13500.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p52_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.905Z",
+    "updated_at": "2026-01-19T01:15:24.230Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 46,
+  "fields": {
+    "title": "R70072 GRIS - GRANILLADO",
+    "description": "Marca: Rochaforte\nTipología: Granillado\nRectificado: Si\nUso: LE\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 53 kg\n• Piezas por Caja: 7",
+    "category": "OTRO",
+    "dimensions": "70x70 cm",
+    "price": "13500.00",
+    "m2_per_box": "2.00",
+    "image": "porcelanatos/p53_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.911Z",
+    "updated_at": "2026-01-19T01:15:24.234Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 47,
+  "fields": {
+    "title": "TDL Algarve",
+    "description": "Marca: Ceral\nTipología: Esmaltado\nRectificado: Si\nUso: LA/LF/LP\n\nESPECIFICACIONES TÉCNICAS:\n• Piezas por Caja: 198",
+    "category": "EXTERIOR",
+    "dimensions": "10x10 cm",
+    "price": "27850.00",
+    "m2_per_box": "2.07",
+    "image": "porcelanatos/p55_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.915Z",
+    "updated_at": "2026-01-19T01:04:57.199Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 48,
+  "fields": {
+    "title": "R40082 Blanco Mate",
+    "description": "Marca: Rochaforte\nTipología: Mate\nRectificado: Si\nUso: LA\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 3,00 m²\n• Peso por Caja: 48 kg\n• Peso por Palet: 2.282 kg\n• Piezas por Caja: 10",
+    "category": "INTERIOR",
+    "dimensions": "40x75 cm",
+    "price": "13520.00",
+    "m2_per_box": "3.00",
+    "image": "porcelanatos/p57_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.920Z",
+    "updated_at": "2026-01-19T01:31:55.239Z"
+  }
+},
+{
+  "model": "projects.porcelanato",
+  "pk": 49,
+  "fields": {
+    "title": "R40002 Blanco Pulido",
+    "description": "Marca: Rochaforte\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 3,00 m²\n• Peso por Caja: 48 kg\n• Peso por Palet: 2.282 kg\n• Piezas por Caja: 10",
+    "category": "INTERIOR",
+    "dimensions": "40x75 cm",
+    "price": "17900.00",
+    "m2_per_box": "3.00",
+    "image": "porcelanatos/p58_1.jpeg",
+    "created_at": "2026-01-18T14:39:27.924Z",
+    "updated_at": "2026-01-19T01:31:55.233Z"
+  }
+}
+]
