@@ -4,7 +4,7 @@
   "pk": 1,
   "fields": {
     "title": "Obras y Trabajos Recientes",
-    "description": "Compilación de imágenes extraídas de la presentación institucional.",
+    "description": "CompilaciÃ³n de imÃ¡genes extraÃ­das de la presentaciÃ³n institucional.",
     "category": "CIVIL",
     "client": "Varios",
     "completion_date": null,
@@ -144,7 +144,7 @@
   "pk": 3,
   "fields": {
     "title": "Cemento Gris - Mate",
-    "description": "Marca: Grupo Cristofoli\nTipología: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 1,78 m²\n• M² por Palet: 71,20 m²\n• Peso por Caja: 33 kg\n• Peso por Palet: 1.330 kg\n• M² por Pieza: 1,68 m²",
+    "description": "Marca: Grupo Cristofoli\nTipologÃ­a: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ MÂ² por Caja: 1,78 mÂ²\nâ€¢ MÂ² por Palet: 71,20 mÂ²\nâ€¢ Peso por Caja: 33 kg\nâ€¢ Peso por Palet: 1.330 kg\nâ€¢ MÂ² por Pieza: 1,68 mÂ²",
     "category": "CEMENTO",
     "dimensions": "77x77 cm",
     "price": "16200.00",
@@ -159,7 +159,7 @@
   "pk": 4,
   "fields": {
     "title": "Cemento Beige - Mate",
-    "description": "Marca: Grupo Cristofoli\nTipología: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 1,78 m²\n• M² por Palet: 71,20 m²\n• Peso por Caja: 33 kg\n• Peso por Palet: 1.330 kg\n• M² por Pieza: 1,68 m²",
+    "description": "Marca: Grupo Cristofoli\nTipologÃ­a: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ MÂ² por Caja: 1,78 mÂ²\nâ€¢ MÂ² por Palet: 71,20 mÂ²\nâ€¢ Peso por Caja: 33 kg\nâ€¢ Peso por Palet: 1.330 kg\nâ€¢ MÂ² por Pieza: 1,68 mÂ²",
     "category": "CEMENTO",
     "dimensions": "77x77 cm",
     "price": "16200.00",
@@ -174,7 +174,7 @@
   "pk": 5,
   "fields": {
     "title": "Cemento Gris - Pulido",
-    "description": "Marca: Grupo Cristofoli\nTipología: Pulido\nRectificado: Si\nUso: -\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Palet: 69.20\n• Peso por Caja: 33 kg\n• Peso por Palet: 1.380 kg",
+    "description": "Marca: Grupo Cristofoli\nTipologÃ­a: Pulido\nRectificado: Si\nUso: -\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ MÂ² por Palet: 69.20\nâ€¢ Peso por Caja: 33 kg\nâ€¢ Peso por Palet: 1.380 kg",
     "category": "CEMENTO",
     "dimensions": "76x76 cm",
     "price": "22140.00",
@@ -189,7 +189,7 @@
   "pk": 6,
   "fields": {
     "title": "Bossa CZ - Granulado",
-    "description": "Marca: Formigres Premium\nTipología: Granulado RT\nRectificado: Si\nUso: LE\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 2,16 m²\n• M² por Palet: 64,8 m²",
+    "description": "Marca: Formigres Premium\nTipologÃ­a: Granulado RT\nRectificado: Si\nUso: LE\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ MÂ² por Caja: 2,16 mÂ²\nâ€¢ MÂ² por Palet: 64,8 mÂ²",
     "category": "CEMENTO",
     "dimensions": "60x120 cm",
     "price": "18900.00",
@@ -204,7 +204,7 @@
   "pk": 7,
   "fields": {
     "title": "Concept - Mate",
-    "description": "Marca: Formigres Premium\nTipología: Mate RT\nRectificado: Si\nUso: LE\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 2,16 m²\n• M² por Palet: 64,8 m²",
+    "description": "Marca: Formigres Premium\nTipologÃ­a: Mate RT\nRectificado: Si\nUso: LE\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ MÂ² por Caja: 2,16 mÂ²\nâ€¢ MÂ² por Palet: 64,8 mÂ²",
     "category": "CEMENTO",
     "dimensions": "60x120 cm",
     "price": "18900.00",
@@ -219,7 +219,7 @@
   "pk": 8,
   "fields": {
     "title": "Concreto CL - Mate",
-    "description": "Marca: Formigres Premium\nTipología: Mate RT\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 2,16 m²\n• M² por Palet: 64,8 m²",
+    "description": "Marca: Formigres Premium\nTipologÃ­a: Mate RT\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ MÂ² por Caja: 2,16 mÂ²\nâ€¢ MÂ² por Palet: 64,8 mÂ²",
     "category": "CEMENTO",
     "dimensions": "60x120 cm",
     "price": "18900.00",
@@ -234,7 +234,7 @@
   "pk": 9,
   "fields": {
     "title": "Caja - Mate Relieve",
-    "description": "Marca: Formigres Premium\nTipología: Relevo Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 1,68 m²\n• M² por Palet: 70,56 m²",
+    "description": "Marca: Formigres Premium\nTipologÃ­a: Relevo Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ MÂ² por Caja: 1,68 mÂ²\nâ€¢ MÂ² por Palet: 70,56 mÂ²",
     "category": "MADERA",
     "dimensions": "20x120 cm",
     "price": "17000.00",
@@ -249,7 +249,7 @@
   "pk": 10,
   "fields": {
     "title": "Carvalho NAT CL - Mate",
-    "description": "Marca: Formigres Premium\nTipología: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 1,68 m²\n• M² por Palet: 70,56 m²",
+    "description": "Marca: Formigres Premium\nTipologÃ­a: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ MÂ² por Caja: 1,68 mÂ²\nâ€¢ MÂ² por Palet: 70,56 mÂ²",
     "category": "MADERA",
     "dimensions": "20x120 cm",
     "price": "17000.00",
@@ -264,7 +264,7 @@
   "pk": 11,
   "fields": {
     "title": "Carvalho Natural - Mate",
-    "description": "Marca: Formigres Premium\nTipología: Satinado Mate\nRectificado: Si\nUso: LD",
+    "description": "Marca: Formigres Premium\nTipologÃ­a: Satinado Mate\nRectificado: Si\nUso: LD",
     "category": "MADERA",
     "dimensions": "20x120 cm",
     "price": "17000.00",
@@ -279,7 +279,7 @@
   "pk": 12,
   "fields": {
     "title": "Fresno - Mate",
-    "description": "Marca: Formigres Premium\nTipología: Satinado Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 1,68 m²\n• M² por Palet: 70,56 m²",
+    "description": "Marca: Formigres Premium\nTipologÃ­a: Satinado Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ MÂ² por Caja: 1,68 mÂ²\nâ€¢ MÂ² por Palet: 70,56 mÂ²",
     "category": "MADERA",
     "dimensions": "20x120 cm",
     "price": "17000.00",
@@ -294,7 +294,7 @@
   "pk": 13,
   "fields": {
     "title": "Piemont - Mate",
-    "description": "Marca: Formigres\nTipología: Relevo Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\nPeso x Caja: - Mcaja: 2 -\nCaja x Palet: - Peso x palet: -\nPiezas x Cajas: -",
+    "description": "Marca: Formigres\nTipologÃ­a: Relevo Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÃ‰CNICAS:\nPeso x Caja: - Mcaja: 2 -\nCaja x Palet: - Peso x palet: -\nPiezas x Cajas: -",
     "category": "MADERA",
     "dimensions": "20x120 cm",
     "price": "17000.00",
@@ -309,7 +309,7 @@
   "pk": 14,
   "fields": {
     "title": "Taruma - Mate Relieve",
-    "description": "Marca: Formigres\nTipología: Mate Relieve\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\nPeso x Caja: - Mcaja: 2 -\nCaja x Palet: - Peso x palet: -\nPiezas x Cajas: -",
+    "description": "Marca: Formigres\nTipologÃ­a: Mate Relieve\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÃ‰CNICAS:\nPeso x Caja: - Mcaja: 2 -\nCaja x Palet: - Peso x palet: -\nPiezas x Cajas: -",
     "category": "MADERA",
     "dimensions": "20x120 cm",
     "price": "17000.00",
@@ -324,7 +324,7 @@
   "pk": 15,
   "fields": {
     "title": "Gran Vision - Granillado",
-    "description": "Marca: Rochamaxx\nTipología: ABS\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 1,68 m²\n• M² por Palet: 70,56 m²",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: ABS\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ MÂ² por Caja: 1,68 mÂ²\nâ€¢ MÂ² por Palet: 70,56 mÂ²",
     "category": "MARMOL",
     "dimensions": "82x82 cm",
     "price": "24000.00",
@@ -339,7 +339,7 @@
   "pk": 16,
   "fields": {
     "title": "HD Cremo Delicato - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 45 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "67x116 cm",
     "price": "24000.00",
@@ -354,7 +354,7 @@
   "pk": 17,
   "fields": {
     "title": "HD Damasco - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Peso por Palet: 1.300 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 46 kg\nâ€¢ Peso por Palet: 1.300 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "82x82 cm",
     "price": "24000.00",
@@ -369,7 +369,7 @@
   "pk": 18,
   "fields": {
     "title": "HD Marmo Allure - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 45 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "67x116 cm",
     "price": "24000.00",
@@ -384,7 +384,7 @@
   "pk": 19,
   "fields": {
     "title": "HD Marmo Gris - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 45 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "67x116 cm",
     "price": "24000.00",
@@ -399,7 +399,7 @@
   "pk": 20,
   "fields": {
     "title": "HD Marmo Negro - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 45 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "61x116 cm",
     "price": "24000.00",
@@ -414,7 +414,7 @@
   "pk": 21,
   "fields": {
     "title": "HD Oro Realle - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 45 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "67x116 cm",
     "price": "24000.00",
@@ -429,7 +429,7 @@
   "pk": 22,
   "fields": {
     "title": "HD Statuario - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 45 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "67x116 cm",
     "price": "24000.00",
@@ -444,7 +444,7 @@
   "pk": 23,
   "fields": {
     "title": "HD Evok - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 45 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "67x116 cm",
     "price": "24000.00",
@@ -459,7 +459,7 @@
   "pk": 24,
   "fields": {
     "title": "HD Caravaggio - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 45 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "61x116 cm",
     "price": "24000.00",
@@ -474,7 +474,7 @@
   "pk": 25,
   "fields": {
     "title": "HD Bronze - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 45 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "67x116 cm",
     "price": "24000.00",
@@ -489,7 +489,7 @@
   "pk": 26,
   "fields": {
     "title": "HD Mirage - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 45 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "61x116 cm",
     "price": "24000.00",
@@ -504,7 +504,7 @@
   "pk": 27,
   "fields": {
     "title": "HD Marmo Imperial - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 45 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "67x116 cm",
     "price": "24000.00",
@@ -519,7 +519,7 @@
   "pk": 28,
   "fields": {
     "title": "HD Apunan - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 45 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "61x116 cm",
     "price": "24000.00",
@@ -534,7 +534,7 @@
   "pk": 29,
   "fields": {
     "title": "HD Lexus - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 45 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "67x116 cm",
     "price": "24000.00",
@@ -549,7 +549,7 @@
   "pk": 30,
   "fields": {
     "title": "HD Arabesco - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 46 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "61x116 cm",
     "price": "24000.00",
@@ -564,7 +564,7 @@
   "pk": 31,
   "fields": {
     "title": "HD Iris - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 46 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "61x116 cm",
     "price": "24000.00",
@@ -579,7 +579,7 @@
   "pk": 32,
   "fields": {
     "title": "HD Crema - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 46 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "82x82 cm",
     "price": "24000.00",
@@ -594,7 +594,7 @@
   "pk": 33,
   "fields": {
     "title": "HD Montreal - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC",
     "category": "MARMOL",
     "dimensions": "82x82 cm",
     "price": "24000.00",
@@ -609,7 +609,7 @@
   "pk": 34,
   "fields": {
     "title": "HD Golden - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 46 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "82x82 cm",
     "price": "24000.00",
@@ -624,7 +624,7 @@
   "pk": 35,
   "fields": {
     "title": "HD Marmo Brown - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 46 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "82x82 cm",
     "price": "24000.00",
@@ -639,7 +639,7 @@
   "pk": 36,
   "fields": {
     "title": "HD Silver - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 46 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "82x82 cm",
     "price": "24000.00",
@@ -654,7 +654,7 @@
   "pk": 37,
   "fields": {
     "title": "HD Marmo Douro - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 46 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "82x82 cm",
     "price": "24000.00",
@@ -669,7 +669,7 @@
   "pk": 38,
   "fields": {
     "title": "HD Apollo - Satinado",
-    "description": "Marca: Rochamaxx\nTipología: Satinado\nRectificado: Si\nUso: LD",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Satinado\nRectificado: Si\nUso: LD",
     "category": "MARMOL",
     "dimensions": "82x82 cm",
     "price": "24000.00",
@@ -684,7 +684,7 @@
   "pk": 39,
   "fields": {
     "title": "HD Dommus - Pulido",
-    "description": "Marca: Rochamaxx\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 46 kg\n• Peso por Palet: 1.300 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 46 kg\nâ€¢ Peso por Palet: 1.300 kg\nâ€¢ Piezas por Caja: 4",
     "category": "MARMOL",
     "dimensions": "82x82 cm",
     "price": "24000.00",
@@ -699,7 +699,7 @@
   "pk": 40,
   "fields": {
     "title": "PR7085 - Pulido",
-    "description": "Marca: Rochaforte\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 53 kg\n• Peso por Palet: 1.279 kg\n• Piezas por Caja: 7",
+    "description": "Marca: Rochaforte\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 53 kg\nâ€¢ Peso por Palet: 1.279 kg\nâ€¢ Piezas por Caja: 7",
     "category": "MARMOL",
     "dimensions": "70x70 cm",
     "price": "24000.00",
@@ -714,7 +714,7 @@
   "pk": 41,
   "fields": {
     "title": "Apollo - Mate",
-    "description": "Marca: Rochamaxx\nTipología: Satinado\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 45 kg\n• Piezas por Caja: 4",
+    "description": "Marca: Rochamaxx\nTipologÃ­a: Satinado\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 45 kg\nâ€¢ Piezas por Caja: 4",
     "category": "PIEDRA",
     "dimensions": "61x116 cm",
     "price": "24000.00",
@@ -729,7 +729,7 @@
   "pk": 42,
   "fields": {
     "title": "Arenito CZ - Mate",
-    "description": "Marca: Formigres Premium\nTipología: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\nPeso x Caja: - Mcaja: 2 -\nCaja x Palet: - Peso x palet: -\nPiezas x Cajas: -",
+    "description": "Marca: Formigres Premium\nTipologÃ­a: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÃ‰CNICAS:\nPeso x Caja: - Mcaja: 2 -\nCaja x Palet: - Peso x palet: -\nPiezas x Cajas: -",
     "category": "PIEDRA",
     "dimensions": "88x88 cm",
     "price": "24000.00",
@@ -744,7 +744,7 @@
   "pk": 43,
   "fields": {
     "title": "Arenito BG - Mate",
-    "description": "Marca: Formigres Premium\nTipología: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\nPeso x Caja: - Mcaja: 2 -\nCaja x Palet: - Peso x palet: -\nPiezas x Cajas: -",
+    "description": "Marca: Formigres Premium\nTipologÃ­a: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÃ‰CNICAS:\nPeso x Caja: - Mcaja: 2 -\nCaja x Palet: - Peso x palet: -\nPiezas x Cajas: -",
     "category": "PIEDRA",
     "dimensions": "88x88 cm",
     "price": "24000.00",
@@ -759,7 +759,7 @@
   "pk": 44,
   "fields": {
     "title": "Arenito Black - Mate",
-    "description": "Marca: Formigres Premium\nTipología: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\nPeso x Caja: - Mcaja: 2 -\nCaja x Palet: - Peso x palet: -\nPiezas x Cajas: -",
+    "description": "Marca: Formigres Premium\nTipologÃ­a: Mate\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÃ‰CNICAS:\nPeso x Caja: - Mcaja: 2 -\nCaja x Palet: - Peso x palet: -\nPiezas x Cajas: -",
     "category": "PIEDRA",
     "dimensions": "88x88 cm",
     "price": "24000.00",
@@ -774,7 +774,7 @@
   "pk": 45,
   "fields": {
     "title": "Gris Mate",
-    "description": "Marca: Rochaforte\nTipología: Acetinado\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 53 kg\n• Piezas por Caja: 7",
+    "description": "Marca: Rochaforte\nTipologÃ­a: Acetinado\nRectificado: Si\nUso: LD\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 53 kg\nâ€¢ Piezas por Caja: 7",
     "category": "OTRO",
     "dimensions": "70x70 cm",
     "price": "13500.00",
@@ -789,7 +789,7 @@
   "pk": 46,
   "fields": {
     "title": "R70072 GRIS - GRANILLADO",
-    "description": "Marca: Rochaforte\nTipología: Granillado\nRectificado: Si\nUso: LE\n\nESPECIFICACIONES TÉCNICAS:\n• Peso por Caja: 53 kg\n• Piezas por Caja: 7",
+    "description": "Marca: Rochaforte\nTipologÃ­a: Granillado\nRectificado: Si\nUso: LE\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Peso por Caja: 53 kg\nâ€¢ Piezas por Caja: 7",
     "category": "OTRO",
     "dimensions": "70x70 cm",
     "price": "13500.00",
@@ -804,7 +804,7 @@
   "pk": 47,
   "fields": {
     "title": "TDL Algarve",
-    "description": "Marca: Ceral\nTipología: Esmaltado\nRectificado: Si\nUso: LA/LF/LP\n\nESPECIFICACIONES TÉCNICAS:\n• Piezas por Caja: 198",
+    "description": "Marca: Ceral\nTipologÃ­a: Esmaltado\nRectificado: Si\nUso: LA/LF/LP\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ Piezas por Caja: 198",
     "category": "EXTERIOR",
     "dimensions": "10x10 cm",
     "price": "27850.00",
@@ -819,7 +819,7 @@
   "pk": 48,
   "fields": {
     "title": "R40082 Blanco Mate",
-    "description": "Marca: Rochaforte\nTipología: Mate\nRectificado: Si\nUso: LA\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 3,00 m²\n• Peso por Caja: 48 kg\n• Peso por Palet: 2.282 kg\n• Piezas por Caja: 10",
+    "description": "Marca: Rochaforte\nTipologÃ­a: Mate\nRectificado: Si\nUso: LA\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ MÂ² por Caja: 3,00 mÂ²\nâ€¢ Peso por Caja: 48 kg\nâ€¢ Peso por Palet: 2.282 kg\nâ€¢ Piezas por Caja: 10",
     "category": "INTERIOR",
     "dimensions": "40x75 cm",
     "price": "13520.00",
@@ -834,7 +834,7 @@
   "pk": 49,
   "fields": {
     "title": "R40002 Blanco Pulido",
-    "description": "Marca: Rochaforte\nTipología: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÉCNICAS:\n• M² por Caja: 3,00 m²\n• Peso por Caja: 48 kg\n• Peso por Palet: 2.282 kg\n• Piezas por Caja: 10",
+    "description": "Marca: Rochaforte\nTipologÃ­a: Pulido\nRectificado: Si\nUso: LC\n\nESPECIFICACIONES TÃ‰CNICAS:\nâ€¢ MÂ² por Caja: 3,00 mÂ²\nâ€¢ Peso por Caja: 48 kg\nâ€¢ Peso por Palet: 2.282 kg\nâ€¢ Piezas por Caja: 10",
     "category": "INTERIOR",
     "dimensions": "40x75 cm",
     "price": "17900.00",
