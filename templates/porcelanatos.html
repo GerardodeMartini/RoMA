@@ -72,9 +72,11 @@
                                     <div class="product-title">{{ p.title }}</div>
                                     <div class="product-price">${{ p.price|floatformat:0 }} M2 +IVA</div>
                                     <ul class="specs-list">
-                                        {% if p.dimensions %}<li><strong>Formato:</strong> <span>{{ p.dimensions }}</span></li>{% endif %}
+                                        {% if p.dimensions %}<li><strong>Formato:</strong> <span>{{ p.dimensions
+                                                }}</span></li>{% endif %}
                                         {% if p.description %}
-                                        <li class="pre-line" style="list-style: none; white-space: pre-line;">{{ p.description }}</li>
+                                        <li class="pre-line" style="list-style: none; white-space: pre-line;">{{
+                                            p.description }}</li>
                                         {% endif %}
                                     </ul>
                                 </div>
@@ -183,7 +185,13 @@
 
                 images.forEach((img, index) => {
                     const active = index === 0 ? 'active' : '';
-                    const src = img.includes('no-image') ? '/static/img/no-image.png' : '/static/img/porcelanatos/' + img;
+                    // If img already starts with /, assume it's a full URL. Otherwise (legacy), prepend static path.
+                    // But our data-images has full URLs now.
+                    let src = img;
+                    if (!img.startsWith('/')) {
+                        src = '/static/img/porcelanatos/' + img;
+                    }
+
                     const item = `<div class="carousel-item ${active}" style="height: 100%; text-align: center;"><img src="${src}" class="img-fluid" style="max-height: 500px; max-width: 100%; object-fit: contain;"></div>`;
                     carouselInner.innerHTML += item;
                 });
