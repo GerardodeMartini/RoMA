@@ -66,6 +66,13 @@ class Porcelanato(models.Model):
     title = models.CharField(max_length=200, verbose_name="Nombre")
     description = models.TextField(verbose_name="Descripción/Características", blank=True)
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='INTERIOR', verbose_name="Categoría")
+    
+    # New specs
+    brand = models.CharField(max_length=100, verbose_name="Marca", blank=True)
+    typology = models.CharField(max_length=100, verbose_name="Tipología", blank=True)
+    rectified = models.CharField(max_length=50, verbose_name="Rectificado (Si/No)", blank=True)
+    usage = models.CharField(max_length=50, verbose_name="Uso", blank=True)
+    
     dimensions = models.CharField(max_length=50, verbose_name="Dimensiones (ej. 60x60)", blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True, verbose_name="Precio por m²")
     m2_per_box = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True, verbose_name="M² por Caja")
