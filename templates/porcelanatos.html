@@ -33,6 +33,9 @@
                                     onclick='openProductModal(this)' data-title="{{ p.title }}"
                                     data-price="{{ p.price|floatformat:0 }}"
                                     data-m2box="{{ p.m2_per_box|stringformat:'.2f' }}"
+                                    data-dimensions="{{ p.dimensions }}" data-brand="{{ p.brand }}"
+                                    data-typology="{{ p.typology }}" data-rectified="{{ p.rectified }}"
+                                    data-usage="{{ p.usage }}" data-description="{{ p.description|escapejs }}"
                                     data-images="{{ p.image.url }}{% for img in p.images.all %},{{ img.image.url }}{% endfor %}">
 
                                     {% if p.images.exists %}
@@ -163,7 +166,24 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                                 <h3 id="modalTitle" class="mb-2" style="font-weight: 700;">Nombre Producto</h3>
-                                <p id="modalPriceLabel" class="text-muted mb-4" style="font-size: 1.2rem;">$ Precio</p>
+                                <p id="modalPriceLabel" class="text-muted mb-3" style="font-size: 1.2rem;">$ Precio</p>
+
+                                <!-- Modal Specs -->
+                                <div id="modalSpecs" class="mb-4 small text-muted">
+                                    <div class="row">
+                                        <div class="col-6 mb-1"><i class="fas fa-expand-arrows-alt mr-1"></i> <span
+                                                id="modalDim"></span></div>
+                                        <div class="col-6 mb-1"><i class="fas fa-tag mr-1"></i> <span
+                                                id="modalBrand"></span></div>
+                                        <div class="col-6 mb-1"><i class="fas fa-layer-group mr-1"></i> <span
+                                                id="modalTypology"></span></div>
+                                        <div class="col-6 mb-1"><i class="fas fa-ruler-combined mr-1"></i> <span
+                                                id="modalRect"></span></div>
+                                        <div class="col-6 mb-1"><i class="fas fa-shoe-prints mr-1"></i> <span
+                                                id="modalUsage"></span></div>
+                                    </div>
+                                    <div class="mt-2" id="modalDesc" style="white-space: pre-line; color: #666;"></div>
+                                </div>
                                 <hr>
                                 <h5 class="mb-3"><i class="fas fa-calculator"></i> Calculadora de Material</h5>
                                 <form>
@@ -206,11 +226,28 @@
                 const title = element.getAttribute('data-title');
                 const price = parseFloat(element.getAttribute('data-price')) || 0;
                 const m2box = parseFloat(element.getAttribute('data-m2box')) || 0;
+
+                // Read new attributes
+                const dimensions = element.getAttribute('data-dimensions') || '-';
+                const brand = element.getAttribute('data-brand') || '-';
+                const typology = element.getAttribute('data-typology') || '-';
+                const rectified = element.getAttribute('data-rectified') || '-';
+                const usage = element.getAttribute('data-usage') || '-';
+                const description = element.getAttribute('data-description') || '';
+
                 const imagesStr = element.getAttribute('data-images');
                 const images = imagesStr.split(',');
 
                 document.getElementById('modalTitle').innerText = title;
                 document.getElementById('modalPriceLabel').innerText = price > 0 ? '$' + price.toLocaleString() + ' m² +IVA' : 'Consultar Precio';
+
+                // Update Modal Specs
+                document.getElementById('modalDim').innerText = dimensions;
+                document.getElementById('modalBrand').innerText = brand;
+                document.getElementById('modalTypology').innerText = typology;
+                document.getElementById('modalRect').innerText = rectified;
+                document.getElementById('modalUsage').innerText = usage;
+                document.getElementById('modalDesc').innerText = description;
 
                 document.getElementById('unitPrice').value = price;
                 document.getElementById('boxM2').value = m2box;
