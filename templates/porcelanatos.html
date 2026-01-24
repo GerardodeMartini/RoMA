@@ -78,7 +78,7 @@
                                     <!-- Dimensions Highlight -->
                                     <!-- Dimensions Highlight -->
                                     <div class="product-dimensions mb-2" style="font-size: 1.1rem; color: #333;">
-                                        <i class="fas fa-expand-arrows-alt mr-1"></i> Formato: <strong>{{
+                                        <i class="fas fa-expand-arrows-alt mr-1"></i> Dimensiones: <strong>{{
                                             p.dimensions|default:"(Consultar)" }}</strong>
                                     </div>
 
@@ -241,7 +241,7 @@
                 document.getElementById('modalPriceLabel').innerText = price > 0 ? '$' + price.toLocaleString() + ' m² +IVA' : 'Consultar Precio';
 
                 // Update Modal Specs
-                document.getElementById('modalDim').innerText = dimensions !== '-' ? 'Formato: ' + dimensions : '-';
+                document.getElementById('modalDim').innerText = dimensions !== '-' ? 'Dimensiones: ' + dimensions : '-';
                 document.getElementById('modalBrand').innerText = brand;
                 document.getElementById('modalTypology').innerText = typology;
                 document.getElementById('modalRect').innerText = rectified;
