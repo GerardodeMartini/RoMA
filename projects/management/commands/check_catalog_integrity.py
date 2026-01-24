@@ -16,13 +16,29 @@ class Command(BaseCommand):
         
         if bad_dims.exists() or bad_desc.exists():
             self.stdout.write(self.style.ERROR(f"¡CORRUPCIÓN ENCONTRADA!"))
-            self.stdout.write(f"Ítems con '{{' en dimensiones: {bad_dims.count()}")
-            self.stdout.write(f"Ítems con '{{' en descripción: {bad_desc.count()}")
-            
-            for p in bad_dims:
-                self.stdout.write(f"ID {p.id}: Dimensiones='{p.dimensions}'")
-        else:
-            self.stdout.write(self.style.SUCCESS("Contenido de Base de Datos: OK (No se encontraron etiquetas de plantilla literales)"))
+            # ... (keep existing code for corruption) ...
+        
+        # New Check: Empty Data
+        empty_dims = Porcelanato.objects.filter(dimensions__exact='')
+        total_items = Porcelanato.objects.count()
+        
+        self.stdout.write(f"\nVerificando campos vacíos (Total ítems: {total_items}):")
+        self.stdout.write(f"- Dimensiones vacías: {empty_dims.count()}")
+        
+        if empty_dims.count() == total_items and total_items > 0:
+             self.stdout.write(self.style.ERROR("¡TODOS los productos tienen las dimensiones vacías!"))
+             self.stdout.write("Probable causa: La importación de datos no mapeó el campo 'Formato' a 'dimensions'.")
+        elif empty_dims.exists():
+             self.stdout.write(self.style.WARNING(f"Alerta: {empty_dims.count()} productos no tienen dimensiones."))
+
+        # Check a sample
+        if total_items > 0:
+            sample = Porcelanato.objects.first()
+            self.stdout.write(f"\nMuestra (ID {sample.id}):")
+            self.stdout.write(f"  Título: {sample.title}")
+            self.stdout.write(f"  Dimensiones (Formato): '{sample.dimensions}'")
+            self.stdout.write(f"  M2 por Caja: '{sample.m2_per_box}'")
+
 
         # Check template file existence
         template_path = os.path.join(os.getcwd(), 'templates', 'porcelanatos.html')
