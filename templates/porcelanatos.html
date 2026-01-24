@@ -71,10 +71,19 @@
                                 <div class="product-info">
                                     <div class="product-title">{{ p.title }}</div>
                                     <div class="product-price">${{ p.price|floatformat:0 }} M2 +IVA</div>
+
+                                    <!-- Dimensions Highlight -->
+                                    {% if p.dimensions %}
+                                    <div class="product-dimensions mb-2" style="font-size: 1.1rem; color: #555;">
+                                        <i class="fas fa-expand-arrows-alt mr-1"></i> <strong>{{ p.dimensions
+                                            }}</strong>
+                                    </div>
+                                    {% endif %}
+
                                     <!-- Specs Grid (Brand, Typology, etc) -->
                                     {% if p.brand or p.typology or p.rectified or p.usage or p.m2_per_box %}
                                     <div class="row mt-2 mb-2 small text-muted specs-grid-row"
-                                        style="margin-left: -5px; margin-right: -5px;">
+                                        style="margin-left: -5px; margin-right: -5px; border-top: 1px solid #eee; padding-top: 10px;">
                                         {% if p.brand %}
                                         <div class="col-6 mb-1" style="padding: 0 5px;">
                                             <i class="fas fa-tag mx-1"></i> {{ p.brand }}
@@ -103,19 +112,19 @@
                                     </div>
                                     {% endif %}
 
-                                    <!-- Dimensions and Description -->
+                                    <!-- Description -->
                                     <ul class="specs-list">
-                                        {% if p.dimensions %}
-                                        <li class="dimensions-item" style="font-size: 1.1em; margin-bottom: 8px;">
-                                            <strong>Formato:</strong> <span style="color: #333; font-weight: bold;">{{
-                                                p.dimensions }}</span>
-                                        </li>
-                                        {% endif %}
-
                                         {% if p.description %}
                                         <li class="pre-line mt-2"
                                             style="list-style: none; white-space: pre-line; color: #666; font-size: 0.9em;">
-                                            {{ p.description }}</li>
+                                            <!-- Truncate description if too long -->
+                                            {{ p.description|truncatechars:100 }}
+                                            {% if p.description|length > 100 %}
+                                            <a href="#" style="font-size: 0.9em;"
+                                                onclick="event.preventDefault(); this.parentElement.innerText='{{ p.description|escapejs }}'">Ver
+                                                más</a>
+                                            {% endif %}
+                                        </li>
                                         {% endif %}
                                     </ul>
                                 </div>
