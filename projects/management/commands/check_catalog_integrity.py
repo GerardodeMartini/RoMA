@@ -33,11 +33,16 @@ class Command(BaseCommand):
 
         # Check a sample
         if total_items > 0:
-            sample = Porcelanato.objects.first()
-            self.stdout.write(f"\nMuestra (ID {sample.id}):")
-            self.stdout.write(f"  Título: {sample.title}")
-            self.stdout.write(f"  Dimensiones (Formato): '{sample.dimensions}'")
-            self.stdout.write(f"  M2 por Caja: '{sample.m2_per_box}'")
+            self.stdout.write(f"\nMuestras (Primeros 5):")
+            for p in Porcelanato.objects.all()[:5]:
+                self.stdout.write(f"ID {p.id} | Título: {p.title}")
+                self.stdout.write(f"   - Dimensiones (DB): '{p.dimensions}' (Len: {len(p.dimensions) if p.dimensions else 0})")
+                self.stdout.write(f"   - Descripción (DB): '{p.description}' (Len: {len(p.description) if p.description else 0})")
+                self.stdout.write("-" * 20)
+                
+        # Check specifically for description
+        empty_desc = Porcelanato.objects.filter(description__exact='')
+        self.stdout.write(f"\nProductos sin descripción: {empty_desc.count()} de {total_items}")
 
 
         # Check template file existence
