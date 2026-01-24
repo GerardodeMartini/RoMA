@@ -117,14 +117,7 @@
                                         {% if p.description %}
                                         <li class="pre-line mt-2"
                                             style="list-style: none; white-space: pre-line; color: #666; font-size: 0.9em;">
-                                            <!-- Truncate description if too long -->
-                                            {{ p.description|truncatechars:100 }}
-                                            {% if p.description|length > 100 %}
-                                            <a href="#" style="font-size: 0.9em;"
-                                                onclick="event.preventDefault(); this.parentElement.innerText='{{ p.description|escapejs }}'">Ver
-                                                más</a>
-                                            {% endif %}
-                                        </li>
+                                            {{ p.description }}</li>
                                         {% endif %}
                                     </ul>
                                 </div>
