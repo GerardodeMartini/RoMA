@@ -76,12 +76,11 @@
                                     <div class="product-price">${{ p.price|floatformat:0 }} M2 +IVA</div>
 
                                     <!-- Dimensions Highlight -->
-                                    {% if p.dimensions %}
-                                    <div class="product-dimensions mb-2" style="font-size: 1.1rem; color: #555;">
-                                        <i class="fas fa-expand-arrows-alt mr-1"></i> Formato: <strong>{{ p.dimensions
-                                            }}</strong>
+                                    <!-- Dimensions Highlight -->
+                                    <div class="product-dimensions mb-2" style="font-size: 1.1rem; color: #333;">
+                                        <i class="fas fa-expand-arrows-alt mr-1"></i> Formato: <strong>{{
+                                            p.dimensions|default:"(Consultar)" }}</strong>
                                     </div>
-                                    {% endif %}
 
                                     <!-- Specs Grid (Brand, Typology, etc) -->
                                     {% if p.brand or p.typology or p.rectified or p.usage or p.m2_per_box %}
