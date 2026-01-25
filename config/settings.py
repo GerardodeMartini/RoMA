@@ -164,3 +164,9 @@ if not DEBUG:
 TURNSTILE_SITE_KEY = os.getenv('TURNSTILE_SITE_KEY')
 TURNSTILE_SECRET_KEY = os.getenv('TURNSTILE_SECRET_KEY')
 
+# Session Security
+# Logout after 10 minutes (600 seconds) of inactivity
+SESSION_COOKIE_AGE = 600
+# Save the session to the database on every request to update the last_activity time
+SESSION_SAVE_EVERY_REQUEST = True
+
