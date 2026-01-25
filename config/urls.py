@@ -16,12 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from projects.views import RateLimitedLoginView
 from django.conf import settings
 from django.views.static import serve
 from django.urls import re_path
 
 urlpatterns = [
     path('secure-admin/', admin.site.urls),
+    path('accounts/login/', RateLimitedLoginView.as_view(), name='login'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', include('projects.urls')),
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),

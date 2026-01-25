@@ -16,6 +16,10 @@
                         <label for="id_password">Contraseña</label>
                         {{ form.password }}
                     </div>
+                    <!-- Cloudflare Turnstile -->
+                    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+                    <div class="cf-turnstile" data-sitekey="{{ turnstile_site_key }}" data-theme="dark"></div>
+                    <!-- End Turnstile -->
                     <button type="submit" class="btn mt-2">Ingresar -></button>
                 </form>
                 {% if form.errors %}

@@ -159,3 +159,8 @@ if not DEBUG:
     
     # Allow YouTube embeds to verify origin
     SECURE_REFERRER_POLICY = 'strict-origin-when-cross-origin'
+
+# Cloudflare Turnstile Settings
+TURNSTILE_SITE_KEY = os.getenv('TURNSTILE_SITE_KEY')
+TURNSTILE_SECRET_KEY = os.getenv('TURNSTILE_SECRET_KEY')
+

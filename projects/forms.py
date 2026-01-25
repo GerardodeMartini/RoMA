@@ -1,5 +1,33 @@
 from django import forms
+from django.contrib.auth.forms import AuthenticationForm
+import requests
+from django.conf import settings
 from .models import Project, Porcelanato, Hormigon
+
+class CustomAuthenticationForm(AuthenticationForm):
+    def clean(self):
+        cleaned_data = super().clean()
+        turnstile_token = self.request.POST.get('cf-turnstile-response')
+        
+        if not turnstile_token:
+            raise forms.ValidationError("Por favor, completa el CAPTCHA.")
+            
+        # Verify token with Cloudflare
+        secret_key = getattr(settings, 'TURNSTILE_SECRET_KEY', None)
+        if secret_key:
+            response = requests.post(
+                'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+                data={
+                    'secret': secret_key,
+                    'response': turnstile_token,
+                    'remoteip': self.request.META.get('REMOTE_ADDR')
+                }
+            )
+            result = response.json()
+            if not result.get('success'):
+                raise forms.ValidationError("Error de validación del CAPTCHA. Intenta nuevamente.")
+        
+        return cleaned_data
 
 class MultipleFileInput(forms.ClearableFileInput):
     allow_multiple_selected = True

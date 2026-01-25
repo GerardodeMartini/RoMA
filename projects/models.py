@@ -145,7 +145,7 @@ from django.dispatch import receiver
 from django.conf import settings
 
 class AuditLog(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name="Usuario")
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name="Usuario", null=True, blank=True)
     action = models.CharField(max_length=255, verbose_name="Acción")
     timestamp = models.DateTimeField(auto_now_add=True, verbose_name="Fecha y Hora")
     ip_address = models.GenericIPAddressField(null=True, blank=True, verbose_name="Dirección IP")
@@ -163,7 +163,21 @@ def log_user_login(sender, request, user, **kwargs):
     ip = request.META.get('REMOTE_ADDR')
     AuditLog.objects.create(
         user=user,
-        action="Inicio de sesión",
+        action="Inicio de sesión exitoso",
+        ip_address=ip
+    )
+
+from django.contrib.auth.signals import user_login_failed
+
+@receiver(user_login_failed)
+def log_user_login_failed(sender, credentials, request, **kwargs):
+    ip = request.META.get('REMOTE_ADDR')
+    # Try to find the user if possible, otherwise None
+    # user_login_failed sends 'credentials' dict, not 'user' object usually (since it failed)
+    # But we can try to look up the user by username if we want, or just log the attempt
+    AuditLog.objects.create(
+        user=None, # user is not authenticated
+        action=f"Inicio de sesión fallido (Usuario: {credentials.get('username', 'Desconocido')})",
         ip_address=ip
     )
 

@@ -1,5 +1,20 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Project, Porcelanato, Hormigon, HormigonImage, HormigonVideo
+from django.contrib.auth.views import LoginView
+from django.utils.decorators import method_decorator
+from django_ratelimit.decorators import ratelimit
+from .forms import CustomAuthenticationForm
+from django.conf import settings
+
+@method_decorator(ratelimit(key='ip', rate='5/m', method='POST', block=True), name='dispatch')
+class RateLimitedLoginView(LoginView):
+    authentication_form = CustomAuthenticationForm
+    template_name = 'registration/login.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['turnstile_site_key'] = getattr(settings, 'TURNSTILE_SITE_KEY', '')
+        return context
 
 def inicio(request):
     # Show last 3 featured projects (or just last 3 created)
