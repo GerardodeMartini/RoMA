@@ -25,12 +25,12 @@ def porcelanatos(request):
     # Definition of categories to display and their mapping to DB codes
     # Use tuple (DB_CODE, Display Label, HTML ID)
     category_map = [
-        ('CEMENTO', 'Cemento', 'cemento', 'linea cemento.jpeg'),
-        ('MADERA', 'Madera', 'madera', 'linea madera.jpeg'),
-        ('MARMOL', 'Mármol', 'marmol', 'linea marmol.jpeg'),
-        ('PIEDRA', 'Urban Stone', 'urban-stone', 'linea urban stone.jpeg'),
-        ('EXTERIOR', 'Pileta', 'pileta', 'linea pileta.jpeg'),
-        ('INTERIOR', 'Blanca', 'blanca', 'linea blanca.jpeg'),
+        ('CEMENTO', 'Cemento', 'cemento', 'linea_cemento.jpeg'),
+        ('MADERA', 'Madera', 'madera', 'linea_madera.jpeg'),
+        ('MARMOL', 'Mármol', 'marmol', 'linea_marmol.jpeg'),
+        ('PIEDRA', 'Urban Stone', 'urban-stone', 'linea_urban_stone.jpeg'),
+        ('EXTERIOR', 'Pileta', 'pileta', 'linea_pileta.jpeg'),
+        ('INTERIOR', 'Blanca', 'blanca', 'linea_blanca.jpeg'),
         ('OTRO', 'Otros', 'otros', None),
     ]
     
