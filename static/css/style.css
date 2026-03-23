@@ -584,6 +584,30 @@ img {
     transform: translateY(-2px);
 }
 
+.clients-logos-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.client-logo-item img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+
+.client-collage-img {
+    max-width: 65%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
 /* Header - Left Logo / Right Nav Layout */
 .header {
     background-color: var(--bg-white);
@@ -910,5 +934,19 @@ img {
     .footer-bottom {
         padding: 30px 20px !important;
         text-align: center !important;
+    }
+
+    /* Client Logos Mobile Fix */
+    .clients-logos-container {
+        gap: 20px !important;
+        margin-top: 30px !important;
+    }
+
+    .logo-crucijuegos img {
+        max-width: 120px !important;
+    }
+
+    .client-collage-img {
+        max-width: 85% !important;
     }
 }
