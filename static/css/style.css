@@ -584,21 +584,23 @@ img {
     transform: translateY(-2px);
 }
 
-.clients-logos-container {
+.featured-client-logo {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
     margin-top: 40px;
-    width: 100%;
-    gap: 40px;
-    flex-wrap: wrap;
 }
 
-.client-logo-item img {
-    max-width: 200px;
+.featured-client-logo img {
+    max-width: 120px; /* Refined size for PC */
     height: auto;
     display: block;
+}
+
+.clients-logos-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
 }
 
 .client-collage-img {
@@ -937,13 +939,16 @@ img {
     }
 
     /* Client Logos Mobile Fix */
-    .clients-logos-container {
-        gap: 20px !important;
+    .featured-client-logo {
         margin-top: 30px !important;
     }
 
-    .logo-crucijuegos img {
-        max-width: 80px !important;
+    .featured-client-logo img {
+        max-width: 60px !important; /* Smaller for mobile balance */
+    }
+
+    .clients-logos-container {
+        margin-top: 15px !important;
     }
 
     .client-collage-img {
