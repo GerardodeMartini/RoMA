@@ -591,7 +591,7 @@ img {
 }
 
 .featured-client-logo img {
-    max-width: 120px; /* Refined size for PC */
+    max-width: 180px; /* Intermediate size for PC */
     height: auto;
     display: block;
 }
@@ -944,7 +944,7 @@ img {
     }
 
     .featured-client-logo img {
-        max-width: 60px !important; /* Smaller for mobile balance */
+        max-width: 100px !important; /* Intermediate size for mobile balance */
     }
 
     .clients-logos-container {
