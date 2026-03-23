@@ -944,7 +944,7 @@ img {
     }
 
     .featured-client-logo img {
-        max-width: 100px !important; /* Intermediate size for mobile balance */
+        max-width: 85px !important; /* Refined intermediate size for mobile balance */
     }
 
     .clients-logos-container {
