@@ -25,24 +25,25 @@ def porcelanatos(request):
     # Definition of categories to display and their mapping to DB codes
     # Use tuple (DB_CODE, Display Label, HTML ID)
     category_map = [
-        ('CEMENTO', 'Cemento', 'cemento'),
-        ('MADERA', 'Madera', 'madera'),
-        ('MARMOL', 'Mármol', 'marmol'),
-        ('PIEDRA', 'Urban Stone', 'urban-stone'),
-        ('EXTERIOR', 'Pileta', 'pileta'),
-        ('INTERIOR', 'Blanca', 'blanca'),
-        ('OTRO', 'Otros', 'otros'),
+        ('CEMENTO', 'Cemento', 'cemento', 'linea cemento.jpeg'),
+        ('MADERA', 'Madera', 'madera', 'linea madera.jpeg'),
+        ('MARMOL', 'Mármol', 'marmol', 'linea marmol.jpeg'),
+        ('PIEDRA', 'Urban Stone', 'urban-stone', 'linea urban stone.jpeg'),
+        ('EXTERIOR', 'Pileta', 'pileta', 'linea pileta.jpeg'),
+        ('INTERIOR', 'Blanca', 'blanca', 'linea blanca.jpeg'),
+        ('OTRO', 'Otros', 'otros', None),
     ]
     
     grouped_products = []
     
-    for db_code, label, html_id in category_map:
+    for db_code, label, html_id, cover_image in category_map:
         items = Porcelanato.objects.filter(category=db_code)
         if items.exists():
             grouped_products.append({
                 'label': label,
                 'id': html_id,
-                'items': items
+                'items': items,
+                'cover_image': cover_image
             })
             
     return render(request, 'porcelanatos.html', {'grouped_products': grouped_products})

@@ -22,6 +22,13 @@
         {% for group in grouped_products %}
         <div id="{{ group.id }}" class="category-block">
             <h2 class="category-title">{{ group.label }}</h2>
+
+            {% if group.cover_image %}
+            <div class="category-cover mb-4">
+                <img src="{% static 'img/porcelanatos/' %}{{ group.cover_image }}" alt="Línea {{ group.label }}" class="img-fluid w-100" style="border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            </div>
+            {% endif %}
+
             <div class="row" style="display: flex; flex-wrap: wrap; margin: 0 -15px;">
                 {% for p in group.items %}
                 <div class="col-lg-6 col-md-12 mb-4" style="padding: 0 15px;">
