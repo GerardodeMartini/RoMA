@@ -84,19 +84,19 @@
             </a>
 
             <!-- Navigation (Right) -->
-            <div class="hidden md:flex items-center gap-8">
-                <ul class="flex items-center gap-8 m-0 p-0">
-                    <li><a href="{% url 'inicio' %}" class="font-headline font-bold tracking-tight uppercase text-xs text-primary hover:text-secondary transition-colors border-b-2 border-transparent hover:border-secondary pb-1">Inicio</a></li>
-                    <li><a href="{% url 'inicio' %}#servicios" class="font-headline font-bold tracking-tight uppercase text-xs text-on-surface-variant hover:text-primary transition-colors">Servicios</a></li>
-                    <li><a href="{% url 'project_list' %}" class="font-headline font-bold tracking-tight uppercase text-xs text-on-surface-variant hover:text-primary transition-colors">Proyectos</a></li>
-                    <li><a href="{% url 'productos_hub' %}" class="font-headline font-bold tracking-tight uppercase text-xs text-on-surface-variant hover:text-primary transition-colors">Productos</a></li>
-                    <li><a href="#contacto" class="font-headline font-bold tracking-tight uppercase text-xs text-on-surface-variant hover:text-primary transition-colors">Contacto</a></li>
+            <div class="hidden md:flex items-center gap-10">
+                <ul class="flex items-center gap-10 m-0 p-0">
+                    <li><a href="{% url 'inicio' %}" class="font-headline font-bold tracking-tight uppercase text-sm text-primary hover:text-secondary transition-colors border-b-2 border-transparent hover:border-secondary pb-1">Inicio</a></li>
+                    <li><a href="{% url 'inicio' %}#servicios" class="font-headline font-bold tracking-tight uppercase text-sm text-on-surface-variant hover:text-primary transition-colors">Servicios</a></li>
+                    <li><a href="{% url 'project_list' %}" class="font-headline font-bold tracking-tight uppercase text-sm text-on-surface-variant hover:text-primary transition-colors">Proyectos</a></li>
+                    <li><a href="{% url 'productos_hub' %}" class="font-headline font-bold tracking-tight uppercase text-sm text-on-surface-variant hover:text-primary transition-colors">Productos</a></li>
+                    <li><a href="#contacto" class="font-headline font-bold tracking-tight uppercase text-sm text-on-surface-variant hover:text-primary transition-colors">Contacto</a></li>
                 </ul>
                 
                 {% if user.is_authenticated %}
                 <a href="{% url 'edicion' %}" class="ml-4 px-6 py-2 bg-primary text-on-primary rounded-xl font-label text-[10px] uppercase tracking-widest font-bold hover:bg-primary/90 transition-all active:scale-95 shadow-lg shadow-primary/10">Admin</a>
                 {% else %}
-                <a href="{% url 'login' %}" class="ml-4 px-4 py-2 text-primary hover:bg-surface-container rounded-lg transition-all"><span class="material-symbols-outlined">lock</span></a>
+                <a href="{% url 'login' %}" class="ml-4 px-4 py-2 text-primary hover:bg-surface-container rounded-lg transition-all"><span class="material-symbols-outlined text-2xl">lock</span></a>
                 {% endif %}
             </div>
 
