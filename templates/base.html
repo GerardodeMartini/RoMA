@@ -80,9 +80,9 @@
         <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-7xl mx-auto w-full">
             <!-- Logo (Left) -->
             <a href="{% url 'inicio' %}" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                <img src="{% static 'img/logo_roma.png' %}" alt="Logo RoMA" class="h-12 md:h-16 w-auto object-contain">
+                <img src="{% static 'img/logo_roma.png' %}" alt="Logo RoMA" class="h-16 md:h-20 w-auto object-contain">
                 <div class="hidden sm:block">
-                    <span class="block text-lg font-black tracking-tighter leading-none text-primary">RoMA</span>
+                    <span class="block text-xl font-black tracking-tighter leading-none text-primary">RoMA</span>
                     <span class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant font-bold">Ingeniería</span>
                 </div>
             </a>
@@ -106,10 +106,42 @@
 
             <!-- Mobile Toggle -->
             <div class="md:hidden">
-                <span class="material-symbols-outlined text-primary text-3xl cursor-pointer">menu</span>
+                <button id="mobile-menu-open" class="text-primary focus:outline-none">
+                    <span class="material-symbols-outlined text-4xl">menu</span>
+                </button>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-primary/95 backdrop-blur-xl translate-x-full transition-transform duration-500 ease-in-out md:hidden">
+        <div class="flex flex-col h-full p-8">
+            <div class="flex justify-between items-center mb-16">
+                <img src="{% static 'img/logo_roma.png' %}" alt="Logo RoMA" class="h-12 w-auto brightness-200 contrast-200">
+                <button id="mobile-menu-close" class="text-white focus:outline-none">
+                    <span class="material-symbols-outlined text-4xl">close</span>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-8">
+                <a href="{% url 'inicio' %}" class="mobile-nav-link text-3xl font-headline font-bold text-white/50 hover:text-white transition-colors">Inicio</a>
+                <a href="{% url 'inicio' %}#servicios" class="mobile-nav-link text-3xl font-headline font-bold text-white/50 hover:text-white transition-colors">Servicios</a>
+                <a href="{% url 'project_list' %}" class="mobile-nav-link text-3xl font-headline font-bold text-white/50 hover:text-white transition-colors">Proyectos</a>
+                <a href="{% url 'productos_hub' %}" class="mobile-nav-link text-3xl font-headline font-bold text-white/50 hover:text-white transition-colors">Productos</a>
+                <a href="#contacto" class="mobile-nav-link text-3xl font-headline font-bold text-white/50 hover:text-white transition-colors">Contacto</a>
+                
+                <div class="mt-8 pt-8 border-t border-white/10">
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'edicion' %}" class="text-secondary font-headline font-bold uppercase tracking-widest text-sm">Administración &rarr;</a>
+                    {% else %}
+                    <a href="{% url 'login' %}" class="text-white/30 flex items-center gap-2">
+                        <span class="material-symbols-outlined">lock</span> Ingreso Staff
+                    </a>
+                    {% endif %}
+                </div>
+            </nav>
+        </div>
+    </div>
 
     <!-- Spacer for fixed nav -->
     <div class="h-20 md:h-24"></div>
@@ -238,6 +270,26 @@
             }
 
             fetchWeather();
+
+            // Mobile Menu Logic
+            const openBtn = document.getElementById('mobile-menu-open');
+            const closeBtn = document.getElementById('mobile-menu-close');
+            const menu = document.getElementById('mobile-menu');
+            const links = document.querySelectorAll('.mobile-nav-link');
+
+            function toggleMenu(show) {
+                if (show) {
+                    menu.classList.remove('translate-x-full');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    menu.classList.add('translate-x-full');
+                    document.body.style.overflow = '';
+                }
+            }
+
+            openBtn.addEventListener('click', () => toggleMenu(true));
+            closeBtn.addEventListener('click', () => toggleMenu(false));
+            links.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
         });
     </script>
 
