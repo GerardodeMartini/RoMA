@@ -3,561 +3,410 @@
 
 {% block content %}
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-        <h1>Confía en RoMA</h1>
-        <p>Somos una consultora de ingeniería y servicios de asesoramientos a entidades publicas y privadas.</p>
-        <a href="{% url 'project_list' %}" class="btn">Ver Proyectos</a>
+<!-- Hero Section - High Impact Design -->
+<section class="relative h-[80vh] flex items-center overflow-hidden bg-primary mb-12">
+    <div class="absolute inset-0 z-0">
+        <img class="w-full h-full object-cover opacity-30 object-center" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Ingeniería RoMA Background">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/60 to-transparent"></div>
     </div>
-</section>
-
-<!-- History / About Section -->
-<section class="section about-section" style="background-color: var(--white); padding-bottom: 40px;">
-    <div class="container text-center">
-        <h2 class="section-title">Nuestra Historia</h2>
-        <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: var(--text-medium);">
-            RoMA surge de las siglas de los nombres de sus fundadores, en el año 2020, con la idea de brindar
-            servicios de ingeniería civil de alto nivel y asesoramientos de ingeniería industrial en organización y
-            logística.
+    
+    <div class="relative z-10 px-6 md:px-12 max-w-7xl mx-auto w-full">
+        <span class="inline-block px-3 py-1 mb-6 rounded-full bg-secondary/20 text-secondary-fixed-dim font-label text-[10px] uppercase tracking-[0.2em] font-bold">
+            Ingeniería Civil e Industrial
+        </span>
+        <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-tighter mb-8 max-w-4xl">
+            Confía en <span class="text-secondary-fixed-dim">RoMA</span>
+        </h1>
+        <p class="text-surface-container-highest/80 text-lg md:text-xl max-w-2xl mb-12 font-body leading-relaxed">
+            Somos una consultora de ingeniería y servicios de asesoramientos a entidades públicas y privadas.
         </p>
+        <div class="flex flex-col sm:flex-row gap-6">
+            <a href="{% url 'project_list' %}" class="px-10 py-5 bg-secondary text-on-secondary rounded-xl font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all active:scale-95 shadow-xl shadow-secondary/10 inline-block text-center">
+                Ver Proyectos
+            </a>
+            <a href="#servicios" class="px-10 py-5 bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-xl font-headline font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-all active:scale-95 inline-block text-center">
+                Especialidades
+            </a>
+        </div>
     </div>
 </section>
 
-<!-- Services / Intro Section -->
-<section class="section services" id="servicios">
-    <div class="container">
-        <h2 class="section-title">Nuestros Servicios</h2>
-        <div class="services-grid">
+<!-- Nuestra Historia - Modern Layout -->
+<section class="py-24 px-6 md:px-12 bg-surface">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+        <div class="relative">
+            <div class="aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden shadow-2xl">
+                <img class="w-full h-full object-cover" src="{% static 'img/services/pliego2.jpeg' %}" alt="Planos de Ingeniería">
+            </div>
+            <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary-container rounded-xl p-8 flex flex-col justify-end hidden lg:flex shadow-2xl">
+                <p class="font-headline font-black text-6xl text-primary">2020</p>
+                <p class="font-label text-sm uppercase font-bold text-primary tracking-tighter">Año de Fundación</p>
+            </div>
+        </div>
+        <div>
+            <h2 class="font-headline text-xs font-black text-secondary uppercase tracking-[0.3em] mb-4">Nuestra Historia</h2>
+            <h3 class="font-headline text-4xl md:text-5xl font-bold text-primary mb-8 leading-tight">Elevando los estándares de la infraestructura.</h3>
+            <div class="space-y-6 text-on-surface-variant leading-relaxed text-lg">
+                <p>
+                    RoMA surge de las siglas de los nombres de sus fundadores, en el año 2020, con la idea de brindar
+                    servicios de ingeniería civil de alto nivel y asesoramientos de ingeniería industrial en organización y
+                    logística.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Servicios - Modern Grid -->
+<section class="py-24 px-6 md:px-12 bg-surface-container-low" id="servicios">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+            <div class="max-w-2xl">
+                <h2 class="font-headline text-xs font-black text-secondary uppercase tracking-[0.3em] mb-4">Especialidades</h2>
+                <h3 class="font-headline text-4xl md:text-5xl font-bold text-primary leading-tight">Soluciones integrales de ingeniería de alta precisión.</h3>
+            </div>
+            <p class="text-on-surface-variant max-w-sm mb-2">Desarrollamos proyectos complejos con un enfoque técnico riguroso y una visión innovadora.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Servicio 1: Cálculo Estructural -->
-            <div class="service-card">
-                <i class="fa fa-layer-group"></i>
-                <h3>Cálculo Estructural</h3>
-                <ul class="service-list"
-                    style="text-align: center; font-size: 0.95rem; color: var(--text-medium); line-height: 1.3; list-style: none; padding: 0;">
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">
-                            Cálculo y dimensionado de estructuras de hormigón armado, pretensado, metálicas y steel
-                            framing (Robot Structural, CypeCAD, Staad, Rfem).
-                            <div style="text-align: center; margin-top: 15px; margin-bottom: 5px;">
-                                <img src="/static/img/services/structural_calc.jpg" alt="Cálculo Estructural"
-                                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                                <small
-                                    style="display: block; color: var(--text-medium); margin-top: 5px; font-style: italic; font-size: 0.85rem;">PROCREAR
-                                    Santa Rosa (L.P)</small>
-                            </div>
-                        </span>
-                    </li>
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">Modelados en Revit con planillas de doblado y
-                            detalles de uniones.
-                            <div style="text-align: center; margin-top: 15px; margin-bottom: 5px;">
-                                <img src="/static/img/services/revit_modeling.jpg" alt="Modelado Revit"
-                                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                                <small
-                                    style="display: block; color: var(--text-medium); margin-top: 5px; font-style: italic; font-size: 0.85rem;">SUM
-                                    Maizonave (L.P)</small>
-                            </div>
-                        </span>
-                    </li>
-                    <li style="display: flex; align-items: flex-start; justify-content: center;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">
-                            Optimización de estructuras para ahorro en materiales y tiempos.
-                            <div style="text-align: center; margin-top: 15px; margin-bottom: 5px;">
-                                <img src="/static/img/services/structure_optimization.jpg"
-                                    alt="Optimización Estructural"
-                                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                                <small
-                                    style="display: block; color: var(--text-medium); margin-top: 5px; font-style: italic; font-size: 0.85rem;">SUM
-                                    Maizonave (L.P)</small>
-                            </div>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Servicio 2: Cálculo Hidráulico -->
-            <div class="service-card">
-                <i class="fa fa-water"></i>
-                <h3>Cálculo Hidráulico</h3>
-                <ul class="service-list"
-                    style="text-align: center; font-size: 0.95rem; color: var(--text-medium); line-height: 1.3; list-style: none; padding: 0;">
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">
-                            Desarrollamos trabajos en ingeniería hidráulica y civil, diseño, cálculo y soluciones para
-                            todo tipo de obras hidráulicas y sanitarias.
-                            <div style="text-align: center; margin-top: 15px; margin-bottom: 5px;">
-                                <img src="/static/img/services/hydraulic_engineering.jpg" alt="Ingeniería Hidráulica"
-                                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                                <small
-                                    style="display: block; color: var(--text-medium); margin-top: 5px; font-style: italic; font-size: 0.85rem;">Diseño
-                                    y calculo de Alcantarilla PROCREAR LUJAN (Bs.As.)</small>
-                            </div>
-                        </span>
-                    </li>
-                    <li style="display: flex; align-items: flex-start; justify-content: center;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">
-                            Empleando softwares como EPANET y WaterCAD, planteamos soluciones para acueductos, redes de
-                            agua potable, estacion de bombeo, redes cloacales y pluviales.
-                            <div style="text-align: center; margin-top: 15px; margin-bottom: 5px;">
-                                <img src="/static/img/services/hydraulic_software.jpg" alt="Software Hidráulico"
-                                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                                <small
-                                    style="display: block; color: var(--text-medium); margin-top: 5px; font-style: italic; font-size: 0.85rem;">Diseño
-                                    y calculo de red de Agua Potable para Bompadre Catrilo (L.P.)</small>
-                            </div>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Servicio 3: Cálculo Vial -->
-            <div class="service-card">
-                <i class="fa fa-road"></i>
-                <h3>Cálculo Vial</h3>
-                <ul class="service-list"
-                    style="text-align: center; font-size: 0.95rem; color: var(--text-medium); line-height: 1.3; list-style: none; padding: 0;">
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">
-                            Desarrollamos cálculos de pavimento flexible y rígido, para vías de bajo y
-                            elevado transito.
-                            <div style="text-align: center; margin-top: 15px; margin-bottom: 5px;">
-                                <img src="/static/img/services/road_pavement.jpg" alt="Pavimento Vial"
-                                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                                <small
-                                    style="display: block; color: var(--text-medium); margin-top: 5px; font-style: italic; font-size: 0.85rem;">Calculo
-                                    de pavimento flexible para PROCREAR Lujan (Bs.As.)</small>
-                            </div>
-                        </span>
-                    </li>
-                    <li style="display: flex; align-items: flex-start; justify-content: center;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">
-                            Contamos con personal especializado en relevamientos topográficos y equipo
-                            necesario, para
-                            desarrollar cualquier tipo de obra vial.
-                            <div style="text-align: center; margin-top: 15px; margin-bottom: 5px;">
-                                <img src="/static/img/services/road_survey.jpg" alt="Relevamiento Topográfico"
-                                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                                <small
-                                    style="display: block; color: var(--text-medium); margin-top: 5px; font-style: italic; font-size: 0.85rem;">Calculo
-                                    de pavimento flexible para PROCREAR Lujan (Bs.As.)</small>
-                            </div>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Servicio 4: Steel Framing -->
-            <div class="service-card">
-                <i class="fa fa-home"></i>
-                <h3>Steel Framing</h3>
-                <ul class="service-list"
-                    style="text-align: center; font-size: 0.95rem; color: var(--text-medium); line-height: 1.3; list-style: none; padding: 0;">
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">
-                            Cálculo y diseño de estructuras en Steel Framing para obras de arquitectura modernas.
-                            <div style="text-align: center; margin-top: 15px; margin-bottom: 5px;">
-                                <img src="/static/img/services/steel_framing_1.jpg" alt="Steel Framing 1"
-                                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                                <small
-                                    style="display: block; color: var(--text-medium); margin-top: 5px; font-style: italic; font-size: 0.85rem;">Casa
-                                    del Aire, Santiago Del Estrero.</small>
-                            </div>
-                        </span>
-                    </li>
-                    <li style="display: flex; align-items: flex-start; justify-content: center;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">
-                            Soluciones eficientes y constructivas para proyectos residenciales y comerciales.
-                            <div style="text-align: center; margin-top: 15px; margin-bottom: 5px;">
-                                <img src="/static/img/services/steel_framing_2.jpg" alt="Steel Framing 2"
-                                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                                <small
-                                    style="display: block; color: var(--text-medium); margin-top: 5px; font-style: italic; font-size: 0.85rem;">Casa
-                                    Lucatelli ,Santiago del Estero.</small>
-                            </div>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Servicio 5: Pliegos y Presupuestos -->
-            <div class="service-card">
-                <i class="fa fa-file-signature"></i>
-                <h3>Pliegos y Presupuestos</h3>
-                <ul class="service-list"
-                    style="text-align: center; font-size: 0.95rem; color: var(--text-medium); line-height: 1.3; list-style: none; padding: 0;">
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">
-                            Armado de licitaciones y presupuestos de obra.
-                            <div style="text-align: center; margin-top: 15px; margin-bottom: 5px;">
-                                <img src="/static/img/services/budgets_planning.jpg" alt="Licitaciones y Presupuestos"
-                                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                                <small
-                                    style="display: block; color: var(--text-medium); margin-top: 5px; font-style: italic; font-size: 0.85rem;">Plan
-                                    Provincial Mi casa 1, 2 y 3. (L.P.)</small>
-                            </div>
-                            <div style="text-align: center; margin-top: 15px; margin-bottom: 5px;">
-                                <img src="/static/img/services/pliego2.jpeg" alt="Plan de vivienda Miguel Riglos"
-                                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                                <small
-                                    style="display: block; color: var(--text-medium); margin-top: 5px; font-style: italic; font-size: 0.85rem;">Plan
-                                    de vivienda en Miguel Riglos (L.P.)</small>
-                            </div>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Servicio 6: Servicios de Agrimensura -->
-            <div class="service-card">
-                <i class="fa fa-map-marked-alt"></i>
-                <h3>Servicios de Agrimensura</h3>
-                <ul class="service-list"
-                    style="text-align: center; font-size: 0.95rem; color: var(--text-medium); line-height: 1.3; list-style: none; padding: 0;">
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">Fotogrametría con dron</span>
-                    </li>
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">Agrimensura</span>
-                    </li>
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">Topografía</span>
-                    </li>
-                </ul>
-
-                <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
-                    <div style="text-align: center;">
-                        <img src="/static/img/services/fotogrametria_dron.jpeg" alt="Fotogrametría con dron"
-                            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    </div>
-                    <div style="text-align: center;">
-                        <img src="/static/img/services/fotogrametria_dron_2.jpeg" alt="Agrimensura"
-                            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    </div>
-                    <div style="text-align: center;">
-                        <img src="/static/img/services/topografia.jpeg" alt="Topografía"
-                            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    </div>
+            <div class="bg-surface-container-lowest p-8 rounded-2xl hover:shadow-2xl transition-all group border border-transparent hover:border-secondary/20 flex flex-col h-full">
+                <div class="w-14 h-14 bg-surface-container mb-8 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="architecture">architecture</span>
+                </div>
+                <h4 class="font-headline text-xl font-bold text-primary mb-4 uppercase tracking-tight">Cálculo Estructural</h4>
+                <div class="text-sm text-on-surface-variant leading-relaxed space-y-4 flex-grow">
+                    <p>Cálculo y dimensionado de estructuras de hormigón armado, pretensado, metálicas y steel framing.</p>
+                    <p class="italic text-xs">Softwares: Robot Structural, CypeCAD, Staad, Rfem.</p>
+                    <p>Modelados en Revit con planillas de doblado y detalles de uniones.</p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-outline/10">
+                    <img src="/static/img/services/structural_calc.jpg" alt="Cálculo Estructural" class="w-full h-32 object-cover rounded-lg mb-2 shadow-md">
+                    <span class="text-[10px] uppercase font-bold text-secondary">PROCREAR Santa Rosa (L.P)</span>
                 </div>
             </div>
 
-            <!-- Servicio 7: Arquitectura -->
-            <div class="service-card" style="display: flex; flex-direction: column; height: 100%;">
-                <i class="fa fa-drafting-compass"></i>
-                <h3>Arquitectura</h3>
-                <ul class="service-list"
-                    style="text-align: center; font-size: 0.95rem; color: var(--text-medium); line-height: 1.3; list-style: none; padding: 0;">
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">Renders de Alta Definición</span>
-                    </li>
-                </ul>
+            <!-- Servicio 2: Cálculo Hidráulico -->
+            <div class="bg-surface-container-lowest p-8 rounded-2xl hover:shadow-2xl transition-all group border border-transparent hover:border-secondary/20 flex flex-col h-full">
+                <div class="w-14 h-14 bg-surface-container mb-8 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="water_drop">water_drop</span>
+                </div>
+                <h4 class="font-headline text-xl font-bold text-primary mb-4 uppercase tracking-tight">Cálculo Hidráulico</h4>
+                <div class="text-sm text-on-surface-variant leading-relaxed space-y-4 flex-grow">
+                    <p>Diseño, cálculo y soluciones para todo tipo de obras hidráulicas y sanitarias.</p>
+                    <p class="italic text-xs">Softwares: EPANET, WaterCAD.</p>
+                    <p>Soluciones para acueductos, redes de agua potable, estaciones de bombeo, redes cloacales y pluviales.</p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-outline/10">
+                    <img src="/static/img/services/hydraulic_engineering.jpg" alt="Ingeniería Hidráulica" class="w-full h-32 object-cover rounded-lg mb-2 shadow-md">
+                    <span class="text-[10px] uppercase font-bold text-secondary">Alcantarilla PROCREAR LUJAN</span>
+                </div>
+            </div>
 
-                <div
-                    style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px; flex-grow: 1; justify-content: space-between;">
-                    <div style="text-align: center;">
-                        <img src="/static/img/services/render1.jpg?v=updated" alt="Render 1"
-                            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    </div>
-                    <div style="text-align: center;">
-                        <img src="/static/img/services/render2.jpg?v=updated" alt="Render 2"
-                            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    </div>
-                    <div style="text-align: center;">
-                        <img src="/static/img/services/render3.jpg?v=updated" alt="Render 3"
-                            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    </div>
+            <!-- Servicio 3: Cálculo Vial -->
+            <div class="bg-surface-container-lowest p-8 rounded-2xl hover:shadow-2xl transition-all group border border-transparent hover:border-secondary/20 flex flex-col h-full">
+                <div class="w-14 h-14 bg-surface-container mb-8 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="alt_route">alt_route</span>
+                </div>
+                <h4 class="font-headline text-xl font-bold text-primary mb-4 uppercase tracking-tight">Cálculo Vial</h4>
+                <div class="text-sm text-on-surface-variant leading-relaxed space-y-4 flex-grow">
+                    <p>Desarrollamos cálculos de pavimento flexible y rígido para vías de bajo y elevado tránsito.</p>
+                    <p>Relevamientos topográficos con equipo especializado para cualquier tipo de obra vial.</p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-outline/10">
+                    <img src="/static/img/services/road_pavement.jpg" alt="Pavimento Vial" class="w-full h-32 object-cover rounded-lg mb-2 shadow-md">
+                    <span class="text-[10px] uppercase font-bold text-secondary">Pavimento PROCREAR Lujan</span>
+                </div>
+            </div>
+
+            <!-- Servicio 4: Steel Framing -->
+            <div class="bg-surface-container-lowest p-8 rounded-2xl hover:shadow-2xl transition-all group border border-transparent hover:border-secondary/20 flex flex-col h-full">
+                <div class="w-14 h-14 bg-surface-container mb-8 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="foundation">foundation</span>
+                </div>
+                <h4 class="font-headline text-xl font-bold text-primary mb-4 uppercase tracking-tight">Steel Framing</h4>
+                <div class="text-sm text-on-surface-variant leading-relaxed space-y-4 flex-grow">
+                    <p>Cálculo y diseño de estructuras en Steel Framing para obras de arquitectura modernas.</p>
+                    <p>Soluciones eficientes para proyectos residenciales y comerciales de alta rapidez de ejecución.</p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-outline/10">
+                    <img src="/static/img/services/steel_framing_1.jpg" alt="Steel Framing" class="w-full h-32 object-cover rounded-lg mb-2 shadow-md">
+                    <span class="text-[10px] uppercase font-bold text-secondary">Casa del Aire, SDE</span>
+                </div>
+            </div>
+
+            <!-- Servicio 5: Pliegos y Presupuestos -->
+            <div class="bg-surface-container-lowest p-8 rounded-2xl hover:shadow-2xl transition-all group border border-transparent hover:border-secondary/20 flex flex-col h-full">
+                <div class="w-14 h-14 bg-surface-container mb-8 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="description">description</span>
+                </div>
+                <h4 class="font-headline text-xl font-bold text-primary mb-4 uppercase tracking-tight">Pliegos y Presupuestos</h4>
+                <div class="text-sm text-on-surface-variant leading-relaxed space-y-4 flex-grow">
+                    <p>Armado de licitaciones y presupuestos de obra detallados.</p>
+                    <p>Planificación para programas de vivienda y obras públicas gubernamentales.</p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-outline/10">
+                    <img src="/static/img/services/budgets_planning.jpg" alt="Licitaciones" class="w-full h-32 object-cover rounded-lg mb-2 shadow-md">
+                    <span class="text-[10px] uppercase font-bold text-secondary">Plan Mi Casa 1, 2 y 3 (L.P.)</span>
+                </div>
+            </div>
+
+            <!-- Servicio 6: Agrimensura y Topografía -->
+            <div class="bg-surface-container-lowest p-8 rounded-2xl hover:shadow-2xl transition-all group border border-transparent hover:border-secondary/20 flex flex-col h-full">
+                <div class="w-14 h-14 bg-surface-container mb-8 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="map">map</span>
+                </div>
+                <h4 class="font-headline text-xl font-bold text-primary mb-4 uppercase tracking-tight">Agrimensura y Topografía</h4>
+                <div class="text-sm text-on-surface-variant leading-relaxed space-y-4 flex-grow">
+                    <p>Fotogrametría con dron de alta precisión para relevamientos territoriales.</p>
+                    <p>Servicios profesionales de agrimensura y topografía aplicada a la construcción y vialidad.</p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-outline/10">
+                    <img src="/static/img/services/fotogrametria_dron.jpeg" alt="Topografía" class="w-full h-32 object-cover rounded-lg mb-2 shadow-md">
+                    <span class="text-[10px] uppercase font-bold text-secondary">Fotogrametría Aérea</span>
+                </div>
+            </div>
+            
+            <!-- Servicio 7: Arquitectura y Renders -->
+            <div class="bg-surface-container-lowest p-8 rounded-2xl hover:shadow-2xl transition-all group border border-transparent hover:border-secondary/20 flex flex-col h-full">
+                <div class="w-14 h-14 bg-surface-container mb-8 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="photo_camera">photo_camera</span>
+                </div>
+                <h4 class="font-headline text-xl font-bold text-primary mb-4 uppercase tracking-tight">Arquitectura y Renders</h4>
+                <div class="text-sm text-on-surface-variant leading-relaxed space-y-4 flex-grow">
+                    <p>Desarrollo de proyectos arquitectónicos integrales.</p>
+                    <p>Generación de Renders de alta definición para previsualización de obras y marketing inmobiliario.</p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-outline/10">
+                    <img src="/static/img/services/render1.jpg" alt="Arquitectura" class="w-full h-32 object-cover rounded-lg mb-2 shadow-md">
+                    <span class="text-[10px] uppercase font-bold text-secondary">Visualización 3D Avanzada</span>
                 </div>
             </div>
 
             <!-- Servicio 8: Alquiler de Maquinaria -->
-            <div class="service-card">
-                <i class="fa fa-snowplow"></i>
-                <h3>Alquiler de Maquinaria</h3>
-                <ul class="service-list"
-                    style="text-align: center; font-size: 0.95rem; color: var(--text-medium); line-height: 1.3; list-style: none; padding: 0;">
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">Movimiento de tierra</span>
-                    </li>
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">Demoliciones</span>
-                    </li>
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">Apertura de caminos</span>
-                    </li>
-                </ul>
-
-                <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
-                    <div style="text-align: center;">
-                        <img src="/static/img/services/maquinaria1.jpg?v=2" alt="Movimiento de tierra"
-                            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    </div>
-                    <div style="text-align: center;">
-                        <img src="/static/img/services/maquinaria3.jpg" alt="Apertura de caminos"
-                            style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    </div>
+            <div class="bg-surface-container-lowest p-8 rounded-2xl hover:shadow-2xl transition-all group border border-transparent hover:border-secondary/20 flex flex-col h-full">
+                <div class="w-14 h-14 bg-surface-container mb-8 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="engineering">engineering</span>
+                </div>
+                <h4 class="font-headline text-xl font-bold text-primary mb-4 uppercase tracking-tight">Maquinaria y Equipos</h4>
+                <div class="text-sm text-on-surface-variant leading-relaxed space-y-4 flex-grow">
+                    <p>Alquiler de maquinaria pesada para movimiento de suelos, demoliciones y apertura de caminos.</p>
+                    <p>Logística y ejecución de obras de infraestructura pesada.</p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-outline/10">
+                    <img src="/static/img/services/maquinaria1.jpg" alt="Maquinaria" class="w-full h-32 object-cover rounded-lg mb-2 shadow-md">
+                    <span class="text-[10px] uppercase font-bold text-secondary">Flota de Equipos Pesados</span>
                 </div>
             </div>
 
             <!-- Servicio 9: Impacto Ambiental -->
-            <div class="service-card">
-                <i class="fa fa-leaf"></i>
-                <h3>Impacto Ambiental</h3>
-                <ul class="service-list"
-                    style="text-align: center; font-size: 0.95rem; color: var(--text-medium); line-height: 1.3; list-style: none; padding: 0;">
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">
-                            Servicios de Ingeniería Ambiental adaptados al contexto actual.
-                        </span>
-                    </li>
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">
-                            Estudios de Impacto Ambiental y Auditorías Ambientales.
-                        </span>
-                    </li>
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">Mejora continua y satisfacción
-                            del
-                            cliente.
-                        </span>
-                    </li>
-                    <li style="display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">Profesionales aptos para nuevos
-                            desafíos y
-                            cumplimiento de metas.</span>
-                    </li>
-                    <li style="display: flex; align-items: flex-start; justify-content: center;">
-                        <span style="flex-shrink: 0; margin-right: 10px; padding-top: 2px;">
-                            <i class="fa fa-check" style="color: var(--primary-color); font-size: 0.8rem;"></i>
-                        </span>
-                        <span style="text-align: center; max-width: 90%;">Compromiso con el desarrollo
-                            sustentable y
-                            economía circular.</span>
-                    </li>
-                </ul>
-                <div style="text-align: center; margin-top: 15px;">
-                    <img src="/static/img/services/environmental_impact.jpg?v=new" alt="Ingeniería Ambiental"
-                        style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <div class="bg-surface-container-lowest p-8 rounded-2xl hover:shadow-2xl transition-all group border border-transparent hover:border-secondary/20 flex flex-col h-full">
+                <div class="w-14 h-14 bg-surface-container mb-8 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="nature">nature</span>
+                </div>
+                <h4 class="font-headline text-xl font-bold text-primary mb-4 uppercase tracking-tight">Impacto Ambiental</h4>
+                <div class="text-sm text-on-surface-variant leading-relaxed space-y-4 flex-grow">
+                    <p>Estudios de Impacto Ambiental (EIA) y Auditorías Ambientales.</p>
+                    <p>Asesoramiento en desarrollo sustentable y economía circular para proyectos de ingeniería.</p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-outline/10">
+                    <img src="/static/img/services/environmental_impact.jpg" alt="Medio Ambiente" class="w-full h-32 object-cover rounded-lg mb-2 shadow-md">
+                    <span class="text-[10px] uppercase font-bold text-secondary">Ingeniería Sustentable</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Specialists Section -->
-<section class="section specialists">
-    <div class="container">
-        <h2 class="section-title">Nuestros Especialistas</h2>
-        <div class="services-grid"> <!-- Reuse grid for consistency -->
+<!-- Especialistas Section - Modern Team Grid -->
+<section class="py-32 px-6 md:px-12 bg-surface">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-24">
+            <h2 class="font-headline text-xs font-black text-secondary uppercase tracking-[0.3em] mb-4">Nuestro Equipo</h2>
+            <h3 class="font-headline text-4xl md:text-5xl font-bold text-primary">Nuestros Especialistas</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-12">
             <!-- 1. Miguel Ángel Díaz -->
-            <div class="service-card">
-                <i class="fa fa-user-tie"></i>
-                <h3>Miguel Ángel Díaz</h3>
-                <p class="role" style="font-weight: 700; color: var(--primary-color); margin-bottom: 5px;">Socio Gerente
-                </p>
-                <p>Ingeniero Industrial.</p>
+            <div class="text-center group">
+                <div class="aspect-square rounded-full overflow-hidden mb-8 max-w-[240px] mx-auto ring-8 ring-surface-container-low ring-offset-4 group-hover:ring-secondary/20 transition-all duration-500">
+                    <div class="w-full h-full bg-surface-container-highest flex items-center justify-center">
+                        <i class="fa fa-user-tie text-6xl text-primary/40"></i>
+                    </div>
+                </div>
+                <h4 class="font-headline text-2xl font-bold text-primary">Miguel Ángel Díaz</h4>
+                <p class="font-label text-[10px] uppercase text-secondary font-black tracking-widest mt-2">Socio Gerente</p>
+                <p class="text-on-surface-variant text-sm mt-3">Ingeniero Industrial</p>
             </div>
 
             <!-- 2. Rodrigo Nicolas Díaz -->
-            <div class="service-card">
-                <i class="fa fa-user-tie"></i>
-                <h3>Rodrigo Nicolas Díaz</h3>
-                <p class="role" style="font-weight: 700; color: var(--primary-color); margin-bottom: 5px;">Socio Gerente
-                </p>
-                <p>Ingeniero Civil, especialista en Cálculo Estructural e Ingeniería Sanitaria.</p>
+            <div class="text-center group">
+                <div class="aspect-square rounded-full overflow-hidden mb-8 max-w-[240px] mx-auto ring-8 ring-surface-container-low ring-offset-4 group-hover:ring-secondary/20 transition-all duration-500">
+                    <div class="w-full h-full bg-surface-container-highest flex items-center justify-center">
+                        <i class="fa fa-user-tie text-6xl text-primary/40"></i>
+                    </div>
+                </div>
+                <h4 class="font-headline text-2xl font-bold text-primary">Rodrigo Nicolas Díaz</h4>
+                <p class="font-label text-[10px] uppercase text-secondary font-black tracking-widest mt-2">Socio Gerente</p>
+                <p class="text-on-surface-variant text-sm mt-3">Ingeniero Civil, especialista en Cálculo Estructural e Ingeniería Sanitaria</p>
             </div>
 
             <!-- 3. Mulki Ignacio -->
-            <div class="service-card">
-                <i class="fa fa-user-graduate"></i>
-                <h3>Mulki Ignacio</h3>
-                <p>Magister en Ingeniería Civil.</p>
+            <div class="text-center group">
+                <div class="aspect-square rounded-full overflow-hidden mb-8 max-w-[240px] mx-auto ring-8 ring-surface-container-low ring-offset-4 group-hover:ring-secondary/20 transition-all duration-500">
+                    <div class="w-full h-full bg-surface-container-highest flex items-center justify-center">
+                        <i class="fa fa-user-graduate text-6xl text-primary/40"></i>
+                    </div>
+                </div>
+                <h4 class="font-headline text-2xl font-bold text-primary">Mulki Ignacio</h4>
+                <p class="font-label text-[10px] uppercase text-on-surface-variant font-black tracking-widest mt-2">Magister en Ingeniería Civil</p>
             </div>
 
             <!-- 4. Macarena Soledad Díaz -->
-            <div class="service-card">
-                <i class="fa fa-balance-scale"></i>
-                <h3>Macarena Soledad Díaz</h3>
-                <p>Abogada.</p>
+            <div class="text-center group">
+                <div class="aspect-square rounded-full overflow-hidden mb-8 max-w-[240px] mx-auto ring-8 ring-surface-container-low ring-offset-4 group-hover:ring-secondary/20 transition-all duration-500">
+                    <div class="w-full h-full bg-surface-container-highest flex items-center justify-center">
+                        <i class="fa fa-balance-scale text-6xl text-primary/40"></i>
+                    </div>
+                </div>
+                <h4 class="font-headline text-2xl font-bold text-primary">Macarena Soledad Díaz</h4>
+                <p class="font-label text-[10px] uppercase text-on-surface-variant font-black tracking-widest mt-2">Abogada</p>
             </div>
 
-            <!-- 5. Pablo Massaccesi (Nuevo) -->
-            <div class="service-card">
-                <i class="fa fa-map-marked-alt"></i>
-                <h3>Pablo Massaccesi</h3>
-                <p>Ingeniero Civil, Especialista en Topografía.</p>
+            <!-- 5. Pablo Massaccesi -->
+            <div class="text-center group">
+                <div class="aspect-square rounded-full overflow-hidden mb-8 max-w-[240px] mx-auto ring-8 ring-surface-container-low ring-offset-4 group-hover:ring-secondary/20 transition-all duration-500">
+                    <div class="w-full h-full bg-surface-container-highest flex items-center justify-center">
+                        <i class="fa fa-map-marked-alt text-6xl text-primary/40"></i>
+                    </div>
+                </div>
+                <h4 class="font-headline text-2xl font-bold text-primary">Pablo Massaccesi</h4>
+                <p class="font-label text-[10px] uppercase text-on-surface-variant font-black tracking-widest mt-2">Ingeniero Civil, Especialista en Topografía</p>
             </div>
 
-            <!-- 6. Federico Saad (Nuevo) -->
-            <div class="service-card">
-                <i class="fa fa-drafting-compass"></i>
-                <h3>Federico Saad</h3>
-                <p>Arquitecto.</p>
+            <!-- 6. Federico Saad -->
+            <div class="text-center group">
+                <div class="aspect-square rounded-full overflow-hidden mb-8 max-w-[240px] mx-auto ring-8 ring-surface-container-low ring-offset-4 group-hover:ring-secondary/20 transition-all duration-500">
+                    <div class="w-full h-full bg-surface-container-highest flex items-center justify-center">
+                        <i class="fa fa-drafting-compass text-6xl text-primary/40"></i>
+                    </div>
+                </div>
+                <h4 class="font-headline text-2xl font-bold text-primary">Federico Saad</h4>
+                <p class="font-label text-[10px] uppercase text-on-surface-variant font-black tracking-widest mt-2">Arquitecto</p>
             </div>
 
             <!-- 7. Juan Ignacio Ramos -->
-            <div class="service-card">
-                <i class="fa fa-home"></i>
-                <h3>Juan Ignacio Ramos</h3>
-                <p>Ingeniero Civil, especialista en Steel Framing.</p>
+            <div class="text-center group">
+                <div class="aspect-square rounded-full overflow-hidden mb-8 max-w-[240px] mx-auto ring-8 ring-surface-container-low ring-offset-4 group-hover:ring-secondary/20 transition-all duration-500">
+                    <div class="w-full h-full bg-surface-container-highest flex items-center justify-center">
+                        <i class="fa fa-home text-6xl text-primary/40"></i>
+                    </div>
+                </div>
+                <h4 class="font-headline text-2xl font-bold text-primary">Juan Ignacio Ramos</h4>
+                <p class="font-label text-[10px] uppercase text-on-surface-variant font-black tracking-widest mt-2">Ingeniero Civil, especialista en Steel Framing</p>
             </div>
 
             <!-- 8. Gerardo Alberto Dllano -->
-            <div class="service-card">
-                <i class="fa fa-calculator"></i>
-                <h3>Gerardo Alberto Dllano</h3>
-                <p>Contador Público.</p>
+            <div class="text-center group">
+                <div class="aspect-square rounded-full overflow-hidden mb-8 max-w-[240px] mx-auto ring-8 ring-surface-container-low ring-offset-4 group-hover:ring-secondary/20 transition-all duration-500">
+                    <div class="w-full h-full bg-surface-container-highest flex items-center justify-center">
+                        <i class="fa fa-calculator text-6xl text-primary/40"></i>
+                    </div>
+                </div>
+                <h4 class="font-headline text-2xl font-bold text-primary">Gerardo Alberto Dllano</h4>
+                <p class="font-label text-[10px] uppercase text-on-surface-variant font-black tracking-widest mt-2">Contador Público</p>
             </div>
 
             <!-- 9. Silvana Carina Cuelle -->
-            <div class="service-card">
-                <i class="fa fa-hard-hat"></i>
-                <h3>Silvana Carina Cuelle</h3>
-                <p>Técnica en Seguridad e Higiene.</p>
+            <div class="text-center group">
+                <div class="aspect-square rounded-full overflow-hidden mb-8 max-w-[240px] mx-auto ring-8 ring-surface-container-low ring-offset-4 group-hover:ring-secondary/20 transition-all duration-500">
+                    <div class="w-full h-full bg-surface-container-highest flex items-center justify-center">
+                        <i class="fa fa-hard-hat text-6xl text-primary/40"></i>
+                    </div>
+                </div>
+                <h4 class="font-headline text-2xl font-bold text-primary">Silvana Carina Cuelle</h4>
+                <p class="font-label text-[10px] uppercase text-on-surface-variant font-black tracking-widest mt-2">Técnica en Seguridad e Higiene</p>
             </div>
-
         </div>
     </div>
 </section>
 
-<!-- Featured Projects -->
-<section class="section featured-projects">
-    <div class="container">
-        <h2 class="section-title">Proyectos Destacados</h2>
+<!-- Proyectos Destacados - Bento Grid -->
+<section class="py-32 px-6 md:px-12 bg-primary">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex justify-between items-end mb-20">
+            <div>
+                <h2 class="font-headline text-xs font-black text-secondary-fixed-dim uppercase tracking-[0.3em] mb-4">Portfolio</h2>
+                <h3 class="font-headline text-4xl md:text-5xl font-bold text-white">Proyectos Destacados</h3>
+            </div>
+            <a href="{% url 'project_list' %}" class="hidden md:flex items-center gap-2 text-white font-label text-xs uppercase font-bold tracking-widest group hover:text-secondary-fixed-dim transition-colors">
+                Ver todo el Portfolio 
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+            </a>
+        </div>
 
-        {% if featured_projects %}
-        <div class="projects-grid">
-            {% for project in featured_projects %}
-            <div class="project-card">
-                <div class="project-image">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% if featured_projects %}
+                {% for project in featured_projects %}
+                <div class="relative group overflow-hidden rounded-2xl aspect-[4/3] bg-surface-container">
                     {% if project.main_image %}
-                    <img src="{{ project.main_image.url }}" alt="{{ project.title }}">
-                    {% else %}
-                    <div class="no-image">Sin Imagen</div>
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90" src="{{ project.main_image.url }}" alt="{{ project.title }}">
                     {% endif %}
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <span class="text-secondary-fixed-dim font-label text-[10px] uppercase font-bold tracking-[0.2em]">{{ project.get_category_display }}</span>
+                        <h4 class="text-xl font-headline font-bold text-white mt-2">{{ project.title }}</h4>
+                        <a href="{% url 'project_detail' project.pk %}" class="inline-block mt-4 text-[10px] font-bold text-white/60 uppercase tracking-widest hover:text-white transition-colors">Ver Detalles &rarr;</a>
+                    </div>
                 </div>
-                <div class="project-info">
-                    <span class="category-tag">{{ project.get_category_display }}</span>
-                    <h3>{{ project.title }}</h3>
-                    <p>{{ project.description|truncatewords:20 }}</p>
-                    <a href="{% url 'project_detail' project.pk %}" class="read-more">Ver Detalles &rarr;</a>
+                {% endfor %}
+            {% else %}
+                <div class="col-span-full py-20 text-center border border-white/10 rounded-2xl">
+                    <p class="text-white/40 font-headline">Cargando obras recientes...</p>
                 </div>
-            </div>
-            {% endfor %}
+            {% endif %}
         </div>
-        {% else %}
-        <p class="text-center">Aumentando obras recientes...</p>
-        {% endif %}
-
-        <div class="text-center mt-2">
-            <a href="{% url 'project_list' %}" class="btn-outline">Ver Todos los Proyectos</a>
+        
+        <div class="mt-12 text-center md:hidden">
+            <a href="{% url 'project_list' %}" class="inline-block px-8 py-4 border border-white/20 text-white rounded-xl text-xs uppercase font-bold tracking-widest">Ver Todo el Portfolio</a>
         </div>
     </div>
 </section>
 
-<!-- Clients Section (Extracted from PDF) -->
-<section class="section clients-section">
-    <div class="container">
-        <h2 class="section-title">Confían en Nosotros</h2>
-        <div class="clients-list">
-            <ul>
-                <li>Aeropuertos Argentina</li>
-                <li>Municipalidad de Arata</li>
-                <li>Municipalidad de Catriló</li>
-                <li>Municipalidad de Mauricio Mayer</li>
-                <li>Cooperativa de Victorica</li>
-                <li>Cooperativa de Winifreda</li>
-                <li>Comisión de Fomento de Maisonave</li>
-                <li>Comisión de Fomento de Pichi Huinca</li>
-                <li>PROCREAR</li>
-                <li>Municipalidad de Toay</li>
-                <li>Ministerio de Obras y Servicios Públicos de La Pampa</li>
-                <li>Casillas RG de Macachín</li>
-                <li>Comisión de Fomento de Sarah</li>
-                <li>Cooperativa de Intendente Alvear</li>
-                <li>BEPHA Construcciones</li>
-                <li>ECOP Construcciones</li>
-                <li>ILKA Construcciones</li>
-                <li>IPAV</li>
-                <li>RIGEM</li>
-                <li>Municipalidad de Miguel Riglos</li>
-                <li>Municipalidad de Doblas</li>
-                <li>Municipalidad de Macachín</li>
-                <li>Municipalidad de Miguel Cané</li>
-            </ul>
-        </div>
-        <!-- Clients Image -->
-        <!-- Featured Client -->
-        <div class="featured-client-logo">
-            <img src="/static/img/services/logo crucijuegos.avif" alt="Crucijuegos">
+<!-- Confían en Nosotros - Chips Grid -->
+<section class="py-24 px-6 md:px-12 bg-surface-container-low border-b border-outline/5">
+    <div class="max-w-7xl mx-auto">
+        <p class="text-center font-label text-[10px] uppercase font-bold text-on-surface-variant tracking-[0.3em] mb-16">Organismos y Empresas que confían en RoMA</p>
+        <div class="flex flex-wrap justify-center gap-3">
+            <span class="px-5 py-2 bg-white rounded-full text-xs font-bold text-primary shadow-sm border border-outline/5 hover:bg-primary hover:text-white transition-all cursor-default">Aeropuertos Argentina</span>
+            <span class="px-5 py-2 bg-white rounded-full text-xs font-bold text-primary shadow-sm border border-outline/5 hover:bg-primary hover:text-white transition-all cursor-default">PROCREAR</span>
+            <span class="px-5 py-2 bg-white rounded-full text-xs font-bold text-primary shadow-sm border border-outline/5 hover:bg-primary hover:text-white transition-all cursor-default">IPAV</span>
+            <span class="px-5 py-2 bg-white rounded-full text-xs font-bold text-primary shadow-sm border border-outline/5 hover:bg-primary hover:text-white transition-all cursor-default">Ministerio de Obras Públicas (L.P.)</span>
+            <span class="px-5 py-2 bg-white rounded-full text-xs font-bold text-primary shadow-sm border border-outline/5 hover:bg-primary hover:text-white transition-all cursor-default">Municipalidad de Toay</span>
+            <span class="px-5 py-2 bg-white rounded-full text-xs font-bold text-primary shadow-sm border border-outline/5 hover:bg-primary hover:text-white transition-all cursor-default">Municipalidad de Macachín</span>
+            <span class="px-5 py-2 bg-white rounded-full text-xs font-bold text-primary shadow-sm border border-outline/5 hover:bg-primary hover:text-white transition-all cursor-default">Municipalidad de Catriló</span>
+            <span class="px-5 py-2 bg-white rounded-full text-xs font-bold text-primary shadow-sm border border-outline/5 hover:bg-primary hover:text-white transition-all cursor-default">BEPHA Construcciones</span>
+            <span class="px-5 py-2 bg-white rounded-full text-xs font-bold text-primary shadow-sm border border-outline/5 hover:bg-primary hover:text-white transition-all cursor-default">ECOP Construcciones</span>
         </div>
 
-        <!-- Clients Collage -->
-        <div class="clients-logos-container">
-            <img src="{% static 'img/clientes_collage.png' %}" alt="Nuestros Clientes" class="client-collage-img">
+        <div class="mt-16 flex flex-col md:flex-row items-center justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+            <img src="/static/img/services/logo crucijuegos.avif" alt="Crucijuegos" class="h-12 w-auto">
+            <img src="{% static 'img/clientes_collage.png' %}" alt="Clientes RoMA" class="max-w-[400px] h-auto rounded-lg">
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section - Modern Material Container -->
+<section class="py-32 px-6 md:px-12 bg-surface">
+    <div class="max-w-5xl mx-auto bg-primary rounded-[2.5rem] overflow-hidden relative p-12 md:p-24 text-center shadow-2xl">
+        <div class="absolute inset-0 opacity-10">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Ingeniería Background">
+        </div>
+        <div class="relative z-10">
+            <h2 class="font-headline text-4xl md:text-6xl font-bold text-white mb-8 tracking-tighter">¿Listo para dar vida a su próximo gran proyecto?</h2>
+            <p class="text-on-primary/60 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-body">Nuestros especialistas están listos para asesorarlo en cada etapa técnica de su obra.</p>
+            <a href="https://wa.me/5492954330377?text=Hola%20Miguel%2C%20estuve%20viendo%20el%20Sitio%20de%20RoMA" target="_blank" class="px-12 py-6 bg-secondary text-on-secondary rounded-2xl font-headline font-bold text-sm uppercase tracking-widest hover:opacity-90 hover:scale-105 transition-all active:scale-95 shadow-2xl inline-block">
+                Contactar con un Especialista
+            </a>
         </div>
     </div>
 </section>

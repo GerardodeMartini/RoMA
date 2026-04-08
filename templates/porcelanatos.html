@@ -2,133 +2,128 @@
 {% load static %}
 
 {% block content %}
-<section class="page-header">
-    <div class="container text-center">
-        <h1>Catálogo de Porcelanatos</h1>
-        <p>Calidad y diseño para tus espacios.</p>
+<!-- Page Header - Modern Hero -->
+<section class="relative h-[40vh] flex items-center overflow-hidden bg-primary mb-12">
+    <div class="absolute inset-0 z-0">
+        <img class="w-full h-full object-cover opacity-20 object-center" src="{% static 'img/porcelanatos/cover_porcelanatos.jpg' %}" alt="Catálogo RoMA">
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/80 to-primary"></div>
+    </div>
+    <div class="relative z-10 px-6 md:px-12 max-w-7xl mx-auto w-full text-center">
+        <h1 class="font-headline text-4xl md:text-6xl font-extrabold text-white leading-tight tracking-tighter mb-4">
+            Catálogo de <span class="text-secondary-fixed-dim">Porcelanatos</span>
+        </h1>
+        <p class="text-on-primary/60 text-lg font-body max-w-2xl mx-auto">Excelencia estética y durabilidad técnica para cada ambiente de su proyecto.</p>
     </div>
 </section>
 
-<section class="section catalog-section">
-    <div class="container">
-        <!-- Category Navigation -->
-        <div class="category-nav mb-4 text-center">
-            <span class="mr-2">Categorías:</span>
+<section class="pb-24 px-6 md:px-12 bg-surface">
+    <div class="max-w-7xl mx-auto">
+        <!-- Category Navigation - Modern Chips -->
+        <div class="flex flex-wrap justify-center gap-3 mb-16">
+            <span class="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest w-full text-center mb-4">Filtrar por Línea</span>
             {% for group in grouped_products %}
-            <a href="#{{ group.id }}">{{ group.label }}</a>
+            <a href="#{{ group.id }}" class="px-6 py-2 bg-surface-container rounded-full text-xs font-bold text-primary hover:bg-secondary hover:text-on-secondary transition-all shadow-sm border border-outline/5">{{ group.label }}</a>
             {% endfor %}
         </div>
 
         {% for group in grouped_products %}
-        <div id="{{ group.id }}" class="category-block">
-            <h2 class="category-title">{{ group.label }}</h2>
+        <div id="{{ group.id }}" class="category-block mb-32 scroll-mt-32">
+            <div class="flex items-center gap-6 mb-12">
+                <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary">{{ group.label }}</h2>
+                <div class="h-px flex-grow bg-outline/10"></div>
+            </div>
 
             {% if group.cover_image %}
-            <div class="category-cover mb-4">
-                <img src="{% static 'img/porcelanatos/' %}{{ group.cover_image }}" alt="Línea {{ group.label }}" class="img-fluid w-100" style="border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <div class="mb-12 rounded-3xl overflow-hidden shadow-2xl relative group">
+                <img src="{% static 'img/porcelanatos/' %}{{ group.cover_image }}" alt="Línea {{ group.label }}" class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-1000">
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/40 to-transparent"></div>
             </div>
             {% endif %}
 
-            <div class="row" style="display: flex; flex-wrap: wrap; margin: 0 -15px;">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 {% for p in group.items %}
-                <div class="col-lg-6 col-md-12 mb-4" style="padding: 0 15px;">
-                    <div class="product-card">
-                        <div class="row no-gutters">
-                            <div class="col-md-5">
-                                <div class="product-image"
-                                    style="height: 100%; min-height: 250px; background: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center;"
-                                    onclick='openProductModal(this)' data-title="{{ p.title }}"
-                                    data-price="{{ p.price|floatformat:0 }}"
-                                    data-m2box="{{ p.m2_per_box|stringformat:'.2f' }}"
-                                    data-dimensions="{{ p.dimensions }}" data-brand="{{ p.brand }}"
-                                    data-typology="{{ p.typology }}" data-rectified="{{ p.rectified }}"
-                                    data-usage="{{ p.usage }}" data-description="{{ p.description|escapejs }}"
-                                    data-images="{{ p.image.url }}{% for img in p.images.all %},{{ img.image.url }}{% endfor %}">
+                <div class="bg-surface-container-lowest rounded-[2rem] overflow-hidden hover:shadow-2xl transition-all duration-500 border border-outline/5 group flex flex-col md:flex-row h-full">
+                    <!-- Product Image -->
+                    <div class="md:w-5/12 relative bg-white cursor-pointer group/img overflow-hidden" 
+                         onclick='openProductModal(this)' 
+                         data-title="{{ p.title }}"
+                         data-price="{{ p.price|floatformat:0 }}"
+                         data-m2box="{{ p.m2_per_box|stringformat:'.2f' }}"
+                         data-dimensions="{{ p.dimensions }}" data-brand="{{ p.brand }}"
+                         data-typology="{{ p.typology }}" data-rectified="{{ p.rectified }}"
+                         data-usage="{{ p.usage }}" data-description="{{ p.description|escapejs }}"
+                         data-images="{{ p.image.url }}{% for img in p.images.all %},{{ img.image.url }}{% endfor %}">
+                        
+                        {% if p.images.exists %}
+                        <div id="carousel_{{ p.id }}" class="carousel slide h-full" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner h-full">
+                                <div class="carousel-item active h-full">
+                                    <img src="{{ p.image.url }}" class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-700" alt="{{ p.title }}">
+                                </div>
+                                {% for img in p.images.all %}
+                                <div class="carousel-item h-full">
+                                    <img src="{{ img.image.url }}" class="w-full h-full object-cover" alt="{{ p.title }}">
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="absolute bottom-4 right-4 bg-primary/80 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full opacity-0 group-hover/img:opacity-100 transition-opacity">
+                                Ver Galería
+                            </div>
+                        </div>
+                        {% else %}
+                        <img src="{{ p.image.url }}" alt="{{ p.title }}" class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-700">
+                        {% endif %}
+                    </div>
 
-                                    {% if p.images.exists %}
-                                    <div id="carousel_{{ p.id }}" class="carousel slide" data-ride="carousel"
-                                        data-interval="false">
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="{{ p.image.url }}" class="d-block w-100 clickable-image"
-                                                    alt="{{ p.title }}" onclick="openImageModal(this.src)">
-                                            </div>
-                                            {% for img in p.images.all %}
-                                            <div class="carousel-item">
-                                                <img src="{{ img.image.url }}" class="d-block w-100 clickable-image"
-                                                    alt="{{ p.title }}" onclick="openImageModal(this.src)">
-                                            </div>
-                                            {% endfor %}
-                                        </div>
-                                        <a class="carousel-control-prev" href="#carousel_{{ p.id }}" role="button"
-                                            data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"
-                                                style="background-color: rgba(0,0,0,0.5); border-radius: 50%; width: 35px; height: 35px;"></span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#carousel_{{ p.id }}" role="button"
-                                            data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"
-                                                style="background-color: rgba(0,0,0,0.5); border-radius: 50%; width: 35px; height: 35px;"></span>
-                                        </a>
-                                    </div>
-                                    {% else %}
-                                    <img src="{{ p.image.url }}" alt="{{ p.title }}" class="img-fluid clickable-image"
-                                        onclick="openImageModal(this.src)">
-                                    {% endif %}
+                    <!-- Product Info -->
+                    <div class="md:w-7/12 p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="font-headline text-2xl font-bold text-primary leading-tight">{{ p.title }}</h3>
+                                <div class="text-right">
+                                    <span class="block text-2xl font-black text-secondary-fixed-dim leading-none">${{ p.price|floatformat:0 }}</span>
+                                    <span class="text-[9px] uppercase font-bold text-on-surface-variant">m² +IVA</span>
                                 </div>
                             </div>
-                            <div class="col-md-7">
-                                <div class="product-info">
-                                    <div class="product-title">{{ p.title }}</div>
-                                    <div class="product-price">${{ p.price|floatformat:0 }} M2 +IVA</div>
-
-                                    <!-- Dimensions Highlight -->
-                                    <div class="product-dimensions mb-2" style="font-size: 1.1rem; color: #333;">
-                                        <i class="fas fa-expand-arrows-alt mr-1"></i> Dimensiones: <strong>{{ p.dimensions }}</strong>
-                                    </div>
-
-                                    <!-- Specs Grid (Brand, Typology, etc) -->
-                                    {% if p.brand or p.typology or p.rectified or p.usage or p.m2_per_box %}
-                                    <div class="row mt-2 mb-2 small text-muted specs-grid-row"
-                                        style="margin-left: -5px; margin-right: -5px; border-top: 1px solid #eee; padding-top: 10px;">
-                                        {% if p.brand %}
-                                        <div class="col-6 mb-1" style="padding: 0 5px;">
-                                            <i class="fas fa-tag mx-1"></i> {{ p.brand }}
-                                        </div>
-                                        {% endif %}
-                                        {% if p.typology %}
-                                        <div class="col-6 mb-1" style="padding: 0 5px;">
-                                            <i class="fas fa-layer-group mx-1"></i> {{ p.typology }}
-                                        </div>
-                                        {% endif %}
-                                        {% if p.rectified %}
-                                        <div class="col-6 mb-1" style="padding: 0 5px;">
-                                            <i class="fas fa-ruler-combined mx-1"></i> Rect: {{ p.rectified }}
-                                        </div>
-                                        {% endif %}
-                                        {% if p.usage %}
-                                        <div class="col-6 mb-1" style="padding: 0 5px;">
-                                            <i class="fas fa-shoe-prints mx-1"></i> Uso: {{ p.usage }}
-                                        </div>
-                                        {% endif %}
-                                        {% if p.m2_per_box %}
-                                        <div class="col-6 mb-1" style="padding: 0 5px;">
-                                            <i class="fas fa-box-open mx-1"></i> Caja: {{ p.m2_per_box }} m²
-                                        </div>
-                                        {% endif %}
-                                    </div>
-                                    {% endif %}
-
-                                    <!-- Description -->
-                                    <ul class="specs-list">
-                                        {% if p.description %}
-                                        <li class="pre-line mt-2"
-                                            style="list-style: none; white-space: pre-line; color: #666; font-size: 0.9em;">
-                                            {{ p.description }}</li>
-                                        {% endif %}
-                                    </ul>
-                                </div>
+                            
+                            <div class="flex items-center gap-2 mb-6">
+                                <span class="material-symbols-outlined text-sm text-secondary">straighten</span>
+                                <span class="text-sm font-bold text-on-surface-variant uppercase tracking-tighter">{{ p.dimensions }}</span>
                             </div>
+
+                            <div class="grid grid-cols-2 gap-y-4 gap-x-2 border-t border-outline/5 pt-6">
+                                {% if p.brand %}
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-xs text-secondary/60">branding_watermark</span>
+                                    <span class="text-[10px] uppercase font-medium text-on-surface-variant">{{ p.brand }}</span>
+                                </div>
+                                {% endif %}
+                                {% if p.typology %}
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-xs text-secondary/60">category</span>
+                                    <span class="text-[10px] uppercase font-medium text-on-surface-variant">{{ p.typology }}</span>
+                                </div>
+                                {% endif %}
+                                {% if p.rectified %}
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-xs text-secondary/60">check_circle</span>
+                                    <span class="text-[10px] uppercase font-medium text-on-surface-variant">Rectificado</span>
+                                </div>
+                                {% endif %}
+                                {% if p.usage %}
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-xs text-secondary/60">layers</span>
+                                    <span class="text-[10px] uppercase font-medium text-on-surface-variant">{{ p.usage }}</span>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <button onclick='openProductModal(this.closest(".flex").querySelector("[data-title]"))' class="w-full flex items-center justify-center gap-2 py-3 bg-surface-container hover:bg-primary hover:text-white rounded-xl text-[10px] uppercase font-bold tracking-widest transition-all">
+                                Calcular Presupuesto
+                                <span class="material-symbols-outlined text-sm">calculate</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -137,87 +132,110 @@
         </div>
         {% endfor %}
 
-        <!-- Product Detail Modal -->
-        <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-hidden="true"
-            style="z-index: 10500;">
+        <!-- Product Detail Modal - Modern Material Design -->
+        <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 10500;">
             <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
-                <div class="modal-content" style="border: none; border-radius: 15px; overflow: hidden;">
+                <div class="modal-content border-0 rounded-[2.5rem] overflow-hidden bg-surface shadow-2xl">
                     <div class="modal-body p-0">
-                        <div class="row no-gutters">
-                            <div class="col-lg-8 bg-dark d-flex align-items-center justify-content-center"
-                                style="min-height: 400px; background-color: #f8f9fa !important;">
-                                <div id="modalCarousel" class="carousel slide" data-ride="carousel"
-                                    style="width: 100%; height: 100%;">
-                                    <div class="carousel-inner" id="modalCarouselInner"
-                                        style="height: 100%; display: flex; align-items: center;">
+                        <div class="flex flex-col lg:flex-row">
+                            <!-- Image Gallery -->
+                            <div class="lg:w-7/12 bg-white relative">
+                                <button type="button" class="absolute top-6 left-6 z-20 w-10 h-10 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-lg" data-dismiss="modal">
+                                    <span class="material-symbols-outlined">close</span>
+                                </button>
+                                
+                                <div id="modalCarousel" class="carousel slide h-full" data-ride="carousel">
+                                    <div class="carousel-inner h-full flex items-center" id="modalCarouselInner">
                                         <!-- Slides injected via JS -->
                                     </div>
-                                    <a class="carousel-control-prev" href="#modalCarousel" role="button"
-                                        data-slide="prev" style="opacity: 1;">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"
-                                            style="background-color: rgba(0,0,0,0.5); border-radius: 50%; width: 40px; height: 40px; background-size: 60%; background-position: center;"></span>
+                                    <a class="carousel-control-prev" href="#modalCarousel" role="button" data-slide="prev">
+                                        <span class="w-12 h-12 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-primary shadow-xl material-symbols-outlined">chevron_left</span>
                                     </a>
-                                    <a class="carousel-control-next" href="#modalCarousel" role="button"
-                                        data-slide="next" style="opacity: 1;">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"
-                                            style="background-color: rgba(0,0,0,0.5); border-radius: 50%; width: 40px; height: 40px; background-size: 60%; background-position: center;"></span>
+                                    <a class="carousel-control-next" href="#modalCarousel" role="button" data-slide="next">
+                                        <span class="w-12 h-12 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-primary shadow-xl material-symbols-outlined">chevron_right</span>
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-4 p-4">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
-                                    style="position: absolute; right: 15px; top: 10px;">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <h3 id="modalTitle" class="mb-2" style="font-weight: 700;">Nombre Producto</h3>
-                                <p id="modalPriceLabel" class="text-muted mb-3" style="font-size: 1.2rem;">$ Precio</p>
 
-                                <!-- Modal Specs -->
-                                <div id="modalSpecs" class="mb-4 small text-muted">
-                                    <div class="row">
-                                        <div class="col-6 mb-1"><i class="fas fa-expand-arrows-alt mr-1"></i> <span
-                                                id="modalDim"></span></div>
-                                        <div class="col-6 mb-1"><i class="fas fa-tag mr-1"></i> <span
-                                                id="modalBrand"></span></div>
-                                        <div class="col-6 mb-1"><i class="fas fa-layer-group mr-1"></i> <span
-                                                id="modalTypology"></span></div>
-                                        <div class="col-6 mb-1"><i class="fas fa-ruler-combined mr-1"></i> <span
-                                                id="modalRect"></span></div>
-                                        <div class="col-6 mb-1"><i class="fas fa-shoe-prints mr-1"></i> <span
-                                                id="modalUsage"></span></div>
+                            <!-- Details & Calculator -->
+                            <div class="lg:w-5/12 p-8 md:p-12 overflow-y-auto max-h-[90vh]">
+                                <div class="mb-8">
+                                    <span id="modalBrand" class="px-3 py-1 bg-secondary/10 text-secondary font-label text-[10px] uppercase font-black tracking-widest rounded-full"></span>
+                                    <h3 id="modalTitle" class="font-headline text-3xl md:text-4xl font-bold text-primary mt-6 leading-tight"></h3>
+                                    <div class="mt-4 flex items-baseline gap-2">
+                                        <span id="modalPriceLabel" class="text-3xl font-black text-primary leading-none"></span>
+                                        <span class="text-[10px] uppercase font-bold text-on-surface-variant">m² + IVA</span>
                                     </div>
-                                    <div class="mt-2" id="modalDesc" style="white-space: pre-line; color: #666;"></div>
                                 </div>
-                                <hr>
-                                <h5 class="mb-3"><i class="fas fa-calculator"></i> Calculadora de Material</h5>
-                                <form>
-                                    <div class="form-group">
-                                        <label for="inputM2">Metros Cuadrados a Cubrir (m²)</label>
-                                        <input type="number" class="form-control" id="inputM2" placeholder="Ej: 45"
-                                            step="0.01" oninput="calculateMaterial()">
+
+                                <!-- Specs Bento -->
+                                <div id="modalSpecs" class="grid grid-cols-2 gap-4 mb-10">
+                                    <div class="p-4 bg-surface-container-low rounded-2xl flex flex-col gap-1 border border-outline/5">
+                                        <span class="material-symbols-outlined text-secondary text-lg">straighten</span>
+                                        <span class="text-[9px] uppercase font-black text-on-surface-variant tracking-widest mt-1">Dimensiones</span>
+                                        <span id="modalDim" class="text-xs font-bold text-primary"></span>
                                     </div>
-                                    <div class="alert alert-secondary" role="alert" style="font-size: 0.9rem;">
-                                        <input type="hidden" id="boxM2">
-                                        <input type="hidden" id="unitPrice">
-                                        <div class="d-flex justify-content-between mb-2">
-                                            <span>M² por Caja:</span>
-                                            <strong id="displayBoxM2">-</strong>
+                                    <div class="p-4 bg-surface-container-low rounded-2xl flex flex-col gap-1 border border-outline/5">
+                                        <span class="material-symbols-outlined text-secondary text-lg">category</span>
+                                        <span class="text-[9px] uppercase font-black text-on-surface-variant tracking-widest mt-1">Tipología</span>
+                                        <span id="modalTypology" class="text-xs font-bold text-primary"></span>
+                                    </div>
+                                    <div class="p-4 bg-surface-container-low rounded-2xl flex flex-col gap-1 border border-outline/5">
+                                        <span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+                                        <span class="text-[9px] uppercase font-black text-on-surface-variant tracking-widest mt-1">Rectificado</span>
+                                        <span id="modalRect" class="text-xs font-bold text-primary"></span>
+                                    </div>
+                                    <div class="p-4 bg-surface-container-low rounded-2xl flex flex-col gap-1 border border-outline/5">
+                                        <span class="material-symbols-outlined text-secondary text-lg">layers</span>
+                                        <span class="text-[9px] uppercase font-black text-on-surface-variant tracking-widest mt-1">Uso</span>
+                                        <span id="modalUsage" class="text-xs font-bold text-primary"></span>
+                                    </div>
+                                </div>
+
+                                <div id="modalDesc" class="text-sm text-on-surface-variant leading-relaxed font-body mb-12 border-l-4 border-secondary/20 pl-6 italic"></div>
+
+                                <!-- Calculator - Modern Card -->
+                                <div class="bg-primary p-8 rounded-[2rem] text-white shadow-2xl relative overflow-hidden">
+                                    <div class="relative z-10">
+                                        <div class="flex items-center gap-3 mb-8">
+                                            <span class="material-symbols-outlined text-secondary-fixed-dim">calculate</span>
+                                            <h4 class="font-headline font-bold text-sm uppercase tracking-widest">Calculadora de Material</h4>
                                         </div>
-                                        <div class="d-flex justify-content-between mb-2">
-                                            <span>Cajas Necesarias:</span>
-                                            <strong id="resultBoxes"
-                                                style="color: #d9534f; font-size: 1.1rem;">-</strong>
-                                        </div>
-                                        <div class="d-flex justify-content-between border-top pt-2">
-                                            <span>Total m² Real:</span>
-                                            <strong id="resultTotalM2">-</strong>
+                                        
+                                        <div class="space-y-6">
+                                            <div>
+                                                <label class="block text-[10px] uppercase font-bold text-white/40 tracking-widest mb-3">Metros a cubrir (m²)</label>
+                                                <input type="number" id="inputM2" oninput="calculateMaterial()" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white font-headline text-lg focus:outline-none focus:border-secondary transition-colors" placeholder="0">
+                                            </div>
+
+                                            <div class="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
+                                                <div>
+                                                    <span class="block text-[9px] uppercase font-bold text-white/30 tracking-widest mb-1">Por Caja</span>
+                                                    <span id="displayBoxM2" class="text-sm font-bold"></span>
+                                                </div>
+                                                <div class="text-right">
+                                                    <span class="block text-[9px] uppercase font-bold text-white/30 tracking-widest mb-1">Cajas Necesarias</span>
+                                                    <span id="resultBoxes" class="text-lg font-black text-secondary-fixed-dim">-</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex justify-between items-center bg-white/5 p-6 rounded-2xl">
+                                                <div>
+                                                    <span class="block text-[10px] uppercase font-bold text-white/40 tracking-widest">Precio Estimado</span>
+                                                    <span class="text-[8px] uppercase text-white/20">Incluye IVA (21%)</span>
+                                                </div>
+                                                <div id="resultPrice" class="text-2xl font-black text-secondary-fixed-dim">$ -</div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="text-center mt-4">
-                                        <small class="text-muted d-block uppercase">Precio Estimado (IVA Incl.)</small>
-                                        <h2 id="resultPrice" style="color: #28a745; font-weight: bold;">$ -</h2>
-                                    </div>
-                                </form>
+                                    
+                                    <input type="hidden" id="boxM2">
+                                    <input type="hidden" id="unitPrice">
+                                </div>
+                                
+                                <div class="mt-8 text-center text-[9px] text-on-surface-variant font-medium uppercase tracking-[0.2em]">
+                                    Presupuesto sujeto a variación de stock.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -231,7 +249,6 @@
                 const price = parseFloat(element.getAttribute('data-price')) || 0;
                 const m2box = parseFloat(element.getAttribute('data-m2box')) || 0;
 
-                // Read new attributes
                 const dimensions = element.getAttribute('data-dimensions') || '-';
                 const brand = element.getAttribute('data-brand') || '-';
                 const typology = element.getAttribute('data-typology') || '-';
@@ -243,10 +260,9 @@
                 const images = imagesStr.split(',');
 
                 document.getElementById('modalTitle').innerText = title;
-                document.getElementById('modalPriceLabel').innerText = price > 0 ? '$' + price.toLocaleString() + ' m² +IVA' : 'Consultar Precio';
+                document.getElementById('modalPriceLabel').innerText = price > 0 ? '$' + price.toLocaleString() : 'Cons.';
 
-                // Update Modal Specs
-                document.getElementById('modalDim').innerText = dimensions !== '-' ? 'Dimensiones: ' + dimensions : '-';
+                document.getElementById('modalDim').innerText = dimensions !== '-' ? dimensions : '-';
                 document.getElementById('modalBrand').innerText = brand;
                 document.getElementById('modalTypology').innerText = typology;
                 document.getElementById('modalRect').innerText = rectified;
@@ -255,10 +271,9 @@
 
                 document.getElementById('unitPrice').value = price;
                 document.getElementById('boxM2').value = m2box;
-                document.getElementById('displayBoxM2').innerText = m2box > 0 ? m2box + ' m²' : 'Consultar';
+                document.getElementById('displayBoxM2').innerText = m2box > 0 ? m2box + ' m²' : 'Cons.';
                 document.getElementById('inputM2').value = '';
                 document.getElementById('resultBoxes').innerText = '-';
-                document.getElementById('resultTotalM2').innerText = '-';
                 document.getElementById('resultPrice').innerText = '$ -';
                 document.getElementById('inputM2').disabled = (m2box <= 0);
 
@@ -267,14 +282,14 @@
 
                 images.forEach((img, index) => {
                     const active = index === 0 ? 'active' : '';
-                    // If img already starts with /, assume it's a full URL. Otherwise (legacy), prepend static path.
-                    // But our data-images has full URLs now.
                     let src = img;
                     if (!img.startsWith('/')) {
                         src = '/static/img/porcelanatos/' + img;
                     }
 
-                    const item = `<div class="carousel-item ${active}" style="height: 100%; text-align: center;"><img src="${src}" class="img-fluid" style="max-height: 500px; max-width: 100%; object-fit: contain;"></div>`;
+                    const item = `<div class="carousel-item ${active} h-full w-full text-center">
+                        <img src="${src}" class="max-h-[600px] max-w-full mx-auto object-contain p-12">
+                    </div>`;
                     carouselInner.innerHTML += item;
                 });
 
@@ -288,7 +303,6 @@
 
                 if (inputM2 <= 0 || boxM2 <= 0) {
                     document.getElementById('resultBoxes').innerText = '-';
-                    document.getElementById('resultTotalM2').innerText = '-';
                     document.getElementById('resultPrice').innerText = '$ -';
                     return;
                 }
@@ -298,10 +312,9 @@
                 const estimatedTotal = totalM2 * price * 1.21;
 
                 document.getElementById('resultBoxes').innerText = boxes;
-                document.getElementById('resultTotalM2').innerText = totalM2.toFixed(2) + ' m²';
 
                 if (price > 0) {
-                    document.getElementById('resultPrice').innerText = '$ ' + estimatedTotal.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+                    document.getElementById('resultPrice').innerText = '$ ' + Math.floor(estimatedTotal).toLocaleString('es-AR');
                 } else {
                     document.getElementById('resultPrice').innerText = 'Consultar';
                 }

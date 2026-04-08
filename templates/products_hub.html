@@ -1,72 +1,67 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container section" style="min-height: 60vh; display: flex; align-items: center;">
-    <div class="row w-100 justify-content-center">
-        <div class="col-12 text-center mb-5">
-            <h2 class="section-title">Nuestros Productos</h2>
-            <p class="text-muted">Seleccione una categoría para ver nuestro catálogo</p>
+<section class="min-h-[70vh] flex flex-col items-center justify-center px-6 py-24 bg-surface">
+    <div class="max-w-7xl mx-auto w-full">
+        <!-- Header -->
+        <div class="text-center mb-20">
+            <h1 class="font-headline text-4xl md:text-5xl font-extrabold text-primary tracking-tighter mb-4">
+                Nuestros <span class="text-secondary-fixed-dim">Catálogos</span>
+            </h1>
+            <p class="text-on-surface-variant text-lg font-body max-w-xl mx-auto">Seleccione una unidad de negocio para explorar nuestras soluciones integrales.</p>
         </div>
 
-        <!-- Option 1: Hormigón -->
-        <div class="col-md-5 mb-4">
-            <a href="{% url 'productos_hormigon' %}" class="card-link" style="text-decoration: none;">
-                <div class="glass-card text-center p-5 h-100 product-hub-card">
-                    <i class="fa fa-cubes fa-3x mb-3" style="color: var(--primary-color);"></i>
-                    <h3>Prefabricados de Hormigón</h3>
-                    <p class="text-muted">Caños, pilares, postes y soluciones estructurales.</p>
-                    <span class="btn mt-auto" style="background-color: var(--primary-color); color: white;">Ver Catálogo
-                        &rarr;</span>
+        <!-- Bento Hub Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
+            
+            <!-- Category: Hormigón -->
+            <a href="{% url 'productos_hormigon' %}" class="group relative overflow-hidden bg-primary rounded-[2.5rem] p-10 md:p-14 flex flex-col justify-between h-[450px] shadow-2xl hover:shadow-primary/20 transition-all duration-500 active:scale-[0.98]">
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/concrete-wall.png')]"></div>
+                </div>
+                <!-- Content -->
+                <div class="relative z-10">
+                    <div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-8 border border-secondary/20 group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-500">
+                        <span class="material-symbols-outlined text-3xl text-secondary group-hover:text-inherit">view_quilt</span>
+                    </div>
+                    <h3 class="font-headline text-3xl font-bold text-white mb-4">Prefabricados de <br>Hormigón</h3>
+                    <p class="text-white/40 text-sm leading-relaxed max-w-xs font-body">Caños, pilares, postes y soluciones estructurales de máxima resistencia.</p>
+                </div>
+                <div class="relative z-10 flex items-center gap-4 text-secondary font-headline font-bold uppercase text-[10px] tracking-widest group-hover:gap-6 transition-all">
+                    Explorar Catálogo
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </div>
             </a>
+
+            <!-- Category: Revestimientos -->
+            <a href="{% url 'porcelanatos' %}" class="group relative overflow-hidden bg-white border border-outline/10 rounded-[2.5rem] p-10 md:p-14 flex flex-col justify-between h-[450px] shadow-xl hover:shadow-2xl transition-all duration-500 active:scale-[0.98]">
+                <!-- Background Decoration -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-surface-container rounded-full blur-3xl -mr-32 -mt-32 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <!-- Content -->
+                <div class="relative z-10">
+                    <div class="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center mb-8 border border-primary/5 group-hover:bg-primary group-hover:text-on-primary transition-all duration-500 text-primary">
+                        <span class="material-symbols-outlined text-3xl group-hover:text-inherit">layers</span>
+                    </div>
+                    <h3 class="font-headline text-3xl font-bold text-primary mb-4">Línea de <br>Revestimientos</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed max-w-xs font-body">Porcelanatos exclusivos y revestimientos de vanguardia para arquitectos y constructoras.</p>
+                </div>
+                <div class="relative z-10 flex items-center gap-4 text-primary font-headline font-bold uppercase text-[10px] tracking-widest group-hover:gap-6 transition-all">
+                    Ver Porcelanatos
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </div>
+            </a>
+
         </div>
 
-        <!-- Option 2: Revestimientos (Porcelanatos) -->
-        <div class="col-md-5 mb-4">
-            <a href="{% url 'porcelanatos' %}" class="card-link" style="text-decoration: none;">
-                <div class="glass-card text-center p-5 h-100 product-hub-card">
-                    <i class="fa fa-layer-group fa-3x mb-3" style="color: var(--primary-color);"></i>
-                    <h3>Revestimientos</h3>
-                    <p class="text-muted">Porcelanatos de alta calidad.</p>
-                    <span class="btn mt-auto" style="background-color: var(--primary-color); color: white;">Ver Catálogo
-                        &rarr;</span>
-                </div>
-            </a>
+        <!-- Footer Note -->
+        <div class="mt-24 text-center">
+            <p class="text-[10px] uppercase font-bold tracking-[0.3em] text-on-surface-variant flex items-center justify-center gap-3">
+                <span class="w-8 h-px bg-outline/20"></span>
+                Calidad Certificada por RoMA
+                <span class="w-8 h-px bg-outline/20"></span>
+            </p>
         </div>
     </div>
-</div>
-
-<style>
-    .product-hub-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .product-hub-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        border-color: var(--primary-color);
-    }
-
-    /* Animate icon slightly too */
-    .product-hub-card:hover i {
-        transform: scale(1.1);
-        transition: transform 0.3s ease;
-    }
-
-    .btn,
-    i {
-        transition: all 0.3s ease;
-    }
-
-    /* Ensure full card clickability */
-    .card-link {
-        display: block;
-        height: 100%;
-        color: inherit;
-    }
-</style>
-{% endblock %}
+</section>
+{% endblock %}
