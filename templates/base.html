@@ -8,211 +8,97 @@
     <title>RoMA | Ingeniería Civil e Industrial</title>
     <!-- Fonts: Manrope (Headlines) & Inter (Body) from Google Stitch -->
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Material Symbols -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Tailwind Play CDN -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                "secondary": "#735c00",
-                "on-secondary": "#ffffff",
-                "secondary-container": "#fed65b",
-                "surface": "#f6f9ff",
-                "primary": "#051523",
-                "on-surface": "#101d26",
-                "on-surface-variant": "#43474c",
-                "background": "#f6f9ff",
-                "outline": "#74777c",
-                "surface-container": "#e2effd",
-                "surface-container-low": "#ebf5ff",
-                "surface-container-highest": "#d7e4f2",
-                "on-primary": "#ffffff",
-                "primary-fixed": "#d3e4f7",
-                "secondary-fixed-dim": "#e9c349",
-            },
-            "borderRadius": {
-                "DEFAULT": "0.125rem",
-                "lg": "0.25rem",
-                "xl": "0.5rem",
-                "full": "0.75rem"
-            },
-            "fontFamily": {
-                "headline": ["Manrope"],
-                "body": ["Inter"],
-                "label": ["Inter"]
-            }
-          },
-        },
-      }
-    </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-nav {
-            background-color: rgba(246, 249, 255, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-        /* Preserve some classic styles while we transition */
-        :root {
-            --primary-color: #051523;
-            --secondary-color: #f6f9ff;
-            --font-heading: 'Manrope', sans-serif;
-            --font-body: 'Inter', sans-serif;
-        }
-    </style>
-    <!-- Custom CSS (Legacy) -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1.0.1">
+    {% block extra_head %}{% endblock %}
 </head>
 
-<body class="bg-background font-body text-on-surface min-h-screen flex flex-col">
+<body>
 
-    <!-- Header / Navbar - Material 3 Glass Design -->
-    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline/10">
-        <div class="flex justify-between items-center px-6 md:px-12 py-1 max-w-7xl mx-auto w-full">
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container header-container">
             <!-- Logo (Left) -->
-            <a href="{% url 'inicio' %}" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                <img src="{% static 'img/logo_roma_cropped.png' %}" alt="Logo RoMA" class="h-20 md:h-32 w-auto object-contain">
+            <a href="{% url 'inicio' %}" class="logo-link">
+                <img src="{% static 'img/logo_roma_white.png' %}" alt="Logo Ingeniería RoMA" class="logo-img">
             </a>
 
             <!-- Navigation (Right) -->
-            <div class="hidden md:flex items-center gap-10">
-                <ul class="flex items-center gap-10 m-0 p-0">
-                    <li><a href="{% url 'inicio' %}" class="font-headline font-bold tracking-tight uppercase text-sm text-primary hover:text-secondary transition-colors border-b-2 border-transparent hover:border-secondary pb-1">Inicio</a></li>
-                    <li><a href="{% url 'inicio' %}#servicios" class="font-headline font-bold tracking-tight uppercase text-sm text-on-surface-variant hover:text-primary transition-colors">Servicios</a></li>
-                    <li><a href="{% url 'project_list' %}" class="font-headline font-bold tracking-tight uppercase text-sm text-on-surface-variant hover:text-primary transition-colors">Proyectos</a></li>
-                    <li><a href="{% url 'productos_hub' %}" class="font-headline font-bold tracking-tight uppercase text-sm text-on-surface-variant hover:text-primary transition-colors">Productos</a></li>
-                    <li><a href="#contacto" class="font-headline font-bold tracking-tight uppercase text-sm text-on-surface-variant hover:text-primary transition-colors">Contacto</a></li>
-                </ul>
-                
-                {% if user.is_authenticated %}
-                <a href="{% url 'edicion' %}" class="ml-4 px-6 py-2 bg-primary text-on-primary rounded-xl font-label text-[10px] uppercase tracking-widest font-bold hover:bg-primary/90 transition-all active:scale-95 shadow-lg shadow-primary/10">Admin</a>
-                {% else %}
-                <a href="{% url 'login' %}" class="ml-4 px-4 py-2 text-primary hover:bg-surface-container rounded-lg transition-all"><span class="material-symbols-outlined text-2xl">lock</span></a>
-                {% endif %}
-            </div>
-
-            <!-- Mobile Toggle -->
-            <div class="md:hidden">
-                <button id="mobile-menu-open" class="text-primary focus:outline-none">
-                    <span class="material-symbols-outlined text-4xl">menu</span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-primary/95 backdrop-blur-xl translate-x-full transition-transform duration-500 ease-in-out md:hidden">
-        <div class="flex flex-col h-full p-8">
-            <div class="flex justify-between items-center mb-16">
-                <img src="{% static 'img/logo_roma.png' %}" alt="Logo RoMA" class="h-12 w-auto brightness-200 contrast-200">
-                <button id="mobile-menu-close" class="text-white focus:outline-none">
-                    <span class="material-symbols-outlined text-4xl">close</span>
-                </button>
-            </div>
-            
-            <nav class="flex flex-col gap-8">
-                <a href="{% url 'inicio' %}" class="mobile-nav-link text-3xl font-headline font-bold text-white/50 hover:text-white transition-colors">Inicio</a>
-                <a href="{% url 'inicio' %}#servicios" class="mobile-nav-link text-3xl font-headline font-bold text-white/50 hover:text-white transition-colors">Servicios</a>
-                <a href="{% url 'project_list' %}" class="mobile-nav-link text-3xl font-headline font-bold text-white/50 hover:text-white transition-colors">Proyectos</a>
-                <a href="{% url 'productos_hub' %}" class="mobile-nav-link text-3xl font-headline font-bold text-white/50 hover:text-white transition-colors">Productos</a>
-                <a href="#contacto" class="mobile-nav-link text-3xl font-headline font-bold text-white/50 hover:text-white transition-colors">Contacto</a>
-                
-                <div class="mt-8 pt-8 border-t border-white/10">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                    <li><a href="{% url 'inicio' %}#servicios">Nuestros Servicios</a></li>
+                    <li><a href="{% url 'project_list' %}">Proyectos</a></li>
+                    <li><a href="{% url 'productos_hub' %}">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                     {% if user.is_authenticated %}
-                    <a href="{% url 'edicion' %}" class="text-secondary font-headline font-bold uppercase tracking-widest text-sm">Administración &rarr;</a>
+                    <li><a href="{% url 'edicion' %}" class="admin-link">Admin</a></li>
                     {% else %}
-                    <a href="{% url 'login' %}" class="text-white/30 flex items-center gap-2">
-                        <span class="material-symbols-outlined">lock</span> Ingreso Staff
-                    </a>
+                    <li><a href="{% url 'login' %}" class="admin-link"><i class="fa fa-lock"></i></a></li>
                     {% endif %}
-                </div>
+                </ul>
             </nav>
         </div>
-    </div>
-
-    <!-- Spacer for fixed nav -->
-    <div class="h-20 md:h-24"></div>
+    </header>
 
     <!-- Main Content -->
     <main>
         {% block content %}{% endblock %}
     </main>
 
-    <!-- Footer - Modern Dark Design -->
-    <footer class="bg-primary text-white/60 py-20 px-6 md:px-12 border-t border-white/5 mt-auto">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            <div class="space-y-6">
-                <div class="flex items-center gap-3">
-                    <img src="{% static 'img/logo_roma_white_cropped.png' %}" alt="Logo RoMA" class="h-12 w-auto opacity-100 invert">
-                    <span class="text-lg font-black tracking-tighter text-white">RoMA Ingeniería</span>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Ingeniería RoMA</h3>
+                <p>Soluciones integrales en ingeniería civil e industrial.</p>
+            </div>
+            <div class="footer-col" id="contacto">
+                <h3>Contacto</h3>
+                <p><i class="fa fa-envelope"></i> oys.ing.roma@gmail.com</p>
+                <div style="margin-top: 10px;">
+                    <p style="margin-bottom: 8px;">
+                        <a href="https://wa.me/5492954330377?text=Hola%20Miguel%2C%20estuve%20viendo%20el%20Sitio%20de%20RoMA%20y%20quer%C3%ADa%20consultarles%20por%20un%20proyecto%20de"
+                            target="_blank" style="color: #ccc; text-decoration: none;">
+                            <i class="fab fa-whatsapp" style="color: #25d366; font-size: 1.1em;"></i> 2954-330377 (Ing.
+                            Miguel Díaz)
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://wa.me/5493517632522?text=Hola%20Rodrigo%2C%20estuve%20viendo%20el%20Sitio%20de%20RoMA%20y%20quer%C3%ADa%20consultarles%20por%20un%20proyecto%20de"
+                            target="_blank" style="color: #ccc; text-decoration: none;">
+                            <i class="fab fa-whatsapp" style="color: #25d366; font-size: 1.1em;"></i> 351-7632522 (Ing.
+                            Rodrigo Díaz)
+                        </a>
+                    </p>
                 </div>
-                <p class="text-sm leading-relaxed font-body">
-                    Soluciones integrales de vanguardia aplicada a la infraestructura civil e industrial. Precisión en cada cálculo, pasión en cada obra.
-                </p>
+                <p style="margin-top: 10px;"><i class="fa fa-map-marker-alt"></i> Santa Rosa, La Pampa, Argentina</p>
             </div>
-            
-            <div>
-                <h5 class="text-white font-headline font-bold mb-6 uppercase text-xs tracking-[0.2em]">Enlaces Rápidos</h5>
-                <ul class="space-y-4 text-sm font-body">
-                    <li><a href="{% url 'inicio' %}" class="hover:text-secondary transition-colors">Inicio</a></li>
-                    <li><a href="{% url 'inicio' %}#servicios" class="hover:text-secondary transition-colors">Nuestros Servicios</a></li>
-                    <li><a href="{% url 'project_list' %}" class="hover:text-secondary transition-colors">Proyectos Realizados</a></li>
-                    <li><a href="{% url 'productos_hub' %}" class="hover:text-secondary transition-colors">Catálogo de Productos</a></li>
-                </ul>
-            </div>
-
-            <div id="contacto">
-                <h5 class="text-white font-headline font-bold mb-6 uppercase text-xs tracking-[0.2em]">Contacto</h5>
-                <ul class="space-y-4 text-sm font-body">
-                    <li class="flex items-start gap-3">
-                        <span class="material-symbols-outlined text-sm text-secondary">mail</span>
-                        <span>oys.ing.roma@gmail.com</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="material-symbols-outlined text-sm text-secondary">location_on</span>
-                        <span>Santa Rosa, La Pampa, Argentina</span>
-                    </li>
-                    <li class="flex flex-col gap-2 pt-2">
-                        <a href="https://wa.me/5492954330377" target="_blank" class="flex items-center gap-2 hover:text-white transition-colors">
-                            <i class="fab fa-whatsapp text-[#25d366]"></i> 2954-330377 (Ing. Miguel)
-                        </a>
-                        <a href="https://wa.me/5493517632522" target="_blank" class="flex items-center gap-2 hover:text-white transition-colors">
-                            <i class="fab fa-whatsapp text-[#25d366]"></i> 351-7632522 (Ing. Rodrigo)
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h5 class="text-white font-headline font-bold mb-6 uppercase text-xs tracking-[0.2em]">Síguenos</h5>
-                <div class="flex gap-4">
-                    <a href="https://www.instagram.com/_oys.ing.roma" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+            <div class="footer-col">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/_oys.ing.roma?igsh=OHRpMXhoM29hNGZn" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
-
-        <div class="max-w-7xl mx-auto pt-16 mt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-            <!-- Weather Ticker -->
-            <div class="w-full md:w-2/3 overflow-hidden bg-white/5 py-3 px-6 rounded-full border border-white/5">
-                <div id="weather-ticker" class="text-xs tracking-wide whitespace-nowrap inline-block animate-[ticker_40s_linear_infinite]">
-                    <span class="text-white/40">Cargando clima de la región...</span>
+        <div class="footer-bottom"
+            style="display: flex; justify-content: space-between; align-items: center; padding: 15px 100px;">
+            <!-- Weather Widget -->
+            <div class="weather-widget-container"
+                style="overflow: hidden; width: 60%; white-space: nowrap; color: #aaa; font-size: 0.9rem; text-align: left;">
+                <div id="weather-ticker" style="display: inline-block; animation: ticker 40s linear infinite;">
+                    <span class="weather-item">Cargando clima...</span>
                 </div>
             </div>
 
-            <p class="text-[10px] font-bold uppercase tracking-widest text-white/30">
-                &copy; {% now "Y" %} RoMA Ingeniería & <a href="https://portfolio.gdemar.com.ar/" target="_blank" class="hover:text-white transition-colors">GdeMar</a>
-            </p>
+            <p class="copyright" style="margin: 0; color: #888;">&copy; {% now "Y" %} RoMA Ingeniería y <a
+                    href="https://portfolio.gdemar.com.ar/" target="_blank"
+                    style="color: #888; text-decoration: none;">GdeMar</a>. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -266,26 +152,6 @@
             }
 
             fetchWeather();
-
-            // Mobile Menu Logic
-            const openBtn = document.getElementById('mobile-menu-open');
-            const closeBtn = document.getElementById('mobile-menu-close');
-            const menu = document.getElementById('mobile-menu');
-            const links = document.querySelectorAll('.mobile-nav-link');
-
-            function toggleMenu(show) {
-                if (show) {
-                    menu.classList.remove('translate-x-full');
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    menu.classList.add('translate-x-full');
-                    document.body.style.overflow = '';
-                }
-            }
-
-            openBtn.addEventListener('click', () => toggleMenu(true));
-            closeBtn.addEventListener('click', () => toggleMenu(false));
-            links.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
         });
     </script>
 

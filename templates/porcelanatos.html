@@ -1,6 +1,55 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_head %}
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary": "#735c00",
+                "on-secondary": "#ffffff",
+                "secondary-container": "#fed65b",
+                "surface": "#f6f9ff",
+                "primary": "#051523",
+                "on-surface": "#101d26",
+                "on-surface-variant": "#43474c",
+                "background": "#f6f9ff",
+                "outline": "#74777c",
+                "surface-container": "#e2effd",
+                "surface-container-low": "#ebf5ff",
+                "surface-container-highest": "#d7e4f2",
+                "on-primary": "#ffffff",
+                "primary-fixed": "#d3e4f7",
+                "secondary-fixed-dim": "#e9c349",
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
 <!-- Page Header - Modern Hero -->
 <section class="relative h-[40vh] flex items-center overflow-hidden bg-primary mb-12">

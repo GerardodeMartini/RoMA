@@ -21,9 +21,9 @@
     --max-width: 1100px;
     /* Slightly tighter container for classic read */
 
-    --font-heading: 'Playfair Display', serif;
+    --font-heading: 'Manrope', sans-serif;
     /* Classic Serif for headings */
-    --font-body: 'Lato', sans-serif;
+    --font-body: 'Inter', sans-serif;
     /* Clean Sans-Serif for readability */
 }
 
